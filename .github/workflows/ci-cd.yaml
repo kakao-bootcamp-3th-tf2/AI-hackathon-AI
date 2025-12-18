@@ -79,16 +79,6 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Copy data files to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.AI_INSTANCE_IP }}
-          username: ubuntu
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "data/"
-          target: "/home/ubuntu/"
-          overwrite: true
-
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -112,6 +102,18 @@ jobs:
             fi
             
             cd /home/ubuntu
+            
+            # data 폴더 생성 및 JSON 파일 다운로드
+            mkdir -p data
+            echo "Downloading data files from GitHub..."
+            curl -sL https://raw.githubusercontent.com/${{ github.repository }}/main/data/offers.full.json -o data/offers.full.json
+            curl -sL https://raw.githubusercontent.com/${{ github.repository }}/main/data/events.full.json -o data/events.full.json
+            
+            if [ -f "./data/offers.full.json" ] && [ -f "./data/events.full.json" ]; then
+              echo "Data files downloaded successfully"
+            else
+              echo "Warning: Failed to download data files"
+            fi
             
             # Docker Hub 로그인
             echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
