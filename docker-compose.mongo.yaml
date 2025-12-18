@@ -1,0 +1,24 @@
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: jjdc-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD}
+    volumes:
+      - mongo_data:/data/db
+      - mongo_logs:/var/log/mongodb
+    networks:
+      - jjdc-network
+
+networks:
+  jjdc-network:
+    name: jjdc-network
+    external: true
+
+volumes:
+  mongo_data:
+  mongo_logs:

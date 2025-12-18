@@ -1,0 +1,27 @@
+services:
+  ai-server:
+    image: ${DOCKER_IMAGE_NAME_AI}
+    container_name: jjdc-ai
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS}
+      - MONGO_HOST=${MONGO_HOST}
+      - MONGO_PORT=${MONGO_PORT}
+      - MONGO_USERNAME=${MONGO_ROOT_USERNAME}
+      - MONGO_PASSWORD=${MONGO_ROOT_PASSWORD}
+    volumes:
+      - ./data:/app/data
+      - ai_logs:/app/logs
+    networks:
+      - jjdc-network
+
+networks:
+  jjdc-network:
+    name: jjdc-network
+    external: true
+
+volumes:
+  ai_logs:

@@ -209,3 +209,6 @@ __marimo__/
 # Server logs
 server.log
 nohup.out
+
+# Local Docker volume mounts
+logs/
