@@ -79,6 +79,16 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      - name: Copy data files to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.AI_INSTANCE_IP }}
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "data/"
+          target: "/home/ubuntu/"
+          overwrite: true
+
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -99,11 +109,9 @@ jobs:
               sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
               sudo usermod -aG docker ubuntu
               echo "Docker installed successfully"
-            else
-              echo "Docker is already installed"
             fi
             
-            cd /home/ubuntu/prod
+            cd /home/ubuntu
             
             # Docker Hub 로그인
             echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
@@ -125,6 +133,7 @@ jobs:
                   - MONGO_PORT=27017
                   - MONGO_USERNAME=${{ secrets.MONGO_ROOT_USERNAME }}
                   - MONGO_PASSWORD=${{ secrets.MONGO_ROOT_PASSWORD }}
+                  - MONGO_DATABASE=${{ secrets.MONGO_DATABASE }}
                 volumes:
                   - ./data:/app/data
                   - ai_logs:/app/logs
@@ -172,8 +181,25 @@ jobs:
             # 네트워크 생성 (없으면)
             docker network inspect jjdc-network >/dev/null 2>&1 || docker network create jjdc-network
             
-            # MongoDB 먼저 시작 (없으면)
+            # MongoDB 시작 및 대기
             docker compose -f docker-compose.mongo.yaml up -d
+            echo "Waiting for MongoDB..." && sleep 8
+            
+            # JSON 데이터 MongoDB에 삽입
+            if [ -f "./data/offers.full.json" ] && [ -f "./data/events.full.json" ]; then
+              echo "Inserting data into MongoDB..."
+              docker cp ./data/offers.full.json jjdc-mongo:/tmp/
+              docker cp ./data/events.full.json jjdc-mongo:/tmp/
+              docker exec jjdc-mongo mongosh -u ${{ secrets.MONGO_ROOT_USERNAME }} -p ${{ secrets.MONGO_ROOT_PASSWORD }} --authenticationDatabase admin ${{ secrets.MONGO_DATABASE }} --quiet --eval "
+                db.offers.drop(); db.events.drop();
+                db.offers.insertMany(JSON.parse(cat('/tmp/offers.full.json')));
+                db.events.insertMany(JSON.parse(cat('/tmp/events.full.json')));
+                print('Inserted: ' + db.offers.countDocuments() + ' offers, ' + db.events.countDocuments() + ' events');
+              "
+              docker exec jjdc-mongo rm -f /tmp/offers.full.json /tmp/events.full.json
+            else
+              echo "JSON files not found, skipping"
+            fi
             
             # AI 서버 이미지 pull 및 컨테이너 재시작
             docker compose -f docker-compose.ai.yaml pull ai-server

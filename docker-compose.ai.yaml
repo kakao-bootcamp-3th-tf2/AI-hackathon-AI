@@ -12,6 +12,7 @@ services:
       - MONGO_PORT=${MONGO_PORT}
       - MONGO_USERNAME=${MONGO_ROOT_USERNAME}
       - MONGO_PASSWORD=${MONGO_ROOT_PASSWORD}
+      - MONGO_DATABASE=${MONGO_DATABASE}
     volumes:
       - ./data:/app/data
       - ai_logs:/app/logs
