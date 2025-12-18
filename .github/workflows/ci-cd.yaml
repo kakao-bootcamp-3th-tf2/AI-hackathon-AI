@@ -6,7 +6,7 @@ on:
       - '**'
   push:
     branches:
-      - '**'
+      - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -86,11 +86,13 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            set -euo pipefail
-
-            # Docker 설치 여부 체크 및 설치
+            set -e
+            
+            cd /home/ubuntu
+            
+            # Docker 설치 여부 체크
             if ! command -v docker &> /dev/null; then
-              echo "Docker not found. Installing..."
+              echo "Installing Docker..."
               sudo apt-get update
               sudo apt-get install -y ca-certificates curl gnupg
               sudo install -m 0755 -d /etc/apt/keyrings
@@ -100,101 +102,85 @@ jobs:
               sudo apt-get update
               sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
               sudo usermod -aG docker ubuntu
-              echo "Docker installed successfully"
             fi
-            
-            cd /home/ubuntu
             
             # Docker Hub 로그인
             echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
             
-            # docker-compose.ai.yaml 생성
-            cat > docker-compose.ai.yaml << 'EOF'
-            services:
-              ai-server:
-                image: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME_AI }}:latest
-                container_name: jjdc-ai
-                restart: unless-stopped
-                ports:
-                  - "8000:8000"
-                environment:
-                  - OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
-                  - ALLOWED_ORIGINS=${{ secrets.ALLOWED_ORIGINS }}
-                  - MONGO_HOST=jjdc-mongo
-                  - MONGO_PORT=27017
-                  - MONGO_USERNAME=${{ secrets.MONGO_ROOT_USERNAME }}
-                  - MONGO_PASSWORD=${{ secrets.MONGO_ROOT_PASSWORD }}
-                  - MONGO_DATABASE=${{ secrets.MONGO_DATABASE }}
-                volumes:
-                  - ai_logs:/app/logs
-                networks:
-                  - jjdc-network
-
-            networks:
-              jjdc-network:
-                name: jjdc-network
-                external: true
-
-            volumes:
-              ai_logs:
-            EOF
-            
-            # docker-compose.mongo.yaml 생성
-            cat > docker-compose.mongo.yaml << 'EOF'
-            services:
-              mongo:
-                image: mongo:6.0
-                platform: linux/arm64
-                container_name: jjdc-mongo
-                restart: unless-stopped
-                ports:
-                  - "27017:27017"
-                environment:
-                  - MONGO_INITDB_ROOT_USERNAME=${{ secrets.MONGO_ROOT_USERNAME }}
-                  - MONGO_INITDB_ROOT_PASSWORD=${{ secrets.MONGO_ROOT_PASSWORD }}
-                volumes:
-                  - mongo_data:/data/db
-                  - mongo_logs:/var/log/mongodb
-                networks:
-                  - jjdc-network
-
-            networks:
-              jjdc-network:
-                name: jjdc-network
-                external: true
-
-            volumes:
-              mongo_data:
-              mongo_logs:
-            EOF
-            
-            # 네트워크 생성 (없으면)
+            # 네트워크 생성
             docker network inspect jjdc-network >/dev/null 2>&1 || docker network create jjdc-network
             
-            # MongoDB 시작
-            docker compose -f docker-compose.mongo.yaml up -d
+            # 1. MongoDB 컨테이너 시작
+            docker pull mongo:6.0
+            docker stop jjdc-mongo 2>/dev/null || true
+            docker rm jjdc-mongo 2>/dev/null || true
+            docker run -d \
+              --name jjdc-mongo \
+              --network jjdc-network \
+              --restart unless-stopped \
+              -p 27017:27017 \
+              -e MONGO_INITDB_ROOT_USERNAME=${{ secrets.MONGO_ROOT_USERNAME }} \
+              -e MONGO_INITDB_ROOT_PASSWORD=${{ secrets.MONGO_ROOT_PASSWORD }} \
+              -v mongo_data:/data/db \
+              -v mongo_logs:/var/log/mongodb \
+              mongo:6.0
             
-            # AI 서버 이미지 pull 및 시작
-            docker compose -f docker-compose.ai.yaml pull ai-server
-            docker compose -f docker-compose.ai.yaml up -d --force-recreate --remove-orphans ai-server
+            # 2. AI 이미지 pull 및 data 파일 추출 (임시 컨테이너 사용)
+            AI_IMAGE="${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME_AI }}:latest"
+            docker pull $AI_IMAGE
             
-            # MongoDB 대기 후 AI 컨테이너 내부 data를 MongoDB에 삽입
-            echo "Waiting for MongoDB..." && sleep 8
-            echo "Checking data files in AI container..."
-            docker exec jjdc-ai ls -la /app/data
-
-            docker cp jjdc-ai:/app/data/offers.full.json jjdc-mongo:/tmp/offers.full.json
-            docker cp jjdc-ai:/app/data/events.full.json jjdc-mongo:/tmp/events.full.json
-
-            docker exec jjdc-mongo mongosh -u ${{ secrets.MONGO_ROOT_USERNAME }} -p ${{ secrets.MONGO_ROOT_PASSWORD }} --authenticationDatabase admin ${{ secrets.MONGO_DATABASE }} --quiet --eval "
-              const fs = require('fs');
-              const offers = JSON.parse(fs.readFileSync('/tmp/offers.full.json', 'utf8'));
-              const events = JSON.parse(fs.readFileSync('/tmp/events.full.json', 'utf8'));
-              db.offers.drop(); db.events.drop();
-              if (Array.isArray(offers) && offers.length) db.offers.insertMany(offers);
-              if (Array.isArray(events) && events.length) db.events.insertMany(events);
-              print('Inserted: ' + db.offers.countDocuments() + ' offers, ' + db.events.countDocuments() + ' events');
-            "
+            docker rm temp-data-extractor 2>/dev/null || true
+            docker create --name temp-data-extractor $AI_IMAGE
+            docker cp temp-data-extractor:/app/data/offers.full.json /tmp/offers.full.json
+            docker cp temp-data-extractor:/app/data/events.full.json /tmp/events.full.json
+            docker rm temp-data-extractor
+            
+            echo "Data files extracted:"
+            ls -la /tmp/*.full.json
+            
+            # 3. MongoDB 준비 대기 후 데이터 삽입
+            echo "Waiting for MongoDB to be ready..."
+            sleep 10
+            
+            docker cp /tmp/offers.full.json jjdc-mongo:/tmp/offers.full.json
+            docker cp /tmp/events.full.json jjdc-mongo:/tmp/events.full.json
+            
+            docker exec jjdc-mongo mongosh \
+              -u ${{ secrets.MONGO_ROOT_USERNAME }} \
+              -p ${{ secrets.MONGO_ROOT_PASSWORD }} \
+              --authenticationDatabase admin \
+              ${{ secrets.MONGO_DATABASE }} \
+              --quiet \
+              --eval '
+                db.offers.drop();
+                db.events.drop();
+                var offers = JSON.parse(cat("/tmp/offers.full.json"));
+                var events = JSON.parse(cat("/tmp/events.full.json"));
+                db.offers.insertMany(offers);
+                db.events.insertMany(events);
+                print("Inserted: " + db.offers.countDocuments() + " offers, " + db.events.countDocuments() + " events");
+              '
+            
             docker exec jjdc-mongo rm -f /tmp/offers.full.json /tmp/events.full.json
+            rm -f /tmp/offers.full.json /tmp/events.full.json
             
-            echo "AI + MongoDB Deployment completed successfully"
+            # 4. AI 서버 컨테이너 시작
+            docker stop jjdc-ai 2>/dev/null || true
+            docker rm jjdc-ai 2>/dev/null || true
+            docker run -d \
+              --name jjdc-ai \
+              --network jjdc-network \
+              --restart unless-stopped \
+              -p 8000:8000 \
+              -e OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} \
+              -e ALLOWED_ORIGINS=${{ secrets.ALLOWED_ORIGINS }} \
+              -e MONGO_HOST=jjdc-mongo \
+              -e MONGO_PORT=27017 \
+              -e MONGO_USERNAME=${{ secrets.MONGO_ROOT_USERNAME }} \
+              -e MONGO_PASSWORD=${{ secrets.MONGO_ROOT_PASSWORD }} \
+              -e MONGO_DATABASE=${{ secrets.MONGO_DATABASE }} \
+              -v ai_logs:/app/logs \
+              $AI_IMAGE
+            
+            echo "Deployment completed successfully!"
+            docker ps
