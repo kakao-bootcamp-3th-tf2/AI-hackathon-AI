@@ -1,1463 +1,264 @@
 [
   {
-    "id": "event_001_telecom",
-    "type": "event",
-    "title": "Starbucks 아메리카노 Short 무료 (VIP)",
-    "brand": "Starbucks",
-    "category": "Cafe",
-    "validity": {
-      "start": "2025-12-01",
-      "end": "2026-01-31"
-    },
-    "channels": [
-      "offline",
-      "app"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "KT",
-        "LGU+"
-      ]
-    },
-    "notes": "겨울 시즌 한정 음료 출시 및 굿즈 증정 이벤트",
-    "source": {
-      "url": "https://starbucks.co.kr/event/winter2025",
-      "provider": "Starbucks Korea"
-    },
-    "benefit": {
-      "kind": "free",
-      "value": 4000,
-      "min_spend": 0,
-      "max_benefit": 4000
-    }
-  },
-  {
     "id": "event_001_card",
     "type": "event",
-    "title": "Starbucks 5000원 이상 결제 시 1000원 캐시백",
-    "brand": "Starbucks",
-    "category": "Cafe",
+    "title": "Coupang Black Friday Encore (카드사)",
+    "brand": "Coupang",
+    "category": "ECommerce",
     "validity": {
-      "start": "2025-12-01",
-      "end": "2026-01-31"
+      "start": "2025-12-17",
+      "end": "2026-02-05"
     },
     "channels": [
       "offline",
-      "app"
+      "online"
     ],
     "eligibility": {
       "cards_any_of": [
-        "ShinhanCheck",
-        "KB_NaraSarang",
-        "HyundaiCard"
+        "HanaCard",
+        "NaverPay",
+        "SamsungCard"
       ]
     },
-    "notes": "겨울 시즌 한정 음료 출시 및 굿즈 증정 이벤트",
+    "notes": "Experience the Black Friday Encore at Coupang. Limited time offer.",
     "source": {
-      "url": "https://starbucks.co.kr/event/winter2025",
-      "provider": "Starbucks Korea"
+      "url": "https://coupang.com/event/blackfridayencore",
+      "provider": "Coupang Corp"
     },
     "benefit": {
-      "kind": "fixed_amount",
-      "value": 1000,
-      "min_spend": 5000,
-      "max_benefit": 1000
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 30000
     }
   },
   {
     "id": "event_002_telecom",
     "type": "event",
-    "title": "OliveYoung 연말 뷰티 페스티벌 (통신사)",
-    "brand": "OliveYoung",
-    "category": "Beauty",
+    "title": "Kurly Exclusive Pop-up (통신사)",
+    "brand": "Kurly",
+    "category": "ECommerce",
     "validity": {
-      "start": "2025-12-10",
-      "end": "2025-12-31"
+      "start": "2025-12-15",
+      "end": "2026-02-12"
     },
     "channels": [
       "offline",
-      "online",
-      "app"
+      "app",
+      "online"
     ],
     "eligibility": {
       "telecom_any_of": [
-        "SKT",
         "KT"
       ]
     },
-    "notes": "전 품목 최대 50% 할인, 추가 쿠폰 제공 및 사은품 증정",
+    "notes": "Experience the Exclusive Pop-up at Kurly. Limited time offer.",
     "source": {
-      "url": "https://oliveyoung.co.kr/event/beautyfest",
-      "provider": "CJ Olive Young"
+      "url": "https://kurly.com/event/exclusivepop-up",
+      "provider": "Kurly Corp"
     },
     "benefit": {
-      "value": 100
+      "kind": "gift",
+      "value": 0,
+      "description": "Diary"
     }
   },
   {
     "id": "event_002_card",
     "type": "event",
-    "title": "OliveYoung 연말 뷰티 페스티벌 (카드)",
-    "brand": "OliveYoung",
-    "category": "Beauty",
+    "title": "Kurly Member Appreciation Day (카드사)",
+    "brand": "Kurly",
+    "category": "ECommerce",
     "validity": {
-      "start": "2025-12-10",
-      "end": "2025-12-31"
+      "start": "2025-12-06",
+      "end": "2026-01-13"
     },
     "channels": [
-      "offline",
-      "online",
-      "app"
+      "offline"
     ],
     "eligibility": {
       "cards_any_of": [
-        "ShinhanCheck",
-        "KB_NaraSarang",
-        "LotteCard"
+        "SamsungCard",
+        "KBCard"
       ]
     },
-    "notes": "전 품목 최대 50% 할인, 추가 쿠폰 제공 및 사은품 증정",
+    "notes": "Experience the Member Appreciation Day at Kurly. Limited time offer.",
     "source": {
-      "url": "https://oliveyoung.co.kr/event/beautyfest",
-      "provider": "CJ Olive Young"
+      "url": "https://kurly.com/event/memberappreciationday",
+      "provider": "Kurly Corp"
     },
     "benefit": {
-      "value": 100
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
     }
   },
   {
     "id": "event_003_telecom",
     "type": "event",
-    "title": "Samsung Galaxy S25 사전예약 (통신사)",
-    "brand": "Samsung",
-    "category": "Electronics",
+    "title": "Baemin Seasonal Clearance (통신사)",
+    "brand": "Baemin",
+    "category": "Delivery",
     "validity": {
-      "start": "2025-12-15",
-      "end": "2026-01-15"
+      "start": "2025-12-12",
+      "end": "2026-01-09"
     },
     "channels": [
-      "online",
-      "offline"
+      "offline",
+      "app",
+      "online"
     ],
     "eligibility": {
       "telecom_any_of": [
         "SKT",
-        "KT",
-        "LGU+"
+        "LGU+",
+        "KT"
       ]
     },
-    "notes": "사전 예약 고객 대상 특별 혜택 및 액세서리 증정",
+    "notes": "Experience the Seasonal Clearance at Baemin. Limited time offer.",
     "source": {
-      "url": "https://samsung.com/kr/event/s25preorder",
-      "provider": "Samsung Electronics"
+      "url": "https://baemin.com/event/seasonalclearance",
+      "provider": "Baemin Corp"
     },
     "benefit": {
-      "value": 100
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
     }
   },
   {
     "id": "event_003_card",
     "type": "event",
-    "title": "Samsung Galaxy S25 사전예약 (카드)",
-    "brand": "Samsung",
-    "category": "Electronics",
+    "title": "Baemin Black Friday Encore (카드사)",
+    "brand": "Baemin",
+    "category": "Delivery",
     "validity": {
-      "start": "2025-12-15",
-      "end": "2026-01-15"
+      "start": "2025-12-11",
+      "end": "2026-01-28"
     },
     "channels": [
-      "online",
-      "offline"
+      "app",
+      "online"
     ],
     "eligibility": {
       "cards_any_of": [
-        "SamsungCard",
-        "HyundaiCard",
-        "ShinhanCheck"
+        "KBCard"
       ]
     },
-    "notes": "사전 예약 고객 대상 특별 혜택 및 액세서리 증정",
+    "notes": "Experience the Black Friday Encore at Baemin. Limited time offer.",
     "source": {
-      "url": "https://samsung.com/kr/event/s25preorder",
-      "provider": "Samsung Electronics"
+      "url": "https://baemin.com/event/blackfridayencore",
+      "provider": "Baemin Corp"
     },
     "benefit": {
-      "value": 100
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
     }
   },
   {
     "id": "event_004_telecom",
     "type": "event",
-    "title": "Lotte 백화점 연말 대축제 (통신사)",
-    "brand": "Lotte",
-    "category": "Department",
+    "title": "Hyundai Holiday Gift Guide (통신사)",
+    "brand": "Hyundai",
+    "category": "Shopping",
     "validity": {
-      "start": "2025-11-25",
-      "end": "2026-01-05"
+      "start": "2025-12-14",
+      "end": "2026-01-06"
     },
     "channels": [
-      "offline",
-      "online"
+      "offline"
     ],
     "eligibility": {
       "telecom_any_of": [
+        "LGU+",
         "SKT",
-        "LGU+"
+        "KT"
       ]
     },
-    "notes": "전 품목 최대 70% 할인, VIP 고객 추가 혜택 제공",
+    "notes": "Experience the Holiday Gift Guide at Hyundai. Limited time offer.",
     "source": {
-      "url": "https://lotte.com/event/yearend2025",
-      "provider": "Lotte Shopping"
+      "url": "https://hyundai.com/event/holidaygiftguide",
+      "provider": "Hyundai Corp"
     },
     "benefit": {
-      "value": 100
+      "kind": "cashback",
+      "value": 10000,
+      "min_spend": 100000
     }
   },
   {
     "id": "event_004_card",
     "type": "event",
-    "title": "Lotte 백화점 연말 대축제 (카드)",
-    "brand": "Lotte",
-    "category": "Department",
+    "title": "Hyundai Year-End Sale (카드사)",
+    "brand": "Hyundai",
+    "category": "Shopping",
     "validity": {
-      "start": "2025-11-25",
-      "end": "2026-01-05"
+      "start": "2025-12-12",
+      "end": "2026-01-31"
     },
     "channels": [
-      "offline",
-      "online"
+      "app"
     ],
     "eligibility": {
       "cards_any_of": [
-        "LotteCard",
-        "HyundaiCard",
-        "KB_NaraSarang"
+        "HanaCard",
+        "KBCard"
       ]
     },
-    "notes": "전 품목 최대 70% 할인, VIP 고객 추가 혜택 제공",
+    "notes": "Experience the Year-End Sale at Hyundai. Limited time offer.",
     "source": {
-      "url": "https://lotte.com/event/yearend2025",
-      "provider": "Lotte Shopping"
+      "url": "https://hyundai.com/event/year-endsale",
+      "provider": "Hyundai Corp"
     },
     "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_005_telecom",
-    "type": "event",
-    "title": "CU VIP 도시락 무료 증정 쿠폰",
-    "brand": "CU",
-    "category": "Convenience",
-    "validity": {
-      "start": "2025-12-20",
-      "end": "2025-12-26"
-    },
-    "channels": [
-      "offline"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT"
-      ]
-    },
-    "notes": "크리스마스 한정 상품 출시 및 2+1 행사",
-    "source": {
-      "url": "https://cu.co.kr/event/christmas",
-      "provider": "BGF Retail"
-    },
-    "benefit": {
-      "kind": "free",
-      "value": 4500,
-      "min_spend": 0,
-      "max_benefit": 4500
+      "kind": "points",
+      "value": 10000,
+      "min_spend": 50000
     }
   },
   {
     "id": "event_005_card",
     "type": "event",
-    "title": "CU BC페이북 QR결제 시 500원 할인",
-    "brand": "CU",
-    "category": "Convenience",
+    "title": "Netflix Anniversary Special (카드사)",
+    "brand": "Netflix",
+    "category": "Subscription",
     "validity": {
-      "start": "2025-12-20",
-      "end": "2025-12-26"
+      "start": "2025-12-14",
+      "end": "2026-02-11"
     },
     "channels": [
-      "offline"
+      "offline",
+      "online",
+      "app"
     ],
     "eligibility": {
       "cards_any_of": [
-        "KB_NaraSarang",
         "SamsungCard"
       ]
     },
-    "notes": "크리스마스 한정 상품 출시 및 2+1 행사",
+    "notes": "Experience the Anniversary Special at Netflix. Limited time offer.",
     "source": {
-      "url": "https://cu.co.kr/event/christmas",
-      "provider": "BGF Retail"
+      "url": "https://netflix.com/event/anniversaryspecial",
+      "provider": "Netflix Corp"
     },
     "benefit": {
-      "kind": "fixed_amount",
-      "value": 500,
-      "min_spend": 3000,
-      "max_benefit": 500
+      "kind": "points",
+      "value": 20000,
+      "min_spend": 50000
     }
   },
   {
     "id": "event_006_telecom",
     "type": "event",
-    "title": "Baemin 배달 페스티벌 (통신사)",
-    "brand": "Baemin",
+    "title": "CoupangEats Seasonal Clearance (통신사)",
+    "brand": "CoupangEats",
     "category": "Delivery",
     "validity": {
-      "start": "2025-12-01",
-      "end": "2025-12-31"
-    },
-    "channels": [
-      "app"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "KT"
-      ]
-    },
-    "notes": "인기 맛집 최대 5000원 할인 쿠폰 매일 발급",
-    "source": {
-      "url": "https://baemin.com/event/festival",
-      "provider": "Woowa Brothers"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_006_card",
-    "type": "event",
-    "title": "Baemin 배달 페스티벌 (카드)",
-    "brand": "Baemin",
-    "category": "Delivery",
-    "validity": {
-      "start": "2025-12-01",
-      "end": "2025-12-31"
-    },
-    "channels": [
-      "app"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "SamsungCard",
-        "HanaCard",
-        "WooriCard"
-      ]
-    },
-    "notes": "인기 맛집 최대 5000원 할인 쿠폰 매일 발급",
-    "source": {
-      "url": "https://baemin.com/event/festival",
-      "provider": "Woowa Brothers"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_007_telecom",
-    "type": "event",
-    "title": "Coupang 멤버십 포인트 3000점 적립",
-    "brand": "Coupang",
-    "category": "ECommerce",
-    "validity": {
-      "start": "2025-11-20",
-      "end": "2025-12-20"
-    },
-    "channels": [
-      "app",
-      "online"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "KT",
-        "LGU+"
-      ]
-    },
-    "notes": "로켓배송 상품 추가 할인 및 무료배송 쿠폰 제공",
-    "source": {
-      "url": "https://coupang.com/event/rocketday",
-      "provider": "Coupang Corp"
-    },
-    "benefit": {
-      "kind": "fixed_amount",
-      "value": 3000,
-      "min_spend": 30000,
-      "max_benefit": 3000
-    }
-  },
-  {
-    "id": "event_007_card",
-    "type": "event",
-    "title": "Coupang 와우카드 4% 적립",
-    "brand": "Coupang",
-    "category": "ECommerce",
-    "validity": {
-      "start": "2025-11-20",
-      "end": "2025-12-20"
-    },
-    "channels": [
-      "app",
-      "online"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "KB_NaraSarang",
-        "WooriCard",
-        "CitiCard"
-      ]
-    },
-    "notes": "로켓배송 상품 추가 할인 및 무료배송 쿠폰 제공",
-    "source": {
-      "url": "https://coupang.com/event/rocketday",
-      "provider": "Coupang Corp"
-    },
-    "benefit": {
-      "kind": "percent",
-      "value": 4,
-      "min_spend": 10000,
-      "max_benefit": 10000
-    }
-  },
-  {
-    "id": "event_008_telecom",
-    "type": "event",
-    "title": "McDonalds 해피밀 페스티벌 (통신사)",
-    "brand": "McDonalds",
-    "category": "FastFood",
-    "validity": {
-      "start": "2025-12-05",
-      "end": "2026-01-05"
-    },
-    "channels": [
-      "offline",
-      "app"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "KT",
-        "LGU+"
-      ]
-    },
-    "notes": "해피밀 구매 시 인기 캐릭터 장난감 증정",
-    "source": {
-      "url": "https://mcdonalds.co.kr/event/happymeal",
-      "provider": "McDonald's Korea"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_008_card",
-    "type": "event",
-    "title": "McDonalds 해피밀 페스티벌 (카드)",
-    "brand": "McDonalds",
-    "category": "FastFood",
-    "validity": {
-      "start": "2025-12-05",
-      "end": "2026-01-05"
-    },
-    "channels": [
-      "offline",
-      "app"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "HyundaiCard",
-        "LotteCard"
-      ]
-    },
-    "notes": "해피밀 구매 시 인기 캐릭터 장난감 증정",
-    "source": {
-      "url": "https://mcdonalds.co.kr/event/happymeal",
-      "provider": "McDonald's Korea"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_009_telecom",
-    "type": "event",
-    "title": "Ediya 겨울 신메뉴 출시 (통신사)",
-    "brand": "Ediya",
-    "category": "Cafe",
-    "validity": {
-      "start": "2025-11-15",
-      "end": "2025-12-31"
-    },
-    "channels": [
-      "offline",
-      "app"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "LGU+"
-      ]
-    },
-    "notes": "겨울 한정 음료 3종 출시 및 시음 이벤트 진행",
-    "source": {
-      "url": "https://ediya.com/event/winter",
-      "provider": "Ediya Coffee"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_009_card",
-    "type": "event",
-    "title": "Ediya 겨울 신메뉴 출시 (카드)",
-    "brand": "Ediya",
-    "category": "Cafe",
-    "validity": {
-      "start": "2025-11-15",
-      "end": "2025-12-31"
-    },
-    "channels": [
-      "offline",
-      "app"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "LotteCard",
-        "HanaCard",
-        "SamsungCard"
-      ]
-    },
-    "notes": "겨울 한정 음료 3종 출시 및 시음 이벤트 진행",
-    "source": {
-      "url": "https://ediya.com/event/winter",
-      "provider": "Ediya Coffee"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_010_telecom",
-    "type": "event",
-    "title": "Apple 연말 쇼핑 이벤트 (통신사)",
-    "brand": "Apple",
-    "category": "Electronics",
-    "validity": {
-      "start": "2025-11-28",
+      "start": "2025-12-16",
       "end": "2026-01-02"
     },
     "channels": [
-      "online",
-      "offline"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "KT"
-      ]
-    },
-    "notes": "선정 제품 구매 시 기프트 카드 증정 및 무이자 할부",
-    "source": {
-      "url": "https://apple.com/kr/shop/event/holiday",
-      "provider": "Apple Korea"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_010_card",
-    "type": "event",
-    "title": "Apple 연말 쇼핑 이벤트 (카드)",
-    "brand": "Apple",
-    "category": "Electronics",
-    "validity": {
-      "start": "2025-11-28",
-      "end": "2026-01-02"
-    },
-    "channels": [
-      "online",
-      "offline"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "HyundaiCard",
-        "KB_NaraSarang",
-        "ShinhanCheck"
-      ]
-    },
-    "notes": "선정 제품 구매 시 기프트 카드 증정 및 무이자 할부",
-    "source": {
-      "url": "https://apple.com/kr/shop/event/holiday",
-      "provider": "Apple Korea"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_011_telecom",
-    "type": "event",
-    "title": "Netflix 오리지널 시리즈 특별 프로모션 (통신사)",
-    "brand": "Netflix",
-    "category": "Subscription",
-    "validity": {
-      "start": "2025-12-01",
-      "end": "2026-01-31"
-    },
-    "channels": [
       "app",
-      "online"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "LGU+"
-      ]
-    },
-    "notes": "신규 가입자 대상 첫 달 무료 및 오리지널 굿즈 증정",
-    "source": {
-      "url": "https://netflix.com/kr/event/originals",
-      "provider": "Netflix Korea"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_011_card",
-    "type": "event",
-    "title": "Netflix 오리지널 시리즈 특별 프로모션 (카드)",
-    "brand": "Netflix",
-    "category": "Subscription",
-    "validity": {
-      "start": "2025-12-01",
-      "end": "2026-01-31"
-    },
-    "channels": [
-      "app",
-      "online"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "ShinhanCheck",
-        "LotteCard",
-        "CitiCard"
-      ]
-    },
-    "notes": "신규 가입자 대상 첫 달 무료 및 오리지널 굿즈 증정",
-    "source": {
-      "url": "https://netflix.com/kr/event/originals",
-      "provider": "Netflix Korea"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_012_telecom",
-    "type": "event",
-    "title": "Naver 쇼핑 라이브 위크 (통신사)",
-    "brand": "Naver",
-    "category": "ECommerce",
-    "validity": {
-      "start": "2025-12-10",
-      "end": "2025-12-17"
-    },
-    "channels": [
-      "app",
-      "online"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "KT",
-        "LGU+"
-      ]
-    },
-    "notes": "라이브 방송 중 특가 상품 판매 및 추가 쿠폰 발급",
-    "source": {
-      "url": "https://shopping.naver.com/event/liveweek",
-      "provider": "Naver Corp"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_012_card",
-    "type": "event",
-    "title": "Naver 쇼핑 라이브 위크 (카드)",
-    "brand": "Naver",
-    "category": "ECommerce",
-    "validity": {
-      "start": "2025-12-10",
-      "end": "2025-12-17"
-    },
-    "channels": [
-      "app",
-      "online"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "ShinhanCheck",
-        "HanaCard",
-        "KB_NaraSarang"
-      ]
-    },
-    "notes": "라이브 방송 중 특가 상품 판매 및 추가 쿠폰 발급",
-    "source": {
-      "url": "https://shopping.naver.com/event/liveweek",
-      "provider": "Naver Corp"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_013_telecom",
-    "type": "event",
-    "title": "Kakao Friends 팝업스토어 (통신사)",
-    "brand": "Kakao",
-    "category": "ECommerce",
-    "validity": {
-      "start": "2025-12-15",
-      "end": "2026-01-15"
-    },
-    "channels": [
-      "offline"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "KT"
-      ]
-    },
-    "notes": "한정판 굿즈 판매 및 포토존 운영, 방문 고객 사은품 증정",
-    "source": {
-      "url": "https://store.kakaofriends.com/event/popup",
-      "provider": "Kakao Corp"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_013_card",
-    "type": "event",
-    "title": "Kakao Friends 팝업스토어 (카드)",
-    "brand": "Kakao",
-    "category": "ECommerce",
-    "validity": {
-      "start": "2025-12-15",
-      "end": "2026-01-15"
-    },
-    "channels": [
-      "offline"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "ShinhanCheck",
-        "LotteCard",
-        "SamsungCard"
-      ]
-    },
-    "notes": "한정판 굿즈 판매 및 포토존 운영, 방문 고객 사은품 증정",
-    "source": {
-      "url": "https://store.kakaofriends.com/event/popup",
-      "provider": "Kakao Corp"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_014_telecom",
-    "type": "event",
-    "title": "GS25 멤버십 10% 할인 (최대 1000원)",
-    "brand": "GS25",
-    "category": "Convenience",
-    "validity": {
-      "start": "2025-11-25",
-      "end": "2025-12-25"
-    },
-    "channels": [
-      "offline",
-      "app"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "KT"
-      ]
-    },
-    "notes": "신상 도시락 출시 및 구매 고객 대상 음료 1+1 증정",
-    "source": {
-      "url": "https://gs25.gsretail.com/event/lunchbox",
-      "provider": "GS Retail"
-    },
-    "benefit": {
-      "kind": "percent",
-      "value": 10,
-      "min_spend": 1000,
-      "max_benefit": 1000
-    }
-  },
-  {
-    "id": "event_014_card",
-    "type": "event",
-    "title": "GS25 행사상품 1+1 및 추가 10% 할인",
-    "brand": "GS25",
-    "category": "Convenience",
-    "validity": {
-      "start": "2025-11-25",
-      "end": "2025-12-25"
-    },
-    "channels": [
-      "offline",
-      "app"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "ShinhanCheck",
-        "CitiCard",
-        "KB_NaraSarang"
-      ]
-    },
-    "notes": "신상 도시락 출시 및 구매 고객 대상 음료 1+1 증정",
-    "source": {
-      "url": "https://gs25.gsretail.com/event/lunchbox",
-      "provider": "GS Retail"
-    },
-    "benefit": {
-      "kind": "percent",
-      "value": 10,
-      "min_spend": 5000,
-      "max_benefit": 2000
-    }
-  },
-  {
-    "id": "event_015_telecom",
-    "type": "event",
-    "title": "Shinsegae 통신사 VIP 음료쿠폰 2매",
-    "brand": "Shinsegae",
-    "category": "Department",
-    "validity": {
-      "start": "2025-12-26",
-      "end": "2026-01-31"
-    },
-    "channels": [
-      "offline",
-      "online"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "KT",
-        "LGU+"
-      ]
-    },
-    "notes": "전 품목 최대 80% 할인, 럭키박스 이벤트 진행",
-    "source": {
-      "url": "https://shinsegae.com/event/newyear",
-      "provider": "Shinsegae Department Store"
-    },
-    "benefit": {
-      "kind": "free",
-      "value": 10000,
-      "min_spend": 0,
-      "max_benefit": 10000
-    }
-  },
-  {
-    "id": "event_015_card",
-    "type": "event",
-    "title": "Shinsegae 제휴카드 5% 전자쿠폰 할인",
-    "brand": "Shinsegae",
-    "category": "Department",
-    "validity": {
-      "start": "2025-12-26",
-      "end": "2026-01-31"
-    },
-    "channels": [
-      "offline",
-      "online"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "ShinhanCheck",
-        "KB_NaraSarang",
-        "HyundaiCard"
-      ]
-    },
-    "notes": "전 품목 최대 80% 할인, 럭키박스 이벤트 진행",
-    "source": {
-      "url": "https://shinsegae.com/event/newyear",
-      "provider": "Shinsegae Department Store"
-    },
-    "benefit": {
-      "kind": "percent",
-      "value": 5,
-      "min_spend": 50000,
-      "max_benefit": 50000
-    }
-  },
-  {
-    "id": "event_016_telecom",
-    "type": "event",
-    "title": "Homeplus 신선식품 위크 (통신사)",
-    "brand": "Homeplus",
-    "category": "Grocery",
-    "validity": {
-      "start": "2025-12-01",
-      "end": "2025-12-15"
-    },
-    "channels": [
-      "offline"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "LGU+"
-      ]
-    },
-    "notes": "신선식품 특가 판매 및 레시피 북 증정",
-    "source": {
-      "url": "https://homeplus.co.kr/event/freshweek",
-      "provider": "Homeplus"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_016_card",
-    "type": "event",
-    "title": "Homeplus 신선식품 위크 (카드)",
-    "brand": "Homeplus",
-    "category": "Grocery",
-    "validity": {
-      "start": "2025-12-01",
-      "end": "2025-12-15"
-    },
-    "channels": [
-      "offline"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "SamsungCard",
-        "WooriCard"
-      ]
-    },
-    "notes": "신선식품 특가 판매 및 레시피 북 증정",
-    "source": {
-      "url": "https://homeplus.co.kr/event/freshweek",
-      "provider": "Homeplus"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_017_telecom",
-    "type": "event",
-    "title": "Emart 연말 대청소 페스티벌 (통신사)",
-    "brand": "Emart",
-    "category": "Grocery",
-    "validity": {
-      "start": "2025-12-10",
-      "end": "2025-12-31"
-    },
-    "channels": [
-      "offline",
-      "app"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "KT",
-        "LGU+"
-      ]
-    },
-    "notes": "생활용품 및 청소용품 최대 40% 할인",
-    "source": {
-      "url": "https://emart.ssg.com/event/cleaning",
-      "provider": "Shinsegae Emart"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_017_card",
-    "type": "event",
-    "title": "Emart 연말 대청소 페스티벌 (카드)",
-    "brand": "Emart",
-    "category": "Grocery",
-    "validity": {
-      "start": "2025-12-10",
-      "end": "2025-12-31"
-    },
-    "channels": [
-      "offline",
-      "app"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "ShinhanCheck",
-        "CitiCard",
-        "HanaCard"
-      ]
-    },
-    "notes": "생활용품 및 청소용품 최대 40% 할인",
-    "source": {
-      "url": "https://emart.ssg.com/event/cleaning",
-      "provider": "Shinsegae Emart"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_018_telecom",
-    "type": "event",
-    "title": "Daiso 크리스마스 데코 페어 (통신사)",
-    "brand": "Daiso",
-    "category": "Grocery",
-    "validity": {
-      "start": "2025-11-20",
-      "end": "2025-12-25"
-    },
-    "channels": [
-      "offline"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "KT",
-        "LGU+"
-      ]
-    },
-    "notes": "크리스마스 장식용품 특가 판매 및 DIY 키트 증정",
-    "source": {
-      "url": "https://daiso.co.kr/event/christmas",
-      "provider": "Daiso Korea"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_018_card",
-    "type": "event",
-    "title": "Daiso 크리스마스 데코 페어 (카드)",
-    "brand": "Daiso",
-    "category": "Grocery",
-    "validity": {
-      "start": "2025-11-20",
-      "end": "2025-12-25"
-    },
-    "channels": [
-      "offline"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "KB_NaraSarang",
-        "HanaCard",
-        "LotteCard"
-      ]
-    },
-    "notes": "크리스마스 장식용품 특가 판매 및 DIY 키트 증정",
-    "source": {
-      "url": "https://daiso.co.kr/event/christmas",
-      "provider": "Daiso Korea"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_019_telecom",
-    "type": "event",
-    "title": "YouTube Premium 패밀리 플랜 프로모션 (통신사)",
-    "brand": "YouTube",
-    "category": "Subscription",
-    "validity": {
-      "start": "2025-12-01",
-      "end": "2026-01-31"
-    },
-    "channels": [
-      "app",
-      "online"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "KT"
-      ]
-    },
-    "notes": "패밀리 플랜 가입 시 첫 3개월 50% 할인",
-    "source": {
-      "url": "https://youtube.com/premium/family",
-      "provider": "Google Korea"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_019_card",
-    "type": "event",
-    "title": "YouTube Premium 패밀리 플랜 프로모션 (카드)",
-    "brand": "YouTube",
-    "category": "Subscription",
-    "validity": {
-      "start": "2025-12-01",
-      "end": "2026-01-31"
-    },
-    "channels": [
-      "app",
-      "online"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "KB_NaraSarang",
-        "WooriCard",
-        "SamsungCard"
-      ]
-    },
-    "notes": "패밀리 플랜 가입 시 첫 3개월 50% 할인",
-    "source": {
-      "url": "https://youtube.com/premium/family",
-      "provider": "Google Korea"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_020_telecom",
-    "type": "event",
-    "title": "SevenEleven 겨울 간식 페스티벌 (통신사)",
-    "brand": "SevenEleven",
-    "category": "Convenience",
-    "validity": {
-      "start": "2025-11-15",
-      "end": "2025-12-31"
-    },
-    "channels": [
-      "offline",
-      "app"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "LGU+"
-      ]
-    },
-    "notes": "겨울 한정 간식 출시 및 2+1 행사 진행",
-    "source": {
-      "url": "https://7eleven.co.kr/event/wintersnack",
-      "provider": "Korea Seven"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_020_card",
-    "type": "event",
-    "title": "SevenEleven 겨울 간식 페스티벌 (카드)",
-    "brand": "SevenEleven",
-    "category": "Convenience",
-    "validity": {
-      "start": "2025-11-15",
-      "end": "2025-12-31"
-    },
-    "channels": [
-      "offline",
-      "app"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "LotteCard",
-        "SamsungCard",
-        "CitiCard"
-      ]
-    },
-    "notes": "겨울 한정 간식 출시 및 2+1 행사 진행",
-    "source": {
-      "url": "https://7eleven.co.kr/event/wintersnack",
-      "provider": "Korea Seven"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_001_var1_telecom",
-    "type": "event",
-    "title": "Starbucks VIP 무료 사이즈업",
-    "brand": "Starbucks",
-    "category": "Cafe",
-    "validity": {
-      "start": "2026-01-01",
-      "end": "2026-01-15"
-    },
-    "channels": [
-      "offline"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "KT",
-        "LGU+"
-      ]
-    },
-    "notes": "3만원 이상 구매 시 신년 머그컵 증정 (선착순)",
-    "source": {
-      "url": "https://starbucks.co.kr",
-      "provider": "Starbucks"
-    },
-    "benefit": {
-      "kind": "fixed_amount",
-      "value": 500,
-      "min_spend": 4500,
-      "max_benefit": 500
-    }
-  },
-  {
-    "id": "event_001_var1_card",
-    "type": "event",
-    "title": "Starbucks 5000원 이상 결제 시 1000원 캐시백",
-    "brand": "Starbucks",
-    "category": "Cafe",
-    "validity": {
-      "start": "2026-01-01",
-      "end": "2026-01-15"
-    },
-    "channels": [
-      "offline"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "HyundaiCard",
-        "SamsungCard"
-      ]
-    },
-    "notes": "3만원 이상 구매 시 신년 머그컵 증정 (선착순)",
-    "source": {
-      "url": "https://starbucks.co.kr",
-      "provider": "Starbucks"
-    },
-    "benefit": {
-      "kind": "fixed_amount",
-      "value": 1000,
-      "min_spend": 5000,
-      "max_benefit": 1000
-    }
-  },
-  {
-    "id": "event_010_var1_telecom",
-    "type": "event",
-    "title": "Apple iPhone 보상판매 특별전 (통신사)",
-    "brand": "Apple",
-    "category": "Electronics",
-    "validity": {
-      "start": "2025-12-01",
-      "end": "2026-02-28"
-    },
-    "channels": [
-      "offline",
-      "online"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "KT",
-        "LGU+"
-      ]
-    },
-    "notes": "기존 아이폰 반납 시 최대 10만원 추가 보상",
-    "source": {
-      "url": "https://apple.com",
-      "provider": "Apple"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_010_var1_card",
-    "type": "event",
-    "title": "Apple iPhone 보상판매 특별전 (카드)",
-    "brand": "Apple",
-    "category": "Electronics",
-    "validity": {
-      "start": "2025-12-01",
-      "end": "2026-02-28"
-    },
-    "channels": [
-      "offline",
-      "online"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "ShinhanCheck",
-        "KB_NaraSarang"
-      ]
-    },
-    "notes": "기존 아이폰 반납 시 최대 10만원 추가 보상",
-    "source": {
-      "url": "https://apple.com",
-      "provider": "Apple"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_007_var1_telecom",
-    "type": "event",
-    "title": "Coupang 멤버십 포인트 3000점 적립",
-    "brand": "Coupang",
-    "category": "ECommerce",
-    "validity": {
-      "start": "2025-12-05",
-      "end": "2026-01-05"
-    },
-    "channels": [
-      "app"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "SKT",
-        "KT"
-      ]
-    },
-    "notes": "와우 회원 대상 매일 오전 7시 타임딜 오픈",
-    "source": {
-      "url": "https://coupang.com",
-      "provider": "Coupang"
-    },
-    "benefit": {
-      "kind": "fixed_amount",
-      "value": 3000,
-      "min_spend": 30000,
-      "max_benefit": 3000
-    }
-  },
-  {
-    "id": "event_007_var1_card",
-    "type": "event",
-    "title": "Coupang 와우카드 4% 적립",
-    "brand": "Coupang",
-    "category": "ECommerce",
-    "validity": {
-      "start": "2025-12-05",
-      "end": "2026-01-05"
-    },
-    "channels": [
-      "app"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "WooriCard",
-        "HanaCard",
-        "CitiCard"
-      ]
-    },
-    "notes": "와우 회원 대상 매일 오전 7시 타임딜 오픈",
-    "source": {
-      "url": "https://coupang.com",
-      "provider": "Coupang"
-    },
-    "benefit": {
-      "kind": "percent",
-      "value": 4,
-      "min_spend": 10000,
-      "max_benefit": 10000
-    }
-  },
-  {
-    "id": "event_015_var1_telecom",
-    "type": "event",
-    "title": "Shinsegae 통신사 VIP 음료쿠폰 2매",
-    "brand": "Shinsegae",
-    "category": "Department",
-    "validity": {
-      "start": "2025-11-20",
-      "end": "2025-12-20"
-    },
-    "channels": [
-      "offline"
-    ],
-    "eligibility": {
-      "telecom_any_of": [
-        "KT",
-        "LGU+"
-      ]
-    },
-    "notes": "전 점포 5만원 이상 구매 시 5천원 상품권 증정",
-    "source": {
-      "url": "https://shinsegae.com",
-      "provider": "Shinsegae"
-    },
-    "benefit": {
-      "kind": "free",
-      "value": 10000,
-      "min_spend": 0,
-      "max_benefit": 10000
-    }
-  },
-  {
-    "id": "event_015_var1_card",
-    "type": "event",
-    "title": "Shinsegae 제휴카드 5% 전자쿠폰 할인",
-    "brand": "Shinsegae",
-    "category": "Department",
-    "validity": {
-      "start": "2025-11-20",
-      "end": "2025-12-20"
-    },
-    "channels": [
-      "offline"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "SamsungCard",
-        "LotteCard"
-      ]
-    },
-    "notes": "전 점포 5만원 이상 구매 시 5천원 상품권 증정",
-    "source": {
-      "url": "https://shinsegae.com",
-      "provider": "Shinsegae"
-    },
-    "benefit": {
-      "kind": "percent",
-      "value": 5,
-      "min_spend": 50000,
-      "max_benefit": 50000
-    }
-  },
-  {
-    "id": "event_004_var1_telecom",
-    "type": "event",
-    "title": "Lotte 문화센터 수강신청 할인 (통신사)",
-    "brand": "Lotte",
-    "category": "Department",
-    "validity": {
-      "start": "2025-12-01",
-      "end": "2026-02-28"
-    },
-    "channels": [
-      "offline",
       "online"
     ],
     "eligibility": {
@@ -1465,58 +266,30 @@
         "SKT"
       ]
     },
-    "notes": "겨울학기 문화센터 강좌 2개 이상 신청 시 10% 할인",
+    "notes": "Experience the Seasonal Clearance at CoupangEats. Limited time offer.",
     "source": {
-      "url": "https://culture.lotteshopping.com",
-      "provider": "Lotte Culture"
+      "url": "https://coupangeats.com/event/seasonalclearance",
+      "provider": "CoupangEats Corp"
     },
     "benefit": {
-      "value": 100
+      "kind": "cashback",
+      "value": 10000,
+      "min_spend": 30000
     }
   },
   {
-    "id": "event_004_var1_card",
+    "id": "event_007_telecom",
     "type": "event",
-    "title": "Lotte 문화센터 수강신청 할인 (카드)",
-    "brand": "Lotte",
-    "category": "Department",
+    "title": "CGV Seasonal Clearance (통신사)",
+    "brand": "CGV",
+    "category": "Movie",
     "validity": {
-      "start": "2025-12-01",
-      "end": "2026-02-28"
+      "start": "2025-12-08",
+      "end": "2026-01-05"
     },
     "channels": [
       "offline",
       "online"
-    ],
-    "eligibility": {
-      "cards_any_of": [
-        "LotteCard",
-        "KB_NaraSarang"
-      ]
-    },
-    "notes": "겨울학기 문화센터 강좌 2개 이상 신청 시 10% 할인",
-    "source": {
-      "url": "https://culture.lotteshopping.com",
-      "provider": "Lotte Culture"
-    },
-    "benefit": {
-      "value": 100
-    }
-  },
-  {
-    "id": "event_002_var1_telecom",
-    "type": "event",
-    "title": "OliveYoung 블랙프라이데이 연장 (통신사)",
-    "brand": "OliveYoung",
-    "category": "Beauty",
-    "validity": {
-      "start": "2025-11-30",
-      "end": "2025-12-07"
-    },
-    "channels": [
-      "offline",
-      "online",
-      "app"
     ],
     "eligibility": {
       "telecom_any_of": [
@@ -1525,24 +298,900 @@
         "LGU+"
       ]
     },
-    "notes": "인기 품목 앵콜 세일 최대 60%",
+    "notes": "Experience the Seasonal Clearance at CGV. Limited time offer.",
     "source": {
-      "url": "https://oliveyoung.co.kr",
-      "provider": "OliveYoung"
+      "url": "https://cgv.com/event/seasonalclearance",
+      "provider": "CGV Corp"
     },
     "benefit": {
-      "value": 100
+      "kind": "fixed_amount",
+      "value": 10000,
+      "min_spend": 50000
     }
   },
   {
-    "id": "event_002_var1_card",
+    "id": "event_007_card",
     "type": "event",
-    "title": "OliveYoung 블랙프라이데이 연장 (카드)",
+    "title": "CGV Winter Festival (카드사)",
+    "brand": "CGV",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-09"
+    },
+    "channels": [
+      "online",
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KBCard",
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Winter Festival at CGV. Limited time offer.",
+    "source": {
+      "url": "https://cgv.com/event/winterfestival",
+      "provider": "CGV Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_008_card",
+    "type": "event",
+    "title": "Lotteria Grand Opening (카드사)",
+    "brand": "Lotteria",
+    "category": "FastFood",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2025-12-27"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Grand Opening at Lotteria. Limited time offer.",
+    "source": {
+      "url": "https://lotteria.com/event/grandopening",
+      "provider": "Lotteria Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 5000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_009_telecom",
+    "type": "event",
+    "title": "Innisfree Year-End Sale (통신사)",
+    "brand": "Innisfree",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-14",
+      "end": "2026-01-11"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at Innisfree. Limited time offer.",
+    "source": {
+      "url": "https://innisfree.com/event/year-endsale",
+      "provider": "Innisfree Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_009_card",
+    "type": "event",
+    "title": "Innisfree Member Appreciation Day (카드사)",
+    "brand": "Innisfree",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-08",
+      "end": "2026-01-03"
+    },
+    "channels": [
+      "online",
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard",
+        "KakaoPay"
+      ]
+    },
+    "notes": "Experience the Member Appreciation Day at Innisfree. Limited time offer.",
+    "source": {
+      "url": "https://innisfree.com/event/memberappreciationday",
+      "provider": "Innisfree Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "max_benefit": 30000,
+      "min_spend": 20000
+    }
+  },
+  {
+    "id": "event_010_card",
+    "type": "event",
+    "title": "Daiso Grand Opening (카드사)",
+    "brand": "Daiso",
+    "category": "Shopping",
+    "validity": {
+      "start": "2025-12-16",
+      "end": "2026-01-28"
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "NaverPay",
+        "HanaCard",
+        "HyundaiCard"
+      ]
+    },
+    "notes": "Experience the Grand Opening at Daiso. Limited time offer.",
+    "source": {
+      "url": "https://daiso.com/event/grandopening",
+      "provider": "Daiso Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 2000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_011_telecom",
+    "type": "event",
+    "title": "KFC Grand Opening (통신사)",
+    "brand": "KFC",
+    "category": "FastFood",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2026-01-15"
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+",
+        "KT"
+      ]
+    },
+    "notes": "Experience the Grand Opening at KFC. Limited time offer.",
+    "source": {
+      "url": "https://kfc.com/event/grandopening",
+      "provider": "KFC Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Mug Cup"
+    }
+  },
+  {
+    "id": "event_012_card",
+    "type": "event",
+    "title": "CU Winter Festival (카드사)",
+    "brand": "CU",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-11",
+      "end": "2026-01-27"
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay",
+        "KBCard"
+      ]
+    },
+    "notes": "Experience the Winter Festival at CU. Limited time offer.",
+    "source": {
+      "url": "https://cu.com/event/winterfestival",
+      "provider": "CU Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_013_telecom",
+    "type": "event",
+    "title": "Burger King Year-End Sale (통신사)",
+    "brand": "Burger King",
+    "category": "FastFood",
+    "validity": {
+      "start": "2025-12-09",
+      "end": "2026-01-23"
+    },
+    "channels": [
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at Burger King. Limited time offer.",
+    "source": {
+      "url": "https://burgerking.com/event/year-endsale",
+      "provider": "Burger King Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_014_telecom",
+    "type": "event",
+    "title": "Netflix Grand Opening (통신사)",
+    "brand": "Netflix",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-12-19",
+      "end": "2026-02-05"
+    },
+    "channels": [
+      "online",
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Grand Opening at Netflix. Limited time offer.",
+    "source": {
+      "url": "https://netflix.com/event/grandopening",
+      "provider": "Netflix Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 70,
+      "max_benefit": 50000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_014_card",
+    "type": "event",
+    "title": "Netflix Grand Opening (카드사)",
+    "brand": "Netflix",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-12-14",
+      "end": "2026-01-30"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KBCard",
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Grand Opening at Netflix. Limited time offer.",
+    "source": {
+      "url": "https://netflix.com/event/grandopening",
+      "provider": "Netflix Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 5000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_015_telecom",
+    "type": "event",
+    "title": "GS25 Exclusive Pop-up (통신사)",
+    "brand": "GS25",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-07",
+      "end": "2026-01-16"
+    },
+    "channels": [
+      "app",
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at GS25. Limited time offer.",
+    "source": {
+      "url": "https://gs25.com/event/exclusivepop-up",
+      "provider": "GS25 Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_016_card",
+    "type": "event",
+    "title": "Emart24 Year-End Sale (카드사)",
+    "brand": "Emart24",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-11",
+      "end": "2026-02-05"
+    },
+    "channels": [
+      "app",
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KakaoPay",
+        "SamsungCard",
+        "KBCard"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at Emart24. Limited time offer.",
+    "source": {
+      "url": "https://emart24.com/event/year-endsale",
+      "provider": "Emart24 Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 2000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_017_card",
+    "type": "event",
+    "title": "Ediya Member Appreciation Day (카드사)",
+    "brand": "Ediya",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-28"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KakaoPay",
+        "SamsungCard",
+        "HyundaiCard"
+      ]
+    },
+    "notes": "Experience the Member Appreciation Day at Ediya. Limited time offer.",
+    "source": {
+      "url": "https://ediya.com/event/memberappreciationday",
+      "provider": "Ediya Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 20000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_018_card",
+    "type": "event",
+    "title": "7-Eleven Anniversary Special (카드사)",
+    "brand": "7-Eleven",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2025-12-28"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay",
+        "KBCard"
+      ]
+    },
+    "notes": "Experience the Anniversary Special at 7-Eleven. Limited time offer.",
+    "source": {
+      "url": "https://7-eleven.com/event/anniversaryspecial",
+      "provider": "7-Eleven Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 20000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_019_telecom",
+    "type": "event",
+    "title": "CU Black Friday Encore (통신사)",
+    "brand": "CU",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-08",
+      "end": "2026-01-23"
+    },
+    "channels": [
+      "offline",
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at CU. Limited time offer.",
+    "source": {
+      "url": "https://cu.com/event/blackfridayencore",
+      "provider": "CU Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Eco Bag"
+    }
+  },
+  {
+    "id": "event_019_card",
+    "type": "event",
+    "title": "CU Winter Festival (카드사)",
+    "brand": "CU",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-16",
+      "end": "2026-02-02"
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "TossPay",
+        "HanaCard"
+      ]
+    },
+    "notes": "Experience the Winter Festival at CU. Limited time offer.",
+    "source": {
+      "url": "https://cu.com/event/winterfestival",
+      "provider": "CU Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_020_card",
+    "type": "event",
+    "title": "Yogiyo New Year Special (카드사)",
+    "brand": "Yogiyo",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-08",
+      "end": "2026-02-03"
+    },
+    "channels": [
+      "online",
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the New Year Special at Yogiyo. Limited time offer.",
+    "source": {
+      "url": "https://yogiyo.com/event/newyearspecial",
+      "provider": "Yogiyo Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Diary"
+    }
+  },
+  {
+    "id": "event_021_card",
+    "type": "event",
+    "title": "Megabox Exclusive Pop-up (카드사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-06"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/exclusivepop-up",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Sample Kit"
+    }
+  },
+  {
+    "id": "event_022_telecom",
+    "type": "event",
+    "title": "Innisfree Black Friday Encore (통신사)",
+    "brand": "Innisfree",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-08",
+      "end": "2025-12-28"
+    },
+    "channels": [
+      "app",
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Innisfree. Limited time offer.",
+    "source": {
+      "url": "https://innisfree.com/event/blackfridayencore",
+      "provider": "Innisfree Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 50,
+      "max_benefit": 30000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_023_card",
+    "type": "event",
+    "title": "OliveYoung Grand Opening (카드사)",
     "brand": "OliveYoung",
     "category": "Beauty",
     "validity": {
-      "start": "2025-11-30",
-      "end": "2025-12-07"
+      "start": "2025-12-04",
+      "end": "2025-12-21"
+    },
+    "channels": [
+      "offline",
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard",
+        "HyundaiCard",
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Grand Opening at OliveYoung. Limited time offer.",
+    "source": {
+      "url": "https://oliveyoung.com/event/grandopening",
+      "provider": "OliveYoung Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_024_telecom",
+    "type": "event",
+    "title": "Burger King Grand Opening (통신사)",
+    "brand": "Burger King",
+    "category": "FastFood",
+    "validity": {
+      "start": "2025-12-13",
+      "end": "2026-01-02"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Grand Opening at Burger King. Limited time offer.",
+    "source": {
+      "url": "https://burgerking.com/event/grandopening",
+      "provider": "Burger King Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 2000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_024_card",
+    "type": "event",
+    "title": "Burger King Holiday Gift Guide (카드사)",
+    "brand": "Burger King",
+    "category": "FastFood",
+    "validity": {
+      "start": "2025-12-04",
+      "end": "2025-12-24"
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard",
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Holiday Gift Guide at Burger King. Limited time offer.",
+    "source": {
+      "url": "https://burgerking.com/event/holidaygiftguide",
+      "provider": "Burger King Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 50,
+      "max_benefit": 30000,
+      "min_spend": 20000
+    }
+  },
+  {
+    "id": "event_025_telecom",
+    "type": "event",
+    "title": "Burger King Black Friday Encore (통신사)",
+    "brand": "Burger King",
+    "category": "FastFood",
+    "validity": {
+      "start": "2025-12-07",
+      "end": "2026-01-15"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Burger King. Limited time offer.",
+    "source": {
+      "url": "https://burgerking.com/event/blackfridayencore",
+      "provider": "Burger King Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 20000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_026_telecom",
+    "type": "event",
+    "title": "LG Anniversary Special (통신사)",
+    "brand": "LG",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-12",
+      "end": "2026-01-19"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Anniversary Special at LG. Limited time offer.",
+    "source": {
+      "url": "https://lg.com/event/anniversaryspecial",
+      "provider": "LG Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Mug Cup"
+    }
+  },
+  {
+    "id": "event_026_card",
+    "type": "event",
+    "title": "LG Anniversary Special (카드사)",
+    "brand": "LG",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-16",
+      "end": "2026-02-12"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard",
+        "KBCard",
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Anniversary Special at LG. Limited time offer.",
+    "source": {
+      "url": "https://lg.com/event/anniversaryspecial",
+      "provider": "LG Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 2000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_027_card",
+    "type": "event",
+    "title": "Youtube Premium Member Appreciation Day (카드사)",
+    "brand": "Youtube Premium",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-12-04",
+      "end": "2026-01-01"
+    },
+    "channels": [
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Member Appreciation Day at Youtube Premium. Limited time offer.",
+    "source": {
+      "url": "https://youtubepremium.com/event/memberappreciationday",
+      "provider": "Youtube Premium Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 50,
+      "max_benefit": 10000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_028_telecom",
+    "type": "event",
+    "title": "Tous Les Jours New Year Special (통신사)",
+    "brand": "Tous Les Jours",
+    "category": "Bakery",
+    "validity": {
+      "start": "2025-12-06",
+      "end": "2026-01-19"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the New Year Special at Tous Les Jours. Limited time offer.",
+    "source": {
+      "url": "https://touslesjours.com/event/newyearspecial",
+      "provider": "Tous Les Jours Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20,
+      "max_benefit": 10000,
+      "min_spend": 20000
+    }
+  },
+  {
+    "id": "event_029_telecom",
+    "type": "event",
+    "title": "CGV Black Friday Encore (통신사)",
+    "brand": "CGV",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-17",
+      "end": "2026-01-06"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at CGV. Limited time offer.",
+    "source": {
+      "url": "https://cgv.com/event/blackfridayencore",
+      "provider": "CGV Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 30,
+      "max_benefit": 50000,
+      "min_spend": 20000
+    }
+  },
+  {
+    "id": "event_029_card",
+    "type": "event",
+    "title": "CGV Winter Festival (카드사)",
+    "brand": "CGV",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-12",
+      "end": "2026-01-30"
     },
     "channels": [
       "offline",
@@ -1551,17 +1200,2917 @@
     ],
     "eligibility": {
       "cards_any_of": [
-        "ShinhanCheck",
+        "NaverPay",
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Winter Festival at CGV. Limited time offer.",
+    "source": {
+      "url": "https://cgv.com/event/winterfestival",
+      "provider": "CGV Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 30,
+      "max_benefit": 30000,
+      "min_spend": 20000
+    }
+  },
+  {
+    "id": "event_030_telecom",
+    "type": "event",
+    "title": "Youtube Premium Black Friday Encore (통신사)",
+    "brand": "Youtube Premium",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-12-13",
+      "end": "2026-02-10"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Youtube Premium. Limited time offer.",
+    "source": {
+      "url": "https://youtubepremium.com/event/blackfridayencore",
+      "provider": "Youtube Premium Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 20000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_030_card",
+    "type": "event",
+    "title": "Youtube Premium Black Friday Encore (카드사)",
+    "brand": "Youtube Premium",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-12-12",
+      "end": "2026-01-25"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KBCard",
+        "HyundaiCard",
+        "KakaoPay"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Youtube Premium. Limited time offer.",
+    "source": {
+      "url": "https://youtubepremium.com/event/blackfridayencore",
+      "provider": "Youtube Premium Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_031_card",
+    "type": "event",
+    "title": "GS25 Holiday Gift Guide (카드사)",
+    "brand": "GS25",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-14",
+      "end": "2026-01-07"
+    },
+    "channels": [
+      "online",
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay",
+        "NaverPay"
+      ]
+    },
+    "notes": "Experience the Holiday Gift Guide at GS25. Limited time offer.",
+    "source": {
+      "url": "https://gs25.com/event/holidaygiftguide",
+      "provider": "GS25 Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "max_benefit": 10000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_032_card",
+    "type": "event",
+    "title": "OliveYoung Winter Festival (카드사)",
+    "brand": "OliveYoung",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-11",
+      "end": "2026-01-24"
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard",
+        "HanaCard"
+      ]
+    },
+    "notes": "Experience the Winter Festival at OliveYoung. Limited time offer.",
+    "source": {
+      "url": "https://oliveyoung.com/event/winterfestival",
+      "provider": "OliveYoung Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_033_telecom",
+    "type": "event",
+    "title": "Kurly Member Appreciation Day (통신사)",
+    "brand": "Kurly",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-17",
+      "end": "2026-02-03"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Member Appreciation Day at Kurly. Limited time offer.",
+    "source": {
+      "url": "https://kurly.com/event/memberappreciationday",
+      "provider": "Kurly Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "max_benefit": 50000,
+      "min_spend": 20000
+    }
+  },
+  {
+    "id": "event_033_card",
+    "type": "event",
+    "title": "Kurly Exclusive Pop-up (카드사)",
+    "brand": "Kurly",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-04",
+      "end": "2026-02-01"
+    },
+    "channels": [
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard",
+        "KBCard"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at Kurly. Limited time offer.",
+    "source": {
+      "url": "https://kurly.com/event/exclusivepop-up",
+      "provider": "Kurly Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 20000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_034_telecom",
+    "type": "event",
+    "title": "Yogiyo Anniversary Special (통신사)",
+    "brand": "Yogiyo",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-01-23"
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Anniversary Special at Yogiyo. Limited time offer.",
+    "source": {
+      "url": "https://yogiyo.com/event/anniversaryspecial",
+      "provider": "Yogiyo Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20,
+      "max_benefit": 30000,
+      "min_spend": 20000
+    }
+  },
+  {
+    "id": "event_034_card",
+    "type": "event",
+    "title": "Yogiyo Black Friday Encore (카드사)",
+    "brand": "Yogiyo",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-18",
+      "end": "2026-01-21"
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Yogiyo. Limited time offer.",
+    "source": {
+      "url": "https://yogiyo.com/event/blackfridayencore",
+      "provider": "Yogiyo Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 2000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_035_card",
+    "type": "event",
+    "title": "CoupangEats Member Appreciation Day (카드사)",
+    "brand": "CoupangEats",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-18",
+      "end": "2026-01-11"
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KBCard",
+        "NaverPay",
+        "KakaoPay"
+      ]
+    },
+    "notes": "Experience the Member Appreciation Day at CoupangEats. Limited time offer.",
+    "source": {
+      "url": "https://coupangeats.com/event/memberappreciationday",
+      "provider": "CoupangEats Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 10000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_036_telecom",
+    "type": "event",
+    "title": "Megabox Holiday Gift Guide (통신사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-02"
+    },
+    "channels": [
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT",
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Holiday Gift Guide at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/holidaygiftguide",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Diary"
+    }
+  },
+  {
+    "id": "event_036_card",
+    "type": "event",
+    "title": "Megabox Seasonal Clearance (카드사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-12",
+      "end": "2025-12-30"
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/seasonalclearance",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 20000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_037_telecom",
+    "type": "event",
+    "title": "CGV Year-End Sale (통신사)",
+    "brand": "CGV",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-11",
+      "end": "2025-12-27"
+    },
+    "channels": [
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at CGV. Limited time offer.",
+    "source": {
+      "url": "https://cgv.com/event/year-endsale",
+      "provider": "CGV Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_037_card",
+    "type": "event",
+    "title": "CGV New Year Special (카드사)",
+    "brand": "CGV",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-19",
+      "end": "2026-01-14"
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay",
+        "NaverPay"
+      ]
+    },
+    "notes": "Experience the New Year Special at CGV. Limited time offer.",
+    "source": {
+      "url": "https://cgv.com/event/newyearspecial",
+      "provider": "CGV Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 10000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_038_card",
+    "type": "event",
+    "title": "LG Holiday Gift Guide (카드사)",
+    "brand": "LG",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-09",
+      "end": "2026-01-18"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
         "HyundaiCard"
       ]
     },
-    "notes": "인기 품목 앵콜 세일 최대 60%",
+    "notes": "Experience the Holiday Gift Guide at LG. Limited time offer.",
     "source": {
-      "url": "https://oliveyoung.co.kr",
-      "provider": "OliveYoung"
+      "url": "https://lg.com/event/holidaygiftguide",
+      "provider": "LG Corp"
     },
     "benefit": {
-      "value": 100
+      "kind": "gift",
+      "value": 0,
+      "description": "Sample Kit"
+    }
+  },
+  {
+    "id": "event_039_card",
+    "type": "event",
+    "title": "SSG Seasonal Clearance (카드사)",
+    "brand": "SSG",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-31"
+    },
+    "channels": [
+      "online",
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "NaverPay",
+        "SamsungCard",
+        "HyundaiCard"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at SSG. Limited time offer.",
+    "source": {
+      "url": "https://ssg.com/event/seasonalclearance",
+      "provider": "SSG Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Sample Kit"
+    }
+  },
+  {
+    "id": "event_040_card",
+    "type": "event",
+    "title": "Dunkin Grand Opening (카드사)",
+    "brand": "Dunkin",
+    "category": "Bakery",
+    "validity": {
+      "start": "2025-12-16",
+      "end": "2026-02-06"
+    },
+    "channels": [
+      "online",
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KBCard",
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Grand Opening at Dunkin. Limited time offer.",
+    "source": {
+      "url": "https://dunkin.com/event/grandopening",
+      "provider": "Dunkin Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_041_card",
+    "type": "event",
+    "title": "OliveYoung Grand Opening (카드사)",
+    "brand": "OliveYoung",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-12",
+      "end": "2026-01-30"
+    },
+    "channels": [
+      "app",
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard"
+      ]
+    },
+    "notes": "Experience the Grand Opening at OliveYoung. Limited time offer.",
+    "source": {
+      "url": "https://oliveyoung.com/event/grandopening",
+      "provider": "OliveYoung Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 10000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_042_card",
+    "type": "event",
+    "title": "Himart Anniversary Special (카드사)",
+    "brand": "Himart",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2025-12-26"
+    },
+    "channels": [
+      "online",
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "NaverPay"
+      ]
+    },
+    "notes": "Experience the Anniversary Special at Himart. Limited time offer.",
+    "source": {
+      "url": "https://himart.com/event/anniversaryspecial",
+      "provider": "Himart Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_043_card",
+    "type": "event",
+    "title": "Lotte Year-End Sale (카드사)",
+    "brand": "Lotte",
+    "category": "Shopping",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-02"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard",
+        "KBCard",
+        "NaverPay"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at Lotte. Limited time offer.",
+    "source": {
+      "url": "https://lotte.com/event/year-endsale",
+      "provider": "Lotte Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 2000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_044_card",
+    "type": "event",
+    "title": "GS25 Seasonal Clearance (카드사)",
+    "brand": "GS25",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-07",
+      "end": "2026-01-18"
+    },
+    "channels": [
+      "offline",
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard",
+        "NaverPay",
+        "KakaoPay"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at GS25. Limited time offer.",
+    "source": {
+      "url": "https://gs25.com/event/seasonalclearance",
+      "provider": "GS25 Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 5000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_045_telecom",
+    "type": "event",
+    "title": "Megabox Holiday Gift Guide (통신사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2026-02-03"
+    },
+    "channels": [
+      "app",
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Holiday Gift Guide at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/holidaygiftguide",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 2000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_045_card",
+    "type": "event",
+    "title": "Megabox Grand Opening (카드사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-19",
+      "end": "2026-01-29"
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KBCard"
+      ]
+    },
+    "notes": "Experience the Grand Opening at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/grandopening",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_046_telecom",
+    "type": "event",
+    "title": "Baemin Holiday Gift Guide (통신사)",
+    "brand": "Baemin",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-12",
+      "end": "2026-01-06"
+    },
+    "channels": [
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT"
+      ]
+    },
+    "notes": "Experience the Holiday Gift Guide at Baemin. Limited time offer.",
+    "source": {
+      "url": "https://baemin.com/event/holidaygiftguide",
+      "provider": "Baemin Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 5000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_047_card",
+    "type": "event",
+    "title": "Megabox Seasonal Clearance (카드사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2025-12-27"
+    },
+    "channels": [
+      "online",
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "NaverPay",
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/seasonalclearance",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Mug Cup"
+    }
+  },
+  {
+    "id": "event_048_telecom",
+    "type": "event",
+    "title": "Megabox Year-End Sale (통신사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-12",
+      "end": "2026-01-06"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+",
+        "SKT",
+        "KT"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/year-endsale",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_048_card",
+    "type": "event",
+    "title": "Megabox Exclusive Pop-up (카드사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-12",
+      "end": "2026-01-18"
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/exclusivepop-up",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 70,
+      "max_benefit": 10000,
+      "min_spend": 20000
+    }
+  },
+  {
+    "id": "event_049_card",
+    "type": "event",
+    "title": "Innisfree Member Appreciation Day (카드사)",
+    "brand": "Innisfree",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2025-12-31"
+    },
+    "channels": [
+      "online",
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard",
+        "KakaoPay"
+      ]
+    },
+    "notes": "Experience the Member Appreciation Day at Innisfree. Limited time offer.",
+    "source": {
+      "url": "https://innisfree.com/event/memberappreciationday",
+      "provider": "Innisfree Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 5000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_050_card",
+    "type": "event",
+    "title": "GS25 Seasonal Clearance (카드사)",
+    "brand": "GS25",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-19"
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at GS25. Limited time offer.",
+    "source": {
+      "url": "https://gs25.com/event/seasonalclearance",
+      "provider": "GS25 Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 30,
+      "max_benefit": 50000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_051_telecom",
+    "type": "event",
+    "title": "CoupangEats Black Friday Encore (통신사)",
+    "brand": "CoupangEats",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-21"
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at CoupangEats. Limited time offer.",
+    "source": {
+      "url": "https://coupangeats.com/event/blackfridayencore",
+      "provider": "CoupangEats Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_052_telecom",
+    "type": "event",
+    "title": "Megabox Anniversary Special (통신사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-07",
+      "end": "2026-01-06"
+    },
+    "channels": [
+      "online",
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+",
+        "SKT",
+        "KT"
+      ]
+    },
+    "notes": "Experience the Anniversary Special at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/anniversaryspecial",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 20000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_052_card",
+    "type": "event",
+    "title": "Megabox Black Friday Encore (카드사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-14",
+      "end": "2026-01-13"
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard",
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/blackfridayencore",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 2000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_053_telecom",
+    "type": "event",
+    "title": "Paris Baguette Member Appreciation Day (통신사)",
+    "brand": "Paris Baguette",
+    "category": "Bakery",
+    "validity": {
+      "start": "2025-12-06",
+      "end": "2026-01-01"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Member Appreciation Day at Paris Baguette. Limited time offer.",
+    "source": {
+      "url": "https://parisbaguette.com/event/memberappreciationday",
+      "provider": "Paris Baguette Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 5000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_054_telecom",
+    "type": "event",
+    "title": "7-Eleven Exclusive Pop-up (통신사)",
+    "brand": "7-Eleven",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-01-01"
+    },
+    "channels": [
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at 7-Eleven. Limited time offer.",
+    "source": {
+      "url": "https://7-eleven.com/event/exclusivepop-up",
+      "provider": "7-Eleven Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 50,
+      "max_benefit": 10000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_055_telecom",
+    "type": "event",
+    "title": "Gmarket Seasonal Clearance (통신사)",
+    "brand": "Gmarket",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-02-05"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at Gmarket. Limited time offer.",
+    "source": {
+      "url": "https://gmarket.com/event/seasonalclearance",
+      "provider": "Gmarket Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Eco Bag"
+    }
+  },
+  {
+    "id": "event_055_card",
+    "type": "event",
+    "title": "Gmarket Year-End Sale (카드사)",
+    "brand": "Gmarket",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-16",
+      "end": "2026-01-29"
+    },
+    "channels": [
+      "online",
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "NaverPay",
+        "HanaCard",
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at Gmarket. Limited time offer.",
+    "source": {
+      "url": "https://gmarket.com/event/year-endsale",
+      "provider": "Gmarket Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_056_card",
+    "type": "event",
+    "title": "Youtube Premium Seasonal Clearance (카드사)",
+    "brand": "Youtube Premium",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-12-17",
+      "end": "2026-01-23"
+    },
+    "channels": [
+      "app",
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "NaverPay",
+        "HyundaiCard",
+        "KBCard"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at Youtube Premium. Limited time offer.",
+    "source": {
+      "url": "https://youtubepremium.com/event/seasonalclearance",
+      "provider": "Youtube Premium Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_057_telecom",
+    "type": "event",
+    "title": "CGV Seasonal Clearance (통신사)",
+    "brand": "CGV",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-13"
+    },
+    "channels": [
+      "online",
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at CGV. Limited time offer.",
+    "source": {
+      "url": "https://cgv.com/event/seasonalclearance",
+      "provider": "CGV Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "max_benefit": 30000,
+      "min_spend": 20000
+    }
+  },
+  {
+    "id": "event_058_card",
+    "type": "event",
+    "title": "GS25 Anniversary Special (카드사)",
+    "brand": "GS25",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-01-23"
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard",
+        "HanaCard",
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Anniversary Special at GS25. Limited time offer.",
+    "source": {
+      "url": "https://gs25.com/event/anniversaryspecial",
+      "provider": "GS25 Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 20000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_059_card",
+    "type": "event",
+    "title": "Paul Bassett Member Appreciation Day (카드사)",
+    "brand": "Paul Bassett",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-04",
+      "end": "2026-01-11"
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "NaverPay"
+      ]
+    },
+    "notes": "Experience the Member Appreciation Day at Paul Bassett. Limited time offer.",
+    "source": {
+      "url": "https://paulbassett.com/event/memberappreciationday",
+      "provider": "Paul Bassett Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 2000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_060_card",
+    "type": "event",
+    "title": "Megabox Year-End Sale (카드사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-04",
+      "end": "2025-12-30"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard",
+        "SamsungCard",
+        "NaverPay"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/year-endsale",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_061_telecom",
+    "type": "event",
+    "title": "Dunkin Exclusive Pop-up (통신사)",
+    "brand": "Dunkin",
+    "category": "Bakery",
+    "validity": {
+      "start": "2025-12-19",
+      "end": "2026-01-29"
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+",
+        "KT",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at Dunkin. Limited time offer.",
+    "source": {
+      "url": "https://dunkin.com/event/exclusivepop-up",
+      "provider": "Dunkin Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 2000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_062_telecom",
+    "type": "event",
+    "title": "Baemin Seasonal Clearance (통신사)",
+    "brand": "Baemin",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2026-02-01"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+",
+        "SKT",
+        "KT"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at Baemin. Limited time offer.",
+    "source": {
+      "url": "https://baemin.com/event/seasonalclearance",
+      "provider": "Baemin Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 10000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_062_card",
+    "type": "event",
+    "title": "Baemin Year-End Sale (카드사)",
+    "brand": "Baemin",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-14",
+      "end": "2026-01-28"
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard",
+        "NaverPay",
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at Baemin. Limited time offer.",
+    "source": {
+      "url": "https://baemin.com/event/year-endsale",
+      "provider": "Baemin Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 10000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_063_card",
+    "type": "event",
+    "title": "Tous Les Jours Holiday Gift Guide (카드사)",
+    "brand": "Tous Les Jours",
+    "category": "Bakery",
+    "validity": {
+      "start": "2025-12-16",
+      "end": "2026-02-04"
+    },
+    "channels": [
+      "offline",
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard"
+      ]
+    },
+    "notes": "Experience the Holiday Gift Guide at Tous Les Jours. Limited time offer.",
+    "source": {
+      "url": "https://touslesjours.com/event/holidaygiftguide",
+      "provider": "Tous Les Jours Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_064_card",
+    "type": "event",
+    "title": "Kurly Holiday Gift Guide (카드사)",
+    "brand": "Kurly",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-17",
+      "end": "2026-01-16"
+    },
+    "channels": [
+      "online",
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard",
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Holiday Gift Guide at Kurly. Limited time offer.",
+    "source": {
+      "url": "https://kurly.com/event/holidaygiftguide",
+      "provider": "Kurly Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_065_telecom",
+    "type": "event",
+    "title": "Megabox Winter Festival (통신사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-11",
+      "end": "2026-01-22"
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "SKT",
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Winter Festival at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/winterfestival",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 10000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_066_telecom",
+    "type": "event",
+    "title": "Dunkin Exclusive Pop-up (통신사)",
+    "brand": "Dunkin",
+    "category": "Bakery",
+    "validity": {
+      "start": "2025-12-18",
+      "end": "2026-01-26"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at Dunkin. Limited time offer.",
+    "source": {
+      "url": "https://dunkin.com/event/exclusivepop-up",
+      "provider": "Dunkin Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_067_card",
+    "type": "event",
+    "title": "Ediya Holiday Gift Guide (카드사)",
+    "brand": "Ediya",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2026-01-16"
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KBCard"
+      ]
+    },
+    "notes": "Experience the Holiday Gift Guide at Ediya. Limited time offer.",
+    "source": {
+      "url": "https://ediya.com/event/holidaygiftguide",
+      "provider": "Ediya Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_068_telecom",
+    "type": "event",
+    "title": "Gmarket Black Friday Encore (통신사)",
+    "brand": "Gmarket",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-16",
+      "end": "2026-01-06"
+    },
+    "channels": [
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Gmarket. Limited time offer.",
+    "source": {
+      "url": "https://gmarket.com/event/blackfridayencore",
+      "provider": "Gmarket Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_068_card",
+    "type": "event",
+    "title": "Gmarket Winter Festival (카드사)",
+    "brand": "Gmarket",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-13",
+      "end": "2026-01-05"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KBCard",
+        "HyundaiCard",
+        "NaverPay"
+      ]
+    },
+    "notes": "Experience the Winter Festival at Gmarket. Limited time offer.",
+    "source": {
+      "url": "https://gmarket.com/event/winterfestival",
+      "provider": "Gmarket Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 2000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_069_card",
+    "type": "event",
+    "title": "LotteCinema Year-End Sale (카드사)",
+    "brand": "LotteCinema",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-13",
+      "end": "2026-01-08"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard",
+        "KBCard",
+        "HyundaiCard"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at LotteCinema. Limited time offer.",
+    "source": {
+      "url": "https://lottecinema.com/event/year-endsale",
+      "provider": "LotteCinema Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 2000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_070_telecom",
+    "type": "event",
+    "title": "Tous Les Jours Exclusive Pop-up (통신사)",
+    "brand": "Tous Les Jours",
+    "category": "Bakery",
+    "validity": {
+      "start": "2025-12-07",
+      "end": "2026-01-10"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "LGU+",
+        "KT"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at Tous Les Jours. Limited time offer.",
+    "source": {
+      "url": "https://touslesjours.com/event/exclusivepop-up",
+      "provider": "Tous Les Jours Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 20000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_070_card",
+    "type": "event",
+    "title": "Tous Les Jours Anniversary Special (카드사)",
+    "brand": "Tous Les Jours",
+    "category": "Bakery",
+    "validity": {
+      "start": "2025-12-11",
+      "end": "2026-02-04"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard",
+        "HyundaiCard",
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Anniversary Special at Tous Les Jours. Limited time offer.",
+    "source": {
+      "url": "https://touslesjours.com/event/anniversaryspecial",
+      "provider": "Tous Les Jours Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_071_card",
+    "type": "event",
+    "title": "Hyundai Black Friday Encore (카드사)",
+    "brand": "Hyundai",
+    "category": "Shopping",
+    "validity": {
+      "start": "2025-12-04",
+      "end": "2026-01-08"
+    },
+    "channels": [
+      "app",
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KakaoPay",
+        "HyundaiCard",
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Hyundai. Limited time offer.",
+    "source": {
+      "url": "https://hyundai.com/event/blackfridayencore",
+      "provider": "Hyundai Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_072_telecom",
+    "type": "event",
+    "title": "Daiso Holiday Gift Guide (통신사)",
+    "brand": "Daiso",
+    "category": "Shopping",
+    "validity": {
+      "start": "2025-12-16",
+      "end": "2026-01-07"
+    },
+    "channels": [
+      "online",
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "LGU+",
+        "KT"
+      ]
+    },
+    "notes": "Experience the Holiday Gift Guide at Daiso. Limited time offer.",
+    "source": {
+      "url": "https://daiso.com/event/holidaygiftguide",
+      "provider": "Daiso Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 2000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_072_card",
+    "type": "event",
+    "title": "Daiso Black Friday Encore (카드사)",
+    "brand": "Daiso",
+    "category": "Shopping",
+    "validity": {
+      "start": "2025-12-09",
+      "end": "2026-02-06"
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KakaoPay"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Daiso. Limited time offer.",
+    "source": {
+      "url": "https://daiso.com/event/blackfridayencore",
+      "provider": "Daiso Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_073_telecom",
+    "type": "event",
+    "title": "Megabox New Year Special (통신사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-11",
+      "end": "2026-01-21"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the New Year Special at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/newyearspecial",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 20000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_074_card",
+    "type": "event",
+    "title": "Yogiyo Winter Festival (카드사)",
+    "brand": "Yogiyo",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-08",
+      "end": "2026-01-08"
+    },
+    "channels": [
+      "offline",
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard"
+      ]
+    },
+    "notes": "Experience the Winter Festival at Yogiyo. Limited time offer.",
+    "source": {
+      "url": "https://yogiyo.com/event/winterfestival",
+      "provider": "Yogiyo Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Eco Bag"
+    }
+  },
+  {
+    "id": "event_075_card",
+    "type": "event",
+    "title": "CoupangEats Grand Opening (카드사)",
+    "brand": "CoupangEats",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-11",
+      "end": "2026-01-07"
+    },
+    "channels": [
+      "online",
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KBCard",
+        "HyundaiCard"
+      ]
+    },
+    "notes": "Experience the Grand Opening at CoupangEats. Limited time offer.",
+    "source": {
+      "url": "https://coupangeats.com/event/grandopening",
+      "provider": "CoupangEats Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Mug Cup"
+    }
+  },
+  {
+    "id": "event_076_telecom",
+    "type": "event",
+    "title": "LG Exclusive Pop-up (통신사)",
+    "brand": "LG",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-09",
+      "end": "2025-12-30"
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "SKT",
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at LG. Limited time offer.",
+    "source": {
+      "url": "https://lg.com/event/exclusivepop-up",
+      "provider": "LG Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 2000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_077_telecom",
+    "type": "event",
+    "title": "Emart24 Seasonal Clearance (통신사)",
+    "brand": "Emart24",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-01-07"
+    },
+    "channels": [
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at Emart24. Limited time offer.",
+    "source": {
+      "url": "https://emart24.com/event/seasonalclearance",
+      "provider": "Emart24 Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 2000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_077_card",
+    "type": "event",
+    "title": "Emart24 Anniversary Special (카드사)",
+    "brand": "Emart24",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-19",
+      "end": "2026-01-24"
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard"
+      ]
+    },
+    "notes": "Experience the Anniversary Special at Emart24. Limited time offer.",
+    "source": {
+      "url": "https://emart24.com/event/anniversaryspecial",
+      "provider": "Emart24 Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 2000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_078_card",
+    "type": "event",
+    "title": "Paris Baguette Exclusive Pop-up (카드사)",
+    "brand": "Paris Baguette",
+    "category": "Bakery",
+    "validity": {
+      "start": "2025-12-09",
+      "end": "2025-12-26"
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at Paris Baguette. Limited time offer.",
+    "source": {
+      "url": "https://parisbaguette.com/event/exclusivepop-up",
+      "provider": "Paris Baguette Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 5000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_079_telecom",
+    "type": "event",
+    "title": "Innisfree Black Friday Encore (통신사)",
+    "brand": "Innisfree",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-18",
+      "end": "2026-02-03"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Innisfree. Limited time offer.",
+    "source": {
+      "url": "https://innisfree.com/event/blackfridayencore",
+      "provider": "Innisfree Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_079_card",
+    "type": "event",
+    "title": "Innisfree Seasonal Clearance (카드사)",
+    "brand": "Innisfree",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2025-12-29"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KBCard",
+        "TossPay",
+        "KakaoPay"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at Innisfree. Limited time offer.",
+    "source": {
+      "url": "https://innisfree.com/event/seasonalclearance",
+      "provider": "Innisfree Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Mug Cup"
+    }
+  },
+  {
+    "id": "event_080_telecom",
+    "type": "event",
+    "title": "7-Eleven Black Friday Encore (통신사)",
+    "brand": "7-Eleven",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-12",
+      "end": "2026-01-23"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at 7-Eleven. Limited time offer.",
+    "source": {
+      "url": "https://7-eleven.com/event/blackfridayencore",
+      "provider": "7-Eleven Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 2000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_080_card",
+    "type": "event",
+    "title": "7-Eleven Year-End Sale (카드사)",
+    "brand": "7-Eleven",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2026-02-03"
+    },
+    "channels": [
+      "offline",
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "HyundaiCard"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at 7-Eleven. Limited time offer.",
+    "source": {
+      "url": "https://7-eleven.com/event/year-endsale",
+      "provider": "7-Eleven Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 10000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_081_card",
+    "type": "event",
+    "title": "Hyundai Seasonal Clearance (카드사)",
+    "brand": "Hyundai",
+    "category": "Shopping",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-01-19"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "NaverPay",
+        "HanaCard",
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at Hyundai. Limited time offer.",
+    "source": {
+      "url": "https://hyundai.com/event/seasonalclearance",
+      "provider": "Hyundai Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 20000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_082_card",
+    "type": "event",
+    "title": "Himart Seasonal Clearance (카드사)",
+    "brand": "Himart",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-19",
+      "end": "2026-01-03"
+    },
+    "channels": [
+      "offline",
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KakaoPay",
+        "HanaCard",
+        "NaverPay"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at Himart. Limited time offer.",
+    "source": {
+      "url": "https://himart.com/event/seasonalclearance",
+      "provider": "Himart Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 20000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_083_telecom",
+    "type": "event",
+    "title": "Yogiyo Year-End Sale (통신사)",
+    "brand": "Yogiyo",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-08",
+      "end": "2026-01-15"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at Yogiyo. Limited time offer.",
+    "source": {
+      "url": "https://yogiyo.com/event/year-endsale",
+      "provider": "Yogiyo Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 10000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_083_card",
+    "type": "event",
+    "title": "Yogiyo Seasonal Clearance (카드사)",
+    "brand": "Yogiyo",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-06",
+      "end": "2026-02-01"
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "NaverPay",
+        "SamsungCard",
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at Yogiyo. Limited time offer.",
+    "source": {
+      "url": "https://yogiyo.com/event/seasonalclearance",
+      "provider": "Yogiyo Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Eco Bag"
+    }
+  },
+  {
+    "id": "event_084_telecom",
+    "type": "event",
+    "title": "Daiso Exclusive Pop-up (통신사)",
+    "brand": "Daiso",
+    "category": "Shopping",
+    "validity": {
+      "start": "2025-12-14",
+      "end": "2025-12-30"
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at Daiso. Limited time offer.",
+    "source": {
+      "url": "https://daiso.com/event/exclusivepop-up",
+      "provider": "Daiso Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_085_telecom",
+    "type": "event",
+    "title": "Yogiyo Exclusive Pop-up (통신사)",
+    "brand": "Yogiyo",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-02-06"
+    },
+    "channels": [
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at Yogiyo. Limited time offer.",
+    "source": {
+      "url": "https://yogiyo.com/event/exclusivepop-up",
+      "provider": "Yogiyo Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Sample Kit"
+    }
+  },
+  {
+    "id": "event_086_telecom",
+    "type": "event",
+    "title": "Apple Black Friday Encore (통신사)",
+    "brand": "Apple",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-17",
+      "end": "2026-01-16"
+    },
+    "channels": [
+      "online",
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Apple. Limited time offer.",
+    "source": {
+      "url": "https://apple.com/event/blackfridayencore",
+      "provider": "Apple Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 2000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_087_card",
+    "type": "event",
+    "title": "Kurly Winter Festival (카드사)",
+    "brand": "Kurly",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-07",
+      "end": "2026-01-19"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KakaoPay",
+        "NaverPay",
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Winter Festival at Kurly. Limited time offer.",
+    "source": {
+      "url": "https://kurly.com/event/winterfestival",
+      "provider": "Kurly Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_088_telecom",
+    "type": "event",
+    "title": "SSG Member Appreciation Day (통신사)",
+    "brand": "SSG",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-18",
+      "end": "2026-01-05"
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+",
+        "KT",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Member Appreciation Day at SSG. Limited time offer.",
+    "source": {
+      "url": "https://ssg.com/event/memberappreciationday",
+      "provider": "SSG Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_088_card",
+    "type": "event",
+    "title": "SSG Holiday Gift Guide (카드사)",
+    "brand": "SSG",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-04",
+      "end": "2026-01-02"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay",
+        "KakaoPay",
+        "KBCard"
+      ]
+    },
+    "notes": "Experience the Holiday Gift Guide at SSG. Limited time offer.",
+    "source": {
+      "url": "https://ssg.com/event/holidaygiftguide",
+      "provider": "SSG Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 10000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_089_telecom",
+    "type": "event",
+    "title": "Nature Republic Holiday Gift Guide (통신사)",
+    "brand": "Nature Republic",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-09",
+      "end": "2026-01-25"
+    },
+    "channels": [
+      "offline",
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Holiday Gift Guide at Nature Republic. Limited time offer.",
+    "source": {
+      "url": "https://naturerepublic.com/event/holidaygiftguide",
+      "provider": "Nature Republic Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 2000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_089_card",
+    "type": "event",
+    "title": "Nature Republic Year-End Sale (카드사)",
+    "brand": "Nature Republic",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-14",
+      "end": "2026-01-09"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay",
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at Nature Republic. Limited time offer.",
+    "source": {
+      "url": "https://naturerepublic.com/event/year-endsale",
+      "provider": "Nature Republic Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 20000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_090_card",
+    "type": "event",
+    "title": "Disney+ Winter Festival (카드사)",
+    "brand": "Disney+",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-12-11",
+      "end": "2026-01-07"
+    },
+    "channels": [
+      "app",
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Winter Festival at Disney+. Limited time offer.",
+    "source": {
+      "url": "https://disney+.com/event/winterfestival",
+      "provider": "Disney+ Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Diary"
+    }
+  },
+  {
+    "id": "event_091_card",
+    "type": "event",
+    "title": "Samsung Year-End Sale (카드사)",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-02-13"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard",
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at Samsung. Limited time offer.",
+    "source": {
+      "url": "https://samsung.com/event/year-endsale",
+      "provider": "Samsung Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 50,
+      "max_benefit": 50000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_092_telecom",
+    "type": "event",
+    "title": "LG New Year Special (통신사)",
+    "brand": "LG",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-02-08"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT",
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the New Year Special at LG. Limited time offer.",
+    "source": {
+      "url": "https://lg.com/event/newyearspecial",
+      "provider": "LG Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Diary"
+    }
+  },
+  {
+    "id": "event_092_card",
+    "type": "event",
+    "title": "LG Exclusive Pop-up (카드사)",
+    "brand": "LG",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-12",
+      "end": "2026-01-02"
+    },
+    "channels": [
+      "online",
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay",
+        "HyundaiCard",
+        "KakaoPay"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at LG. Limited time offer.",
+    "source": {
+      "url": "https://lg.com/event/exclusivepop-up",
+      "provider": "LG Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Diary"
+    }
+  },
+  {
+    "id": "event_093_card",
+    "type": "event",
+    "title": "LotteCinema Member Appreciation Day (카드사)",
+    "brand": "LotteCinema",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2025-12-29"
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard",
+        "TossPay",
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Member Appreciation Day at LotteCinema. Limited time offer.",
+    "source": {
+      "url": "https://lottecinema.com/event/memberappreciationday",
+      "provider": "LotteCinema Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_094_card",
+    "type": "event",
+    "title": "7-Eleven Year-End Sale (카드사)",
+    "brand": "7-Eleven",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2026-01-10"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard"
+      ]
+    },
+    "notes": "Experience the Year-End Sale at 7-Eleven. Limited time offer.",
+    "source": {
+      "url": "https://7-eleven.com/event/year-endsale",
+      "provider": "7-Eleven Corp"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 0,
+      "description": "Free Gift or Service"
+    }
+  },
+  {
+    "id": "event_095_telecom",
+    "type": "event",
+    "title": "Samsung Black Friday Encore (통신사)",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-09",
+      "end": "2026-02-01"
+    },
+    "channels": [
+      "offline",
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Samsung. Limited time offer.",
+    "source": {
+      "url": "https://samsung.com/event/blackfridayencore",
+      "provider": "Samsung Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Sample Kit"
+    }
+  },
+  {
+    "id": "event_096_telecom",
+    "type": "event",
+    "title": "Hyundai Anniversary Special (통신사)",
+    "brand": "Hyundai",
+    "category": "Shopping",
+    "validity": {
+      "start": "2025-12-13",
+      "end": "2026-01-02"
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Anniversary Special at Hyundai. Limited time offer.",
+    "source": {
+      "url": "https://hyundai.com/event/anniversaryspecial",
+      "provider": "Hyundai Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 2000,
+      "min_spend": 100000
+    }
+  },
+  {
+    "id": "event_096_card",
+    "type": "event",
+    "title": "Hyundai Winter Festival (카드사)",
+    "brand": "Hyundai",
+    "category": "Shopping",
+    "validity": {
+      "start": "2025-12-17",
+      "end": "2026-01-06"
+    },
+    "channels": [
+      "app",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "NaverPay",
+        "HanaCard"
+      ]
+    },
+    "notes": "Experience the Winter Festival at Hyundai. Limited time offer.",
+    "source": {
+      "url": "https://hyundai.com/event/winterfestival",
+      "provider": "Hyundai Corp"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 20000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_097_telecom",
+    "type": "event",
+    "title": "Gmarket Seasonal Clearance (통신사)",
+    "brand": "Gmarket",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-17",
+      "end": "2026-01-31"
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+"
+      ]
+    },
+    "notes": "Experience the Seasonal Clearance at Gmarket. Limited time offer.",
+    "source": {
+      "url": "https://gmarket.com/event/seasonalclearance",
+      "provider": "Gmarket Corp"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 20000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_097_card",
+    "type": "event",
+    "title": "Gmarket Anniversary Special (카드사)",
+    "brand": "Gmarket",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-16",
+      "end": "2026-01-31"
+    },
+    "channels": [
+      "offline",
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KBCard",
+        "TossPay",
+        "KakaoPay"
+      ]
+    },
+    "notes": "Experience the Anniversary Special at Gmarket. Limited time offer.",
+    "source": {
+      "url": "https://gmarket.com/event/anniversaryspecial",
+      "provider": "Gmarket Corp"
+    },
+    "benefit": {
+      "kind": "gift",
+      "value": 0,
+      "description": "Sample Kit"
+    }
+  },
+  {
+    "id": "event_098_telecom",
+    "type": "event",
+    "title": "Ediya New Year Special (통신사)",
+    "brand": "Ediya",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2026-01-08"
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the New Year Special at Ediya. Limited time offer.",
+    "source": {
+      "url": "https://ediya.com/event/newyearspecial",
+      "provider": "Ediya Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 5000,
+      "min_spend": 30000
+    }
+  },
+  {
+    "id": "event_099_card",
+    "type": "event",
+    "title": "Nature Republic Black Friday Encore (카드사)",
+    "brand": "Nature Republic",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-09",
+      "end": "2026-01-12"
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "TossPay"
+      ]
+    },
+    "notes": "Experience the Black Friday Encore at Nature Republic. Limited time offer.",
+    "source": {
+      "url": "https://naturerepublic.com/event/blackfridayencore",
+      "provider": "Nature Republic Corp"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 10000,
+      "min_spend": 50000
+    }
+  },
+  {
+    "id": "event_100_telecom",
+    "type": "event",
+    "title": "Megabox Exclusive Pop-up (통신사)",
+    "brand": "Megabox",
+    "category": "Movie",
+    "validity": {
+      "start": "2025-12-08",
+      "end": "2026-01-10"
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+",
+        "KT",
+        "SKT"
+      ]
+    },
+    "notes": "Experience the Exclusive Pop-up at Megabox. Limited time offer.",
+    "source": {
+      "url": "https://megabox.com/event/exclusivepop-up",
+      "provider": "Megabox Corp"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 50,
+      "max_benefit": 10000,
+      "min_spend": 20000
     }
   }
 ]
