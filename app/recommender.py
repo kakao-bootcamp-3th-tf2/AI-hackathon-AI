@@ -53,29 +53,29 @@ def is_valid_date(validity: Optional[Dict[str, Optional[str]]], target_date: str
 def check_eligibility(
     eligibility: Optional[Dict[str, Optional[List[str]]]],
     user_telecom: str,
-    user_cards: List[str]
+    user_payments: List[str]
 ) -> bool:
     """자격 조건 체크 (결측치 안전 처리)"""
     if not eligibility:
         return True  # eligibility 없으면 모두 자격 있음
-    
+
     telecom_list = eligibility.get("telecom_any_of")
     cards_list = eligibility.get("cards_any_of")
-    
+
     # 둘 다 없으면 자격 있음
     if not telecom_list and not cards_list:
         return True
-    
+
     # telecom 체크
     telecom_match = True
     if telecom_list:
         telecom_match = user_telecom in telecom_list
-    
-    # cards 체크
+
+    # cards 체크 (payments로 변경됨)
     cards_match = True
     if cards_list:
-        cards_match = any(card in cards_list for card in user_cards)
-    
+        cards_match = any(card in cards_list for card in user_payments)
+
     # 둘 다 만족해야 함 (AND 조건)
     return telecom_match and cards_match
 
@@ -157,7 +157,7 @@ def recommend(
             continue
         
         # 자격 조건 체크
-        if not check_eligibility(eligibility, user.telecom, user.cards):
+        if not check_eligibility(eligibility, user.telecom, user.payments):
             continue
         
         # 점수 계산
@@ -178,7 +178,7 @@ def recommend(
             continue
         
         # 자격 조건 체크
-        if not check_eligibility(eligibility, user.telecom, user.cards):
+        if not check_eligibility(eligibility, user.telecom, user.payments):
             continue
         
         # 점수 계산
@@ -254,7 +254,7 @@ def recommend_alternatives(
         # 공통 필터링: 유효기간, 자격조건
         if not is_valid_date(safe_get(item, "validity"), plan.datetime):
             continue
-        if not check_eligibility(safe_get(item, "eligibility"), user.telecom, user.cards):
+        if not check_eligibility(safe_get(item, "eligibility"), user.telecom, user.payments):
             continue
             
         score = calculate_score(item, user, plan)

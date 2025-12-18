@@ -61,7 +61,7 @@ def get_ai_recommendations(
     1. Check 'validity': The plan date must be within [start, end].
     2. Check 'eligibility': 
        - If 'telecom_any_of' is present, user.telecom MUST be in it.
-       - If 'cards_any_of' is present, AT LEAST ONE of user.cards MUST be in it.
+       - If 'cards_any_of' is present, AT LEAST ONE of user.payments MUST be in it.
     3. Check 'constraints':
        - Check 'days_of_week' (plan date is 2025-12-18 which is Thursday).
     4. Prioritize benefits that match the Brand exactly.
@@ -87,7 +87,7 @@ def get_ai_recommendations(
     }
     """
 
-    user_info = f"User(Telecom: {user.telecom}, Cards: {user.cards})"
+    user_info = f"User(Telecom: {user.telecom}, Cards: {user.payments})"
     plan_info = f"Plan(Brand: {plan.brand}, Category: {plan.category}, Date: {plan.datetime})"
     
     # 간소화된 후보 리스트 (토큰 절약을 위해 일부 필드만 보냄)
@@ -160,11 +160,27 @@ def augment_with_llm_messages(items: List[Dict[str, Any]], plan: Plan) -> List[D
     # 1. 입력 줄이기 (비용/속도 최적화)
     simplified_items = []
     for item in items:
+        # benefit을 읽기 쉽게 포맷팅
+        benefit_info = item.get("benefit")
+        benefit_text = ""
+        if benefit_info:
+            kind = benefit_info.get("kind", "")
+            value = benefit_info.get("value", 0)
+            if kind == "percent":
+                benefit_text = f"{value}% 할인"
+            elif kind == "fixed":
+                benefit_text = f"{int(value)}원 할인"
+            elif kind == "cashback":
+                benefit_text = f"{value}% 캐시백"
+            elif kind == "points":
+                benefit_text = f"{int(value)}P 적립"
+
         simplified_items.append({
             "id": item["id"],
             "brand": item.get("brand"),
             "title": item.get("title"),
-            "benefit": item.get("benefit"),
+            "benefit_text": benefit_text,  # 포맷팅된 혜택
+            "benefit_raw": item.get("benefit"),  # 원본도 포함
             "notes": item.get("notes"),
             "validity": item.get("validity"),  # 기간 정보 추가
             "constraints": item.get("constraints"), # 시간 정보 추가
@@ -175,24 +191,34 @@ def augment_with_llm_messages(items: List[Dict[str, Any]], plan: Plan) -> List[D
     
     system_prompt = """
     You are an AI assistant. Your task is to generate a natural and friendly Korean recommendation sentence for each item provided.
-    
+
     # Context
     The user originally planned: {user_plan}
     However, we are recommending these alternative benefits.
-    
+
     # Task
     For each item in the input list, generate a 'message' field.
     - Explain WHY this is a good alternative.
-    - **MANDATORY 1**: Mention specific benefit details (e.g., "20% Discount", "1000 Won Cashback", "Free Size-up").
-    - **MANDATORY 2**: Mention the schedule/time if relevant (e.g., "until Jan 5th", "10 AM to 8 PM", "on Weekends").
-    - **MANDATORY 3**: Mention ONLY the condition (Card or Telecom) that is actually required for this item. Do NOT list all user's cards if not relevant.
-    - **MANDATORY 4**: For Events/Festivals, explicitly mention what the event offers based on 'notes' (e.g., "Up to 70% sale").
-    - Write in a friendly, polite tone (Korean, e.g., "~해요", "~어때요?").
-    - Keep it concise (1-2 sentences).
-    
+    - **MANDATORY 1**: Use 'benefit_text' field to mention the EXACT benefit (e.g., "10% 할인", "5000원 할인"). If benefit_text is empty, use 'notes' or 'title'.
+    - **MANDATORY 2**: Mention the schedule/time if relevant from 'constraints.times' (e.g., "10:30~20:00 이용 가능").
+    - **MANDATORY 3**: If 'notes' exists, include key information from it (e.g., "최대 70% 할인 행사").
+    - **MANDATORY 4**: Use 'reason_hint' as context but ALWAYS add specific benefit details.
+    - Write in a friendly, polite tone (Korean, e.g., "~하세요", "~어때요?").
+    - Keep it concise (1-2 sentences max).
+
+    # Input Fields
+    - benefit_text: Pre-formatted benefit in Korean (USE THIS FIRST!)
+    - notes: Additional event/promotion details
+    - reason_hint: Context about why this is an alternative
+    - constraints.times: Time availability
+
     # Output Format
     JSON object with a key "descriptions" containing a list of objects:
-    {"id": "item_id", "message": "생성된 추천 문장 (혜택, 일정, 정확한 조건, 상세 내용 포함)"}
+    {"id": "item_id", "message": "생성된 추천 문장 (반드시 구체적 혜택 포함!)"}
+
+    # Example
+    Input: {"id": "o1", "brand": "Lotte", "benefit_text": "20% 할인", "reason_hint": "Shinsegae 대신 Lotte에서 혜택을 받아보세요"}
+    Output: {"id": "o1", "message": "Shinsegae 대신 Lotte 백화점에서 20% 할인을 받아보세요"}
     """
     
     desc_map = {}

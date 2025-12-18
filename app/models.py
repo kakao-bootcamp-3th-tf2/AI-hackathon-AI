@@ -15,18 +15,18 @@ from datetime import datetime
 
 class UserProfile(BaseModel):
     """사용자 프로필 (필드 추가 금지)"""
-    user_id: str
     telecom: str
-    cards: List[str]
+    payments: List[str]
 
 
 class Plan(BaseModel):
     """사용자 계획 (필드 추가 금지)"""
-    plan_id: str
-    user_id: str
-    datetime: str  # ISO 8601 format
+    datetime: str = Field(alias='dateTime')  # ISO 8601 format
     brand: str
     category: str
+
+    class Config:
+        populate_by_name = True  # datetime과 dateTime 둘 다 허용
 
 
 # ============================================================================

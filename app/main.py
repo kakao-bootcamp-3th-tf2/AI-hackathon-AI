@@ -203,7 +203,7 @@ class RecommendRequest(BaseModel):
     """추천 요청"""
     user: UserProfile
     plan: Plan
-    top_k: int = 10
+    top_k: int = 5
 
 
 @app.post("/api/recommend", response_model=RecommendationResponse, tags=["Recommendation"])
