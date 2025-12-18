@@ -1,3 +1,4 @@
+
 import os
 import json
 from typing import List, Dict, Any
@@ -25,7 +26,6 @@ def get_ai_recommendations(
         raise Exception("OpenAI API Key is missing. Please check .env file.")
 
     # 1. 문맥 최적화를 위한 1차 필터링 (Heuristic)
-    # 브랜드나 카테고리가 일치하는 항목만 LLM에게 전달하여 토큰 절약
     candidates = []
     
     for item in offers + events:
@@ -39,8 +39,6 @@ def get_ai_recommendations(
             candidates.append(item)
             continue
             
-        # TODO: "전가맹점" 등 범용 혜택이 있다면 여기서 포함
-    
     # 후보가 너무 많으면 상위 N개로 제한 (예: 20개)
     candidates = candidates[:20]
     
@@ -67,18 +65,24 @@ def get_ai_recommendations(
     3. Check 'constraints':
        - Check 'days_of_week' (plan date is 2025-12-18 which is Thursday).
     4. Prioritize benefits that match the Brand exactly.
+    5. **CRITICAL**: You MUST mention the specific benefit details (e.g., "20% discount", "5000 won off", "1+1 event") in the 'reason'.
+    6. **CRITICAL**: When explaining conditions, mention ONLY the condition that matches. 
+       - If the benefit is for Telecom only, mention ONLY the Telecom. 
+       - If it's for Card only, mention ONLY the matched Card.
+       - DO NOT say "SKT and Shinhan are applied" if the benefit is only for SKT.
+    7. **CRITICAL**: If the item is an EVENT or has a vague title (e.g., "Festival", "Promotion"), you MUST use the details from the 'notes' field to explain what the benefit is (e.g., "Up to 70% off", "Free gifts").
     
     # Output Format
     Return a valid JSON object with a key "recommendations".
     "recommendations" should be a list of objects, each containing:
     - "id": The ID of the benefit
-    - "reason": A short explanation in Korean why this is recommended
+    - "reason": A detailed explanation in Korean. STRICTLY follow Rule #6 and #7.
     - "score": A relevance score (0-100)
     
     Example:
     {
         "recommendations": [
-            {"id": "offer_001", "reason": "스타벅스 브랜드가 일치하고 SKT 통신사 할인이 적용됩니다.", "score": 95}
+            {"id": "offer_001_telecom", "reason": "스타벅스에서 20% 할인을 받을 수 있으며, SKT 멤버십이 적용됩니다.", "score": 95}
         ]
     }
     """
@@ -110,10 +114,10 @@ def get_ai_recommendations(
     {json.dumps(candidates_simplified, ensure_ascii=False)}
     """
 
-    # 3. LLM 호출
+    # 3. LLM 호출 및 파싱
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",  # 비용 효율적인 모델 사용 (또는 gpt-4o)
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_message}
@@ -123,26 +127,109 @@ def get_ai_recommendations(
         )
         
         content = response.choices[0].message.content
-        result = json.loads(content)
+        parsed = json.loads(content)
         
-        # 4. 결과 매핑
-        # LLM이 반환한 ID를 기반으로 원본 데이터 찾기
-        final_recommendations = []
-        rec_map = {r["id"]: r for r in result.get("recommendations", [])}
+        # 결과 매핑
+        recommendations = []
+        rec_map = {item["id"]: item for item in parsed.get("recommendations", [])}
         
         for item in candidates:
             if item["id"] in rec_map:
                 rec_info = rec_map[item["id"]]
                 item_copy = item.copy()
-                item_copy["recommendation_score"] = rec_info["score"]
-                item_copy["ai_reason"] = rec_info["reason"]
-                final_recommendations.append(item_copy)
-        
+                item_copy["recommendation_score"] = rec_info.get("score", 0)
+                item_copy["ai_reason"] = rec_info.get("reason", "")
+                recommendations.append(item_copy)
+                
         # 점수순 정렬
-        final_recommendations.sort(key=lambda x: x.get("recommendation_score", 0), reverse=True)
+        recommendations.sort(key=lambda x: x["recommendation_score"], reverse=True)
+        return recommendations
         
-        return final_recommendations
-
     except Exception as e:
-        print(f"Error during OpenAI API call: {e}")
+        print(f"Error LLM recommendation: {e}")
+        return candidates[:5]
+
+
+def augment_with_llm_messages(items: List[Dict[str, Any]], plan: Plan) -> List[Dict[str, Any]]:
+    """
+    아이템 리스트를 받아 LLM을 이용해 'message' (추천 설명)를 생성하여 추가함 (자연스러운 한국어 문장)
+    """
+    if not items:
         return []
+        
+    # 1. 입력 줄이기 (비용/속도 최적화)
+    simplified_items = []
+    for item in items:
+        simplified_items.append({
+            "id": item["id"],
+            "brand": item.get("brand"),
+            "title": item.get("title"),
+            "benefit": item.get("benefit"),
+            "notes": item.get("notes"),
+            "validity": item.get("validity"),  # 기간 정보 추가
+            "constraints": item.get("constraints"), # 시간 정보 추가
+            "reason_hint": item.get("alternative_reason", "")
+        })
+        
+    user_plan_str = f"Plan: {plan.brand} ({plan.category}) at {plan.datetime}"
+    
+    system_prompt = """
+    You are an AI assistant. Your task is to generate a natural and friendly Korean recommendation sentence for each item provided.
+    
+    # Context
+    The user originally planned: {user_plan}
+    However, we are recommending these alternative benefits.
+    
+    # Task
+    For each item in the input list, generate a 'message' field.
+    - Explain WHY this is a good alternative.
+    - **MANDATORY 1**: Mention specific benefit details (e.g., "20% Discount", "1000 Won Cashback", "Free Size-up").
+    - **MANDATORY 2**: Mention the schedule/time if relevant (e.g., "until Jan 5th", "10 AM to 8 PM", "on Weekends").
+    - **MANDATORY 3**: Mention ONLY the condition (Card or Telecom) that is actually required for this item. Do NOT list all user's cards if not relevant.
+    - **MANDATORY 4**: For Events/Festivals, explicitly mention what the event offers based on 'notes' (e.g., "Up to 70% sale").
+    - Write in a friendly, polite tone (Korean, e.g., "~해요", "~어때요?").
+    - Keep it concise (1-2 sentences).
+    
+    # Output Format
+    JSON object with a key "descriptions" containing a list of objects:
+    {"id": "item_id", "message": "생성된 추천 문장 (혜택, 일정, 정확한 조건, 상세 내용 포함)"}
+    """
+    
+    desc_map = {}
+    
+    # LLM 호출
+    if client and os.environ.get("OPENAI_API_KEY"):
+         try:
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                response_format={"type": "json_object"},
+                messages=[
+                    {"role": "system", "content": system_prompt.replace("{user_plan}", user_plan_str)},
+                    {"role": "user", "content": json.dumps(simplified_items, ensure_ascii=False)}
+                ],
+                temperature=0.5
+            )
+            content = response.choices[0].message.content
+            parsed = json.loads(content)
+            desc_map = {d["id"]: d["message"] for d in parsed.get("descriptions", [])}
+         except Exception as e:
+            print(f"LLM generation failed: {e}")
+    
+    # 2. 결과 병합 및 포맷팅 (requested format: message, from, to)
+    result_data = []
+    for item in items:
+        validity = item.get("validity", {}) or {}
+        start_date = validity.get("start", "")
+        end_date = validity.get("end", "")
+        
+        # LLM 메시지 없으면 기본 reason 사용
+        message = desc_map.get(item["id"], item.get("alternative_reason", item.get("title", "")))
+        
+        result_data.append({
+            "message": message,
+            "startAt": start_date,
+            "endAt": end_date
+            # id 등 다른 정보는 제거 (요청 포맷 준수)
+        })
+        
+    return result_data

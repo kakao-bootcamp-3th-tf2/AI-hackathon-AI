@@ -13,6 +13,12 @@ load_dotenv()
 
 # JSON 파일에서 더미데이터 로드
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
+
+# [TEST MODE] Sparse Data 사용 (결측치 테스트용)
+# OFFERS_FILE = os.path.join(DATA_DIR, "offers.sparse.json")
+# EVENTS_FILE = os.path.join(DATA_DIR, "events.sparse.json")
+
+# [NORMAL MODE] Full Data 사용
 OFFERS_FILE = os.path.join(DATA_DIR, "offers.full.json")
 EVENTS_FILE = os.path.join(DATA_DIR, "events.full.json")
 
@@ -240,20 +246,22 @@ async def get_recommendations(request: RecommendRequest):
         )
 
 
-@app.post("/api/recommend/ai", response_model=RecommendationResponse, tags=["Recommendation"])
+@app.post("/api/recommend/ai", tags=["Recommendation"])
 async def get_recommendations_ai(request: RecommendRequest):
     """
     [AI] 사용자 계획 기반 혜택/이벤트 추천 (OpenAI 기반)
     
     OpenAI API를 사용하여 맥락을 분석하고 추천합니다.
-    - **user**: 사용자 프로필
-    - **plan**: 사용자 계획
-    - **Note**: 서버 환경변수에 OPENAI_API_KEY가 설정되어 있어야 합니다.
+    응답 포맷이 변경되었습니다: {code, message, data: [{message, startAt, endAt}]}
     """
     if not os.environ.get("OPENAI_API_KEY"):
-         raise HTTPException(
+         return JSONResponse(
             status_code=501, 
-            detail="Server configuration error: OPENAI_API_KEY is not set. Please assume the rule-based endpoint."
+            content={
+                "code": 501,
+                "message": "Server configuration error: OPENAI_API_KEY is not set.",
+                "data": []
+            }
         )
 
     try:
@@ -268,19 +276,32 @@ async def get_recommendations_ai(request: RecommendRequest):
         # Top K 필터링
         recommendations = recommendations[:request.top_k]
         
-        return RecommendationResponse(
-            plan_id=request.plan.plan_id,
-            user_id=request.user.user_id,
-            recommendations=recommendations,
-            total_count=len(recommendations),
-            timestamp=datetime.now().isoformat()
-        )
+        # 포맷팅 (Standardized Response Format)
+        formatted_data = []
+        for item in recommendations:
+            validity = item.get("validity", {}) or {}
+            
+            formatted_data.append({
+                "message": item.get("ai_reason", item.get("title")), # ai_reason을 message로 사용
+                "startAt": validity.get("start", ""),
+                "endAt": validity.get("end", "")
+            })
+
+        return {
+            "code": 200,
+            "message": "성공",
+            "data": formatted_data
+        }
     
     except Exception as e:
         print(f"AI Recommendation failed: {e}")
-        raise HTTPException(
+        return JSONResponse(
             status_code=500,
-            detail=f"AI 추천 처리 중 오류 발생: {str(e)}"
+            content={
+                "code": 500,
+                "message": f"AI 추천 처리 중 오류 발생: {str(e)}",
+                "data": []
+            }
         )
 
 
@@ -289,31 +310,50 @@ async def get_alternative_recommendations(request: RecommendRequest):
     """
     [대안 추천] 근처 시간대 혜택 및 동종 카테고리 대안 브랜드 추천
     
-    - **near_time_offers**: 브랜드는 일치하고 현재 시간대(일정 시간)에 이용 가능한 혜택
-    - **category_alternatives**: 브랜드는 다르지만 같은 카테고리의 인기 혜택
+    Rule-based 추천 결과를 기반으로 LLM이 자연스러운 설명 문장을 생성하여 반환합니다.
     """
     try:
         from app.recommender import recommend_alternatives
+        from app.llm_recommender import augment_with_llm_messages
         
-        alternatives = recommend_alternatives(
+        # 1. Rule-based 추천 (Top-3 씩만 추출하여 비용 절약)
+        raw_result = recommend_alternatives(
             user=request.user,
             plan=request.plan,
             offers=OFFERS,
             events=EVENTS,
-            top_k=request.top_k
+            top_k=3
         )
         
+        # 2. 결과 병합 (Near Time + Category)
+        # 우선순위: Near Time 먼저, 그 다음 Category
+        candidates = raw_result.get("near_time_offers", []) + raw_result.get("category_alternatives", [])
+        
+        # 3. LLM을 이용한 문장 생성 및 포맷팅 (message, from, to)
+        final_data = augment_with_llm_messages(candidates, request.plan)
+        
+        if not final_data:
+             return {
+                "code": 200,
+                "message": "추천 가능한 대안이 없습니다.",
+                "data": []
+            }
+
         return {
-            "plan_id": request.plan.plan_id,
-            "user_id": request.user.user_id,
-            "alternatives": alternatives,
-            "timestamp": datetime.now().isoformat()
+            "code": 200,
+            "message": "성공",
+            "data": final_data
         }
     
     except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=f"대안 추천 처리 중 오류 발생: {str(e)}"
+        # 에러 발생 시 지정된 포맷 반환
+        return JSONResponse(
+            status_code=500, 
+            content={
+                "code": 500,
+                "message": f"에러: {str(e)}",
+                "data": []
+            }
         )
 
 

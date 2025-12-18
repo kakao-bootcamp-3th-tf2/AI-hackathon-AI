@@ -1,2786 +1,5133 @@
 [
-    {
-        "id": "offer_001",
-        "type": "offer",
-        "title": "Starbucks 아메리카노 20% 할인",
-        "brand": "Starbucks",
-        "category": "Cafe",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 20,
-            "min_spend": 5000,
-            "max_benefit": 3000
-        },
-        "channels": [
-            "offline",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "KB_NaraSarang"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI"
-            ],
-            "times": {
-                "start": "09:00",
-                "end": "18:00"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 3
-            },
-            "exclusive_group": "cafe_morning"
-        },
-        "exclusions": [
-            "gift cards",
-            "sale items"
-        ],
-        "source": {
-            "url": "https://starbucks.co.kr/promo/winter2025",
-            "provider": "Starbucks Korea"
-        }
+  {
+    "id": "offer_001_telecom",
+    "type": "offer",
+    "title": "Starbucks VIP 무료 사이즈업",
+    "brand": "Starbucks",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
     },
-    {
-        "id": "offer_002",
-        "type": "offer",
-        "title": "CU 편의점 2+1 행사",
-        "brand": "CU",
-        "category": "Convenience",
-        "validity": {
-            "start": "2025-11-15",
-            "end": "2025-12-25"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 1500,
-            "min_spend": 3000,
-            "max_benefit": 1500
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT"
-            ],
-            "cards_any_of": [
-                "KB_NaraSarang",
-                "SamsungCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "00:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "day",
-                "count": 2
-            },
-            "exclusive_group": "convenience_daily"
-        },
-        "exclusions": [
-            "alcohol",
-            "tobacco"
-        ],
-        "source": {
-            "url": "https://cu.co.kr/event/2025winter",
-            "provider": "BGF Retail"
-        }
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 500
     },
-    {
-        "id": "offer_003",
-        "type": "offer",
-        "title": "McDonalds 빅맥 세트 30% 할인",
-        "brand": "McDonalds",
-        "category": "FastFood",
-        "validity": {
-            "start": "2025-12-10",
-            "end": "2026-01-10"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 30,
-            "min_spend": 10000,
-            "max_benefit": 5000
-        },
-        "channels": [
-            "offline",
-            "app",
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "HyundaiCard",
-                "LotteCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "11:00",
-                "end": "22:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 1
-            },
-            "exclusive_group": "fastfood_weekend"
-        },
-        "exclusions": [
-            "delivery fee",
-            "happy meal"
-        ],
-        "source": {
-            "url": "https://mcdonalds.co.kr/promo/weekend",
-            "provider": "McDonald's Korea"
-        }
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
     },
-    {
-        "id": "offer_004",
-        "type": "offer",
-        "title": "OliveYoung 뷰티 제품 15% 캐시백",
-        "brand": "OliveYoung",
-        "category": "Beauty",
-        "validity": {
-            "start": "2025-11-20",
-            "end": "2025-12-20"
-        },
-        "benefit": {
-            "kind": "cashback",
-            "value": 15,
-            "min_spend": 20000,
-            "max_benefit": 10000
-        },
-        "channels": [
-            "offline",
-            "online",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "KB_NaraSarang",
-                "HyundaiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "21:00"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 2
-            },
-            "exclusive_group": "beauty_cashback"
-        },
-        "exclusions": [
-            "sale items",
-            "gift sets"
-        ],
-        "source": {
-            "url": "https://oliveyoung.co.kr/event/beauty2025",
-            "provider": "CJ Olive Young"
-        }
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "09:00",
+        "end": "18:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 3
+      },
+      "exclusive_group": "cafe_morning"
     },
-    {
-        "id": "offer_005",
-        "type": "offer",
-        "title": "Baemin 배달 3000원 할인",
-        "brand": "Baemin",
-        "category": "Delivery",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 3000,
-            "min_spend": 15000,
-            "max_benefit": 3000
-        },
-        "channels": [
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT"
-            ],
-            "cards_any_of": [
-                "SamsungCard",
-                "HanaCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU"
-            ],
-            "times": {
-                "start": "11:00",
-                "end": "14:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 3
-            },
-            "exclusive_group": "delivery_lunch"
-        },
-        "exclusions": [
-            "delivery fee",
-            "service charge"
-        ],
-        "source": {
-            "url": "https://baemin.com/event/lunch",
-            "provider": "Woowa Brothers"
-        }
-    },
-    {
-        "id": "offer_006",
-        "type": "offer",
-        "title": "Coupang 로켓배송 5% 적립",
-        "brand": "Coupang",
-        "category": "ECommerce",
-        "validity": {
-            "start": "2025-11-25",
-            "end": "2026-01-15"
-        },
-        "benefit": {
-            "kind": "points",
-            "value": 5000,
-            "min_spend": 50000,
-            "max_benefit": 5000
-        },
-        "channels": [
-            "app",
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "KB_NaraSarang",
-                "WooriCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "00:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 5
-            },
-            "exclusive_group": "ecommerce_rocket"
-        },
-        "exclusions": [
-            "gift cards",
-            "fresh food"
-        ],
-        "source": {
-            "url": "https://coupang.com/event/rocket2025",
-            "provider": "Coupang Corp"
-        }
-    },
-    {
-        "id": "offer_007",
-        "type": "offer",
-        "title": "GS25 도시락 1000원 할인",
-        "brand": "GS25",
-        "category": "Convenience",
-        "validity": {
-            "start": "2025-12-05",
-            "end": "2025-12-26"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 1000,
-            "min_spend": 4000,
-            "max_benefit": 1000
-        },
-        "channels": [
-            "offline",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "CitiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI"
-            ],
-            "times": {
-                "start": "07:00",
-                "end": "10:00"
-            },
-            "usage_limit": {
-                "period": "day",
-                "count": 1
-            },
-            "exclusive_group": "convenience_breakfast"
-        },
-        "exclusions": [
-            "alcohol",
-            "tobacco",
-            "gift cards"
-        ],
-        "source": {
-            "url": "https://gs25.gsretail.com/event/breakfast",
-            "provider": "GS Retail"
-        }
-    },
-    {
-        "id": "offer_008",
-        "type": "offer",
-        "title": "Ediya Coffee 아이스 음료 25% 할인",
-        "brand": "Ediya",
-        "category": "Cafe",
-        "validity": {
-            "start": "2025-11-10",
-            "end": "2025-12-15"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 25,
-            "min_spend": 4000,
-            "max_benefit": 2000
-        },
-        "channels": [
-            "offline",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "LotteCard",
-                "HanaCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "TUE",
-                "WED",
-                "THU"
-            ],
-            "times": {
-                "start": "14:00",
-                "end": "17:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 2
-            },
-            "exclusive_group": "cafe_afternoon"
-        },
-        "exclusions": [
-            "bottled drinks",
-            "food items"
-        ],
-        "source": {
-            "url": "https://ediya.com/promo/ice2025",
-            "provider": "Ediya Coffee"
-        }
-    },
-    {
-        "id": "offer_009",
-        "type": "offer",
-        "title": "Samsung Galaxy 구매 시 10만원 캐시백",
-        "brand": "Samsung",
-        "category": "Electronics",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2026-01-31"
-        },
-        "benefit": {
-            "kind": "cashback",
-            "value": 100000,
-            "min_spend": 1000000,
-            "max_benefit": 100000
-        },
-        "channels": [
-            "offline",
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "SamsungCard",
-                "HyundaiCard",
-                "ShinhanCheck"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "20:00"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "electronics_premium"
-        },
-        "exclusions": [
-            "refurbished items",
-            "accessories"
-        ],
-        "source": {
-            "url": "https://samsung.com/kr/event/galaxy2025",
-            "provider": "Samsung Electronics"
-        }
-    },
-    {
-        "id": "offer_010",
-        "type": "offer",
-        "title": "Apple AirPods 15% 할인",
-        "brand": "Apple",
-        "category": "Electronics",
-        "validity": {
-            "start": "2025-11-28",
-            "end": "2025-12-28"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 15,
-            "min_spend": 200000,
-            "max_benefit": 50000
-        },
-        "channels": [
-            "online",
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT"
-            ],
-            "cards_any_of": [
-                "HyundaiCard",
-                "KB_NaraSarang"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "22:00"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "electronics_audio"
-        },
-        "exclusions": [
-            "engraving service",
-            "AppleCare+"
-        ],
-        "source": {
-            "url": "https://apple.com/kr/shop/event/holiday",
-            "provider": "Apple Korea"
-        }
-    },
-    {
-        "id": "offer_011",
-        "type": "offer",
-        "title": "Netflix 3개월 구독 20% 할인",
-        "brand": "Netflix",
-        "category": "Subscription",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2026-01-20"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 20,
-            "min_spend": 30000,
-            "max_benefit": 6000
-        },
-        "channels": [
-            "online",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "LotteCard",
-                "CitiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "00:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "subscription_streaming"
-        },
-        "exclusions": [
-            "gift subscriptions"
-        ],
-        "source": {
-            "url": "https://netflix.com/kr/promo/winter2025",
-            "provider": "Netflix Korea"
-        }
-    },
-    {
-        "id": "offer_012",
-        "type": "offer",
-        "title": "YouTube Premium 2개월 무료",
-        "brand": "YouTube",
-        "category": "Subscription",
-        "validity": {
-            "start": "2025-11-15",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 28000,
-            "min_spend": 0,
-            "max_benefit": 28000
-        },
-        "channels": [
-            "app",
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "KT"
-            ],
-            "cards_any_of": [
-                "KB_NaraSarang",
-                "WooriCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "00:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "subscription_video"
-        },
-        "exclusions": [
-            "existing subscribers"
-        ],
-        "source": {
-            "url": "https://youtube.com/premium/offer",
-            "provider": "Google Korea"
-        }
-    },
-    {
-        "id": "offer_013",
-        "type": "offer",
-        "title": "Naver Pay 5000원 적립",
-        "brand": "Naver",
-        "category": "ECommerce",
-        "validity": {
-            "start": "2025-12-10",
-            "end": "2026-01-10"
-        },
-        "benefit": {
-            "kind": "points",
-            "value": 5000,
-            "min_spend": 30000,
-            "max_benefit": 5000
-        },
-        "channels": [
-            "app",
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "HanaCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI"
-            ],
-            "times": {
-                "start": "00:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 2
-            },
-            "exclusive_group": "ecommerce_points"
-        },
-        "exclusions": [
-            "gift cards",
-            "digital content"
-        ],
-        "source": {
-            "url": "https://pay.naver.com/event/2025winter",
-            "provider": "Naver Corp"
-        }
-    },
-    {
-        "id": "offer_014",
-        "type": "offer",
-        "title": "Kakao T 택시 2000원 할인",
-        "brand": "Kakao",
-        "category": "Delivery",
-        "validity": {
-            "start": "2025-11-20",
-            "end": "2025-12-20"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 2000,
-            "min_spend": 5000,
-            "max_benefit": 2000
-        },
-        "channels": [
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "KB_NaraSarang",
-                "SamsungCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI"
-            ],
-            "times": {
-                "start": "06:00",
-                "end": "09:00"
-            },
-            "usage_limit": {
-                "period": "day",
-                "count": 1
-            },
-            "exclusive_group": "delivery_taxi"
-        },
-        "exclusions": [
-            "premium taxi",
-            "long distance"
-        ],
-        "source": {
-            "url": "https://t.kakao.com/event/morning",
-            "provider": "Kakao Mobility"
-        }
-    },
-    {
-        "id": "offer_015",
-        "type": "offer",
-        "title": "Lotte Mart 장보기 10% 할인",
-        "brand": "Lotte",
-        "category": "Grocery",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 10,
-            "min_spend": 50000,
-            "max_benefit": 10000
-        },
-        "channels": [
-            "offline",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "LotteCard",
-                "HyundaiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "20:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 1
-            },
-            "exclusive_group": "grocery_weekend"
-        },
-        "exclusions": [
-            "alcohol",
-            "tobacco",
-            "gift cards"
-        ],
-        "source": {
-            "url": "https://lottemart.com/event/weekend",
-            "provider": "Lotte Shopping"
-        }
-    },
-    {
-        "id": "offer_016",
-        "type": "offer",
-        "title": "Shinsegae 백화점 VIP 15% 할인",
-        "brand": "Shinsegae",
-        "category": "Department",
-        "validity": {
-            "start": "2025-11-25",
-            "end": "2026-01-05"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 15,
-            "min_spend": 100000,
-            "max_benefit": 30000
-        },
-        "channels": [
-            "offline",
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "KB_NaraSarang",
-                "HyundaiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI"
-            ],
-            "times": {
-                "start": "10:30",
-                "end": "20:00"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 2
-            },
-            "exclusive_group": "department_vip"
-        },
-        "exclusions": [
-            "sale items",
-            "luxury brands",
-            "cosmetics"
-        ],
-        "source": {
-            "url": "https://shinsegae.com/event/vip2025",
-            "provider": "Shinsegae Department Store"
-        }
-    },
-    {
-        "id": "offer_017",
-        "type": "offer",
-        "title": "Homeplus 신선식품 20% 할인",
-        "brand": "Homeplus",
-        "category": "Grocery",
-        "validity": {
-            "start": "2025-12-05",
-            "end": "2025-12-25"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 20,
-            "min_spend": 30000,
-            "max_benefit": 8000
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT"
-            ],
-            "cards_any_of": [
-                "SamsungCard",
-                "WooriCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "WED",
-                "THU"
-            ],
-            "times": {
-                "start": "09:00",
-                "end": "12:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 1
-            },
-            "exclusive_group": "grocery_fresh"
-        },
-        "exclusions": [
-            "processed food",
-            "frozen food"
-        ],
-        "source": {
-            "url": "https://homeplus.co.kr/event/fresh",
-            "provider": "Homeplus"
-        }
-    },
-    {
-        "id": "offer_018",
-        "type": "offer",
-        "title": "Emart 생필품 5000원 할인",
-        "brand": "Emart",
-        "category": "Grocery",
-        "validity": {
-            "start": "2025-11-18",
-            "end": "2025-12-18"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 5000,
-            "min_spend": 40000,
-            "max_benefit": 5000
-        },
-        "channels": [
-            "offline",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "CitiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "22:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 1
-            },
-            "exclusive_group": "grocery_essentials"
-        },
-        "exclusions": [
-            "alcohol",
-            "tobacco",
-            "electronics"
-        ],
-        "source": {
-            "url": "https://emart.ssg.com/event/essentials",
-            "provider": "Shinsegae Emart"
-        }
-    },
-    {
-        "id": "offer_019",
-        "type": "offer",
-        "title": "Daiso 전품목 10% 추가 할인",
-        "brand": "Daiso",
-        "category": "Grocery",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 10,
-            "min_spend": 10000,
-            "max_benefit": 3000
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "KB_NaraSarang",
-                "HanaCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "21:00"
-            },
-            "usage_limit": {
-                "period": "day",
-                "count": 1
-            },
-            "exclusive_group": "grocery_discount"
-        },
-        "exclusions": [
-            "food items"
-        ],
-        "source": {
-            "url": "https://daiso.co.kr/event/winter",
-            "provider": "Daiso Korea"
-        }
-    },
-    {
-        "id": "offer_020",
-        "type": "offer",
-        "title": "SevenEleven 커피 1+1",
-        "brand": "SevenEleven",
-        "category": "Convenience",
-        "validity": {
-            "start": "2025-11-10",
-            "end": "2025-12-10"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 2000,
-            "min_spend": 2000,
-            "max_benefit": 2000
-        },
-        "channels": [
-            "offline",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "LotteCard",
-                "SamsungCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI"
-            ],
-            "times": {
-                "start": "06:00",
-                "end": "11:00"
-            },
-            "usage_limit": {
-                "period": "day",
-                "count": 1
-            },
-            "exclusive_group": "convenience_coffee"
-        },
-        "exclusions": [
-            "bottled coffee",
-            "ice cream"
-        ],
-        "source": {
-            "url": "https://7eleven.co.kr/event/coffee",
-            "provider": "Korea Seven"
-        }
-    },
-    {
-        "id": "offer_021",
-        "type": "offer",
-        "title": "Starbucks 케이크 세트 25% 할인",
-        "brand": "Starbucks",
-        "category": "Cafe",
-        "validity": {
-            "start": "2025-12-15",
-            "end": "2026-01-15"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 25,
-            "min_spend": 15000,
-            "max_benefit": 5000
-        },
-        "channels": [
-            "offline",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "HyundaiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "14:00",
-                "end": "20:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 1
-            },
-            "exclusive_group": "cafe_dessert"
-        },
-        "exclusions": [
-            "beverages only",
-            "merchandise"
-        ],
-        "source": {
-            "url": "https://starbucks.co.kr/promo/cake",
-            "provider": "Starbucks Korea"
-        }
-    },
-    {
-        "id": "offer_022",
-        "type": "offer",
-        "title": "OliveYoung 스킨케어 세트 30% 할인",
-        "brand": "OliveYoung",
-        "category": "Beauty",
-        "validity": {
-            "start": "2025-11-22",
-            "end": "2025-12-22"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 30,
-            "min_spend": 50000,
-            "max_benefit": 20000
-        },
-        "channels": [
-            "offline",
-            "online",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "KB_NaraSarang",
-                "LotteCard",
-                "CitiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "TUE",
-                "WED",
-                "THU"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "22:00"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "beauty_skincare"
-        },
-        "exclusions": [
-            "luxury brands",
-            "sale items"
-        ],
-        "source": {
-            "url": "https://oliveyoung.co.kr/event/skincare",
-            "provider": "CJ Olive Young"
-        }
-    },
-    {
-        "id": "offer_023",
-        "type": "offer",
-        "title": "Baemin 야식 배달 4000원 할인",
-        "brand": "Baemin",
-        "category": "Delivery",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 4000,
-            "min_spend": 20000,
-            "max_benefit": 4000
-        },
-        "channels": [
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "KT"
-            ],
-            "cards_any_of": [
-                "SamsungCard",
-                "WooriCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "21:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 2
-            },
-            "exclusive_group": "delivery_night"
-        },
-        "exclusions": [
-            "delivery fee",
-            "minimum order"
-        ],
-        "source": {
-            "url": "https://baemin.com/event/night",
-            "provider": "Woowa Brothers"
-        }
-    },
-    {
-        "id": "offer_024",
-        "type": "offer",
-        "title": "Coupang Eats 첫 주문 5000원 할인",
-        "brand": "Coupang",
-        "category": "Delivery",
-        "validity": {
-            "start": "2025-11-15",
-            "end": "2026-01-31"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 5000,
-            "min_spend": 12000,
-            "max_benefit": 5000
-        },
-        "channels": [
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "KB_NaraSarang"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "00:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "delivery_first"
-        },
-        "exclusions": [
-            "new users only"
-        ],
-        "source": {
-            "url": "https://coupangeats.com/event/first",
-            "provider": "Coupang Corp"
-        }
-    },
-    {
-        "id": "offer_025",
-        "type": "offer",
-        "title": "McDonalds 해피밀 2000원 할인",
-        "brand": "McDonalds",
-        "category": "FastFood",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 2000,
-            "min_spend": 5000,
-            "max_benefit": 2000
-        },
-        "channels": [
-            "offline",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT"
-            ],
-            "cards_any_of": [
-                "HanaCard",
-                "CitiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "15:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 1
-            },
-            "exclusive_group": "fastfood_kids"
-        },
-        "exclusions": [
-            "adult meals",
-            "delivery"
-        ],
-        "source": {
-            "url": "https://mcdonalds.co.kr/promo/happymeal",
-            "provider": "McDonald's Korea"
-        }
-    },
-    {
-        "id": "offer_026",
-        "type": "offer",
-        "title": "Samsung TV 구매 시 20만원 캐시백",
-        "brand": "Samsung",
-        "category": "Electronics",
-        "validity": {
-            "start": "2025-11-20",
-            "end": "2026-01-20"
-        },
-        "benefit": {
-            "kind": "cashback",
-            "value": 200000,
-            "min_spend": 2000000,
-            "max_benefit": 200000
-        },
-        "channels": [
-            "offline",
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT"
-            ],
-            "cards_any_of": [
-                "SamsungCard",
-                "HyundaiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "20:00"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "electronics_tv"
-        },
-        "exclusions": [
-            "outlet products",
-            "refurbished"
-        ],
-        "source": {
-            "url": "https://samsung.com/kr/event/tv2025",
-            "provider": "Samsung Electronics"
-        }
-    },
-    {
-        "id": "offer_027",
-        "type": "offer",
-        "title": "Apple MacBook 학생 할인 10%",
-        "brand": "Apple",
-        "category": "Electronics",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2026-01-31"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 10,
-            "min_spend": 1500000,
-            "max_benefit": 200000
-        },
-        "channels": [
-            "online",
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "KB_NaraSarang",
-                "ShinhanCheck"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "20:00"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "electronics_student"
-        },
-        "exclusions": [
-            "accessories",
-            "AppleCare+"
-        ],
-        "source": {
-            "url": "https://apple.com/kr/shop/education",
-            "provider": "Apple Korea"
-        }
-    },
-    {
-        "id": "offer_028",
-        "type": "offer",
-        "title": "Netflix 프리미엄 플랜 1개월 무료",
-        "brand": "Netflix",
-        "category": "Subscription",
-        "validity": {
-            "start": "2025-11-25",
-            "end": "2025-12-25"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 17000,
-            "min_spend": 0,
-            "max_benefit": 17000
-        },
-        "channels": [
-            "app",
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "LotteCard",
-                "WooriCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "00:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "subscription_premium"
-        },
-        "exclusions": [
-            "existing premium subscribers"
-        ],
-        "source": {
-            "url": "https://netflix.com/kr/promo/premium",
-            "provider": "Netflix Korea"
-        }
-    },
-    {
-        "id": "offer_029",
-        "type": "offer",
-        "title": "YouTube Music 3개월 무료",
-        "brand": "YouTube",
-        "category": "Subscription",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2026-01-31"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 29700,
-            "min_spend": 0,
-            "max_benefit": 29700
-        },
-        "channels": [
-            "app",
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT"
-            ],
-            "cards_any_of": [
-                "SamsungCard",
-                "HanaCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "00:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "subscription_music"
-        },
-        "exclusions": [
-            "existing subscribers"
-        ],
-        "source": {
-            "url": "https://music.youtube.com/promo",
-            "provider": "Google Korea"
-        }
-    },
-    {
-        "id": "offer_030",
-        "type": "offer",
-        "title": "Naver Plus 멤버십 6개월 50% 할인",
-        "brand": "Naver",
-        "category": "Subscription",
-        "validity": {
-            "start": "2025-11-20",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 50,
-            "min_spend": 23880,
-            "max_benefit": 11940
-        },
-        "channels": [
-            "app",
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "KB_NaraSarang",
-                "CitiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "00:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "subscription_membership"
-        },
-        "exclusions": [
-            "existing members"
-        ],
-        "source": {
-            "url": "https://membership.naver.com/event",
-            "provider": "Naver Corp"
-        }
-    },
-    {
-        "id": "offer_031",
-        "type": "offer",
-        "title": "Kakao Friends 굿즈 20% 할인",
-        "brand": "Kakao",
-        "category": "ECommerce",
-        "validity": {
-            "start": "2025-12-05",
-            "end": "2026-01-05"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 20,
-            "min_spend": 20000,
-            "max_benefit": 10000
-        },
-        "channels": [
-            "online",
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "LotteCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "22:00"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 2
-            },
-            "exclusive_group": "ecommerce_character"
-        },
-        "exclusions": [
-            "limited editions",
-            "collaborations"
-        ],
-        "source": {
-            "url": "https://store.kakaofriends.com/event",
-            "provider": "Kakao Corp"
-        }
-    },
-    {
-        "id": "offer_032",
-        "type": "offer",
-        "title": "Lotte Cinema 영화 티켓 5000원 할인",
-        "brand": "Lotte",
-        "category": "Entertainment",
-        "validity": {
-            "start": "2025-11-15",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 5000,
-            "min_spend": 14000,
-            "max_benefit": 5000
-        },
-        "channels": [
-            "app",
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "LotteCard",
-                "HyundaiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "18:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 2
-            },
-            "exclusive_group": "entertainment_movie"
-        },
-        "exclusions": [
-            "IMAX",
-            "4DX",
-            "weekend"
-        ],
-        "source": {
-            "url": "https://lottecinema.co.kr/event/weekday",
-            "provider": "Lotte Cinema"
-        }
-    },
-    {
-        "id": "offer_033",
-        "type": "offer",
-        "title": "Shinsegae 식품관 15% 할인",
-        "brand": "Shinsegae",
-        "category": "Grocery",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 15,
-            "min_spend": 30000,
-            "max_benefit": 10000
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "KT"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "KB_NaraSarang"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "WED",
-                "THU"
-            ],
-            "times": {
-                "start": "10:30",
-                "end": "20:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 1
-            },
-            "exclusive_group": "grocery_premium"
-        },
-        "exclusions": [
-            "alcohol",
-            "imported goods"
-        ],
-        "source": {
-            "url": "https://shinsegae.com/event/food",
-            "provider": "Shinsegae Department Store"
-        }
-    },
-    {
-        "id": "offer_034",
-        "type": "offer",
-        "title": "Homeplus 생활용품 3+1",
-        "brand": "Homeplus",
-        "category": "Grocery",
-        "validity": {
-            "start": "2025-11-25",
-            "end": "2025-12-25"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 25,
-            "min_spend": 20000,
-            "max_benefit": 7000
-        },
-        "channels": [
-            "offline",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "SamsungCard",
-                "WooriCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "09:00",
-                "end": "21:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 1
-            },
-            "exclusive_group": "grocery_household"
-        },
-        "exclusions": [
-            "food",
-            "electronics"
-        ],
-        "source": {
-            "url": "https://homeplus.co.kr/event/household",
-            "provider": "Homeplus"
-        }
-    },
-    {
-        "id": "offer_035",
-        "type": "offer",
-        "title": "Emart 와인 페어 20% 할인",
-        "brand": "Emart",
-        "category": "Grocery",
-        "validity": {
-            "start": "2025-12-10",
-            "end": "2026-01-10"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 20,
-            "min_spend": 50000,
-            "max_benefit": 20000
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "HyundaiCard",
-                "CitiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "FRI",
-                "SAT"
-            ],
-            "times": {
-                "start": "15:00",
-                "end": "22:00"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 2
-            },
-            "exclusive_group": "grocery_wine"
-        },
-        "exclusions": [
-            "spirits",
-            "beer"
-        ],
-        "source": {
-            "url": "https://emart.ssg.com/event/wine",
-            "provider": "Shinsegae Emart"
-        }
-    },
-    {
-        "id": "offer_036",
-        "type": "offer",
-        "title": "Daiso 주방용품 15% 할인",
-        "brand": "Daiso",
-        "category": "Grocery",
-        "validity": {
-            "start": "2025-11-20",
-            "end": "2025-12-20"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 15,
-            "min_spend": 15000,
-            "max_benefit": 5000
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT"
-            ],
-            "cards_any_of": [
-                "KB_NaraSarang",
-                "HanaCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "TUE",
-                "WED",
-                "THU"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "20:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 1
-            },
-            "exclusive_group": "grocery_kitchen"
-        },
-        "exclusions": [
-            "food",
-            "cosmetics"
-        ],
-        "source": {
-            "url": "https://daiso.co.kr/event/kitchen",
-            "provider": "Daiso Korea"
-        }
-    },
-    {
-        "id": "offer_037",
-        "type": "offer",
-        "title": "Ediya 디저트 세트 30% 할인",
-        "brand": "Ediya",
-        "category": "Cafe",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 30,
-            "min_spend": 10000,
-            "max_benefit": 4000
-        },
-        "channels": [
-            "offline",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "LotteCard",
-                "SamsungCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "15:00",
-                "end": "19:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 1
-            },
-            "exclusive_group": "cafe_weekend"
-        },
-        "exclusions": [
-            "beverages only"
-        ],
-        "source": {
-            "url": "https://ediya.com/promo/dessert",
-            "provider": "Ediya Coffee"
-        }
-    },
-    {
-        "id": "offer_038",
-        "type": "offer",
-        "title": "OliveYoung 향수 10% 추가 할인",
-        "brand": "OliveYoung",
-        "category": "Beauty",
-        "validity": {
-            "start": "2025-11-28",
-            "end": "2025-12-28"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 10,
-            "min_spend": 80000,
-            "max_benefit": 15000
-        },
-        "channels": [
-            "offline",
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "HyundaiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI"
-            ],
-            "times": {
-                "start": "10:00",
-                "end": "21:00"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "beauty_fragrance"
-        },
-        "exclusions": [
-            "luxury brands",
-            "limited editions"
-        ],
-        "source": {
-            "url": "https://oliveyoung.co.kr/event/fragrance",
-            "provider": "CJ Olive Young"
-        }
-    },
-    {
-        "id": "offer_039",
-        "type": "offer",
-        "title": "CU 도시락 + 음료 세트 2000원 할인",
-        "brand": "CU",
-        "category": "Convenience",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 2000,
-            "min_spend": 6000,
-            "max_benefit": 2000
-        },
-        "channels": [
-            "offline",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT"
-            ],
-            "cards_any_of": [
-                "KB_NaraSarang",
-                "CitiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI"
-            ],
-            "times": {
-                "start": "11:00",
-                "end": "14:00"
-            },
-            "usage_limit": {
-                "period": "day",
-                "count": 1
-            },
-            "exclusive_group": "convenience_lunch"
-        },
-        "exclusions": [
-            "alcohol",
-            "tobacco"
-        ],
-        "source": {
-            "url": "https://cu.co.kr/event/lunchset",
-            "provider": "BGF Retail"
-        }
-    },
-    {
-        "id": "offer_040",
-        "type": "offer",
-        "title": "GS25 삼각김밥 3개 구매 시 1개 무료",
-        "brand": "GS25",
-        "category": "Convenience",
-        "validity": {
-            "start": "2025-11-18",
-            "end": "2025-12-18"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 1500,
-            "min_spend": 4500,
-            "max_benefit": 1500
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "SamsungCard",
-                "WooriCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "06:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "day",
-                "count": 1
-            },
-            "exclusive_group": "convenience_snack"
-        },
-        "exclusions": [
-            "premium products"
-        ],
-        "source": {
-            "url": "https://gs25.gsretail.com/event/kimbap",
-            "provider": "GS Retail"
-        }
-    },
-    {
-        "id": "offer_001_var1",
-        "type": "offer",
-        "title": "[주말] Starbucks 아메리카노 1+1",
-        "brand": "Starbucks",
-        "category": "Cafe",
-        "validity": {
-            "start": "2025-12-05",
-            "end": "2026-01-05"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 4500,
-            "min_spend": 4500,
-            "max_benefit": 4500
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "HyundaiCard",
-                "SamsungCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "13:00",
-                "end": "17:00"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 1
-            },
-            "exclusive_group": "cafe_weekend_special"
-        },
-        "exclusions": [
-            "drive-thru"
-        ],
-        "source": {
-            "url": "https://starbucks.co.kr/promo/weekend",
-            "provider": "Starbucks Korea"
-        }
-    },
-    {
-        "id": "offer_002_var1",
-        "type": "offer",
-        "title": "[심야] CU 편의점 야식 30% 할인",
-        "brand": "CU",
-        "category": "Convenience",
-        "validity": {
-            "start": "2025-12-10",
-            "end": "2026-01-10"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 30,
-            "min_spend": 5000,
-            "max_benefit": 3000
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "HanaCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "FRI",
-                "SAT"
-            ],
-            "times": {
-                "start": "22:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "day",
-                "count": 1
-            },
-            "exclusive_group": "convenience_night"
-        },
-        "exclusions": [
-            "alcohol"
-        ],
-        "source": {
-            "url": "https://cu.co.kr",
-            "provider": "BGF Retail"
-        }
-    },
-    {
-        "id": "offer_006_var1",
-        "type": "offer",
-        "title": "[신규] Coupang 첫 구매 1만원 할인",
-        "brand": "Coupang",
-        "category": "ECommerce",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2026-02-28"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 10000,
-            "min_spend": 30000,
-            "max_benefit": 10000
-        },
-        "channels": [
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "KB_NaraSarang",
-                "WooriCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "00:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 1
-            },
-            "exclusive_group": "ecommerce_new"
-        },
-        "exclusions": [
-            "gold box"
-        ],
-        "source": {
-            "url": "https://coupang.com",
-            "provider": "Coupang"
-        }
-    },
-    {
-        "id": "offer_016_var1",
-        "type": "offer",
-        "title": "Shinsegae 멤버십 데이 10% 추가 할인",
-        "brand": "Shinsegae",
-        "category": "Department",
-        "validity": {
-            "start": "2025-12-20",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 10,
-            "min_spend": 50000,
-            "max_benefit": 20000
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "SamsungCard",
-                "LotteCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "10:30",
-                "end": "20:30"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 1
-            },
-            "exclusive_group": "department_membership"
-        },
-        "exclusions": [
-            "luxury"
-        ],
-        "source": {
-            "url": "https://shinsegae.com",
-            "provider": "Shinsegae"
-        }
-    },
-    {
-        "id": "offer_022_var1",
-        "type": "offer",
-        "title": "OliveYoung 남성 올인원 로션 20% 할인",
-        "brand": "OliveYoung",
-        "category": "Beauty",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2026-01-31"
-        },
-        "benefit": {
-            "kind": "percent",
-            "value": 20,
-            "min_spend": 20000,
-            "max_benefit": 10000
-        },
-        "channels": [
-            "online",
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT"
-            ],
-            "cards_any_of": [
-                "KB_NaraSarang",
-                "IBK_NaraSarang"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI"
-            ],
-            "times": {
-                "start": "00:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "month",
-                "count": 5
-            },
-            "exclusive_group": "beauty_men"
-        },
-        "exclusions": [],
-        "source": {
-            "url": "https://oliveyoung.co.kr",
-            "provider": "OliveYoung"
-        }
-    },
-    {
-        "id": "offer_010_var1",
-        "type": "offer",
-        "title": "Apple iPad 교육 할인 프로모션",
-        "brand": "Apple",
-        "category": "Electronics",
-        "validity": {
-            "start": "2025-12-15",
-            "end": "2026-02-15"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 50000,
-            "min_spend": 800000,
-            "max_benefit": 50000
-        },
-        "channels": [
-            "online"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "HanaCard",
-                "WooriCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI",
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "09:00",
-                "end": "22:00"
-            },
-            "usage_limit": {
-                "period": "year",
-                "count": 1
-            },
-            "exclusive_group": "electronics_edu"
-        },
-        "exclusions": [
-            "accessories"
-        ],
-        "source": {
-            "url": "https://apple.com",
-            "provider": "Apple"
-        }
-    },
-    {
-        "id": "offer_008_var1",
-        "type": "offer",
-        "title": "Ediya 토피넛 라떼 사이즈업 무료",
-        "brand": "Ediya",
-        "category": "Cafe",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 1000,
-            "min_spend": 4000,
-            "max_benefit": 1000
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "KB_NaraSarang"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "MON",
-                "TUE",
-                "WED",
-                "THU",
-                "FRI"
-            ],
-            "times": {
-                "start": "08:00",
-                "end": "11:00"
-            },
-            "usage_limit": {
-                "period": "day",
-                "count": 1
-            },
-            "exclusive_group": "cafe_morning"
-        },
-        "exclusions": [],
-        "source": {
-            "url": "https://ediya.com",
-            "provider": "Ediya"
-        }
-    },
-    {
-        "id": "offer_013_var1",
-        "type": "offer",
-        "title": "Naver Pay 현장결제 3배 적립",
-        "brand": "Naver",
-        "category": "ECommerce",
-        "validity": {
-            "start": "2025-12-24",
-            "end": "2025-12-25"
-        },
-        "benefit": {
-            "kind": "points",
-            "value": 3000,
-            "min_spend": 10000,
-            "max_benefit": 30000
-        },
-        "channels": [
-            "app"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "SKT",
-                "KT",
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "SamsungCard",
-                "HyundaiCard",
-                "LotteCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "WED"
-            ],
-            "times": {
-                "start": "00:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 10
-            },
-            "exclusive_group": "ecommerce_xmas"
-        },
-        "exclusions": [],
-        "source": {
-            "url": "https://naver.com",
-            "provider": "Naver"
-        }
-    },
-    {
-        "id": "offer_037_var1",
-        "type": "offer",
-        "title": "Ediya 조각케익 2000원 할인",
-        "brand": "Ediya",
-        "category": "Cafe",
-        "validity": {
-            "start": "2025-12-15",
-            "end": "2026-01-15"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 2000,
-            "min_spend": 5000,
-            "max_benefit": 2000
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "LGU+"
-            ],
-            "cards_any_of": [
-                "WooriCard",
-                "HanaCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "SAT",
-                "SUN"
-            ],
-            "times": {
-                "start": "12:00",
-                "end": "21:00"
-            },
-            "usage_limit": {
-                "period": "day",
-                "count": 1
-            },
-            "exclusive_group": "cafe_dessert"
-        },
-        "exclusions": [
-            "whole cake"
-        ],
-        "source": {
-            "url": "https://ediya.com",
-            "provider": "Ediya"
-        }
-    },
-    {
-        "id": "offer_007_var1",
-        "type": "offer",
-        "title": "GS25 심야 4캔 만원 맥주 행사",
-        "brand": "GS25",
-        "category": "Convenience",
-        "validity": {
-            "start": "2025-12-01",
-            "end": "2025-12-31"
-        },
-        "benefit": {
-            "kind": "fixed",
-            "value": 2000,
-            "min_spend": 12000,
-            "max_benefit": 2000
-        },
-        "channels": [
-            "offline"
-        ],
-        "eligibility": {
-            "telecom_any_of": [
-                "KT"
-            ],
-            "cards_any_of": [
-                "ShinhanCheck",
-                "HyundaiCard"
-            ]
-        },
-        "constraints": {
-            "days_of_week": [
-                "FRI",
-                "SAT"
-            ],
-            "times": {
-                "start": "18:00",
-                "end": "23:59"
-            },
-            "usage_limit": {
-                "period": "week",
-                "count": 2
-            },
-            "exclusive_group": "convenience_beer"
-        },
-        "exclusions": [],
-        "source": {
-            "url": "https://gs25.gsretail.com",
-            "provider": "GS25"
-        }
+    "exclusions": [
+      "gift cards",
+      "sale items"
+    ],
+    "source": {
+      "url": "https://starbucks.co.kr/promo/winter2025",
+      "provider": "Starbucks Korea"
     }
+  },
+  {
+    "id": "offer_001_card",
+    "type": "offer",
+    "title": "Starbucks 4000원 이상 결제 시 1000원 할인",
+    "brand": "Starbucks",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 1000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "KB_NaraSarang"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "09:00",
+        "end": "18:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 3
+      },
+      "exclusive_group": "cafe_morning"
+    },
+    "exclusions": [
+      "gift cards",
+      "sale items"
+    ],
+    "source": {
+      "url": "https://starbucks.co.kr/promo/winter2025",
+      "provider": "Starbucks Korea"
+    }
+  },
+  {
+    "id": "offer_002_telecom",
+    "type": "offer",
+    "title": "CU VIP 도시락 무료 증정",
+    "brand": "CU",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-11-15",
+      "end": "2025-12-25"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 5000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 2
+      },
+      "exclusive_group": "convenience_daily"
+    },
+    "exclusions": [
+      "alcohol",
+      "tobacco"
+    ],
+    "source": {
+      "url": "https://cu.co.kr/event/2025winter",
+      "provider": "BGF Retail"
+    }
+  },
+  {
+    "id": "offer_002_card",
+    "type": "offer",
+    "title": "CU BC페이북 QR결제 500원 할인",
+    "brand": "CU",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-11-15",
+      "end": "2025-12-25"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 500
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KB_NaraSarang",
+        "SamsungCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 2
+      },
+      "exclusive_group": "convenience_daily"
+    },
+    "exclusions": [
+      "alcohol",
+      "tobacco"
+    ],
+    "source": {
+      "url": "https://cu.co.kr/event/2025winter",
+      "provider": "BGF Retail"
+    }
+  },
+  {
+    "id": "offer_003_telecom",
+    "type": "offer",
+    "title": "McDonalds 통신사 멤버십 할인",
+    "brand": "McDonalds",
+    "category": "FastFood",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-10"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 30,
+      "min_spend": 10000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "offline",
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "11:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "fastfood_weekend"
+    },
+    "exclusions": [
+      "delivery fee",
+      "happy meal"
+    ],
+    "source": {
+      "url": "https://mcdonalds.co.kr/promo/weekend",
+      "provider": "McDonald's Korea"
+    }
+  },
+  {
+    "id": "offer_003_card",
+    "type": "offer",
+    "title": "McDonalds 제휴카드 청구할인",
+    "brand": "McDonalds",
+    "category": "FastFood",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-10"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 30,
+      "min_spend": 10000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "offline",
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard",
+        "LotteCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "11:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "fastfood_weekend"
+    },
+    "exclusions": [
+      "delivery fee",
+      "happy meal"
+    ],
+    "source": {
+      "url": "https://mcdonalds.co.kr/promo/weekend",
+      "provider": "McDonald's Korea"
+    }
+  },
+  {
+    "id": "offer_004_telecom",
+    "type": "offer",
+    "title": "OliveYoung 통신사 멤버십 할인",
+    "brand": "OliveYoung",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-11-20",
+      "end": "2025-12-20"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 15,
+      "min_spend": 20000,
+      "max_benefit": 10000
+    },
+    "channels": [
+      "offline",
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "21:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 2
+      },
+      "exclusive_group": "beauty_cashback"
+    },
+    "exclusions": [
+      "sale items",
+      "gift sets"
+    ],
+    "source": {
+      "url": "https://oliveyoung.co.kr/event/beauty2025",
+      "provider": "CJ Olive Young"
+    }
+  },
+  {
+    "id": "offer_004_card",
+    "type": "offer",
+    "title": "OliveYoung 제휴카드 청구할인",
+    "brand": "OliveYoung",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-11-20",
+      "end": "2025-12-20"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 15,
+      "min_spend": 20000,
+      "max_benefit": 10000
+    },
+    "channels": [
+      "offline",
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "KB_NaraSarang",
+        "HyundaiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "21:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 2
+      },
+      "exclusive_group": "beauty_cashback"
+    },
+    "exclusions": [
+      "sale items",
+      "gift sets"
+    ],
+    "source": {
+      "url": "https://oliveyoung.co.kr/event/beauty2025",
+      "provider": "CJ Olive Young"
+    }
+  },
+  {
+    "id": "offer_005_telecom",
+    "type": "offer",
+    "title": "Baemin 통신사 멤버십 할인",
+    "brand": "Baemin",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 3000,
+      "min_spend": 15000,
+      "max_benefit": 3000
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "11:00",
+        "end": "14:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 3
+      },
+      "exclusive_group": "delivery_lunch"
+    },
+    "exclusions": [
+      "delivery fee",
+      "service charge"
+    ],
+    "source": {
+      "url": "https://baemin.com/event/lunch",
+      "provider": "Woowa Brothers"
+    }
+  },
+  {
+    "id": "offer_005_card",
+    "type": "offer",
+    "title": "Baemin 제휴카드 청구할인",
+    "brand": "Baemin",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 3000,
+      "min_spend": 15000,
+      "max_benefit": 3000
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "HanaCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "11:00",
+        "end": "14:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 3
+      },
+      "exclusive_group": "delivery_lunch"
+    },
+    "exclusions": [
+      "delivery fee",
+      "service charge"
+    ],
+    "source": {
+      "url": "https://baemin.com/event/lunch",
+      "provider": "Woowa Brothers"
+    }
+  },
+  {
+    "id": "offer_006_telecom",
+    "type": "offer",
+    "title": "Coupang 통신사 멤버십 할인",
+    "brand": "Coupang",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-11-25",
+      "end": "2026-01-15"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 50000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 5
+      },
+      "exclusive_group": "ecommerce_rocket"
+    },
+    "exclusions": [
+      "gift cards",
+      "fresh food"
+    ],
+    "source": {
+      "url": "https://coupang.com/event/rocket2025",
+      "provider": "Coupang Corp"
+    }
+  },
+  {
+    "id": "offer_006_card",
+    "type": "offer",
+    "title": "Coupang 제휴카드 청구할인",
+    "brand": "Coupang",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-11-25",
+      "end": "2026-01-15"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 50000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KB_NaraSarang",
+        "WooriCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 5
+      },
+      "exclusive_group": "ecommerce_rocket"
+    },
+    "exclusions": [
+      "gift cards",
+      "fresh food"
+    ],
+    "source": {
+      "url": "https://coupang.com/event/rocket2025",
+      "provider": "Coupang Corp"
+    }
+  },
+  {
+    "id": "offer_007_telecom",
+    "type": "offer",
+    "title": "GS25 멤버십 10% 할인",
+    "brand": "GS25",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2025-12-26"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "07:00",
+        "end": "10:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "convenience_breakfast"
+    },
+    "exclusions": [
+      "alcohol",
+      "tobacco",
+      "gift cards"
+    ],
+    "source": {
+      "url": "https://gs25.gsretail.com/event/breakfast",
+      "provider": "GS Retail"
+    }
+  },
+  {
+    "id": "offer_007_card",
+    "type": "offer",
+    "title": "GS25 행사상품 20% 현장할인",
+    "brand": "GS25",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2025-12-26"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "CitiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "07:00",
+        "end": "10:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "convenience_breakfast"
+    },
+    "exclusions": [
+      "alcohol",
+      "tobacco",
+      "gift cards"
+    ],
+    "source": {
+      "url": "https://gs25.gsretail.com/event/breakfast",
+      "provider": "GS Retail"
+    }
+  },
+  {
+    "id": "offer_008_telecom",
+    "type": "offer",
+    "title": "Ediya 통신사 멤버십 할인",
+    "brand": "Ediya",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-11-10",
+      "end": "2025-12-15"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 25,
+      "min_spend": 4000,
+      "max_benefit": 2000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "TUE",
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "14:00",
+        "end": "17:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 2
+      },
+      "exclusive_group": "cafe_afternoon"
+    },
+    "exclusions": [
+      "bottled drinks",
+      "food items"
+    ],
+    "source": {
+      "url": "https://ediya.com/promo/ice2025",
+      "provider": "Ediya Coffee"
+    }
+  },
+  {
+    "id": "offer_008_card",
+    "type": "offer",
+    "title": "Ediya 제휴카드 청구할인",
+    "brand": "Ediya",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-11-10",
+      "end": "2025-12-15"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 25,
+      "min_spend": 4000,
+      "max_benefit": 2000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "LotteCard",
+        "HanaCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "TUE",
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "14:00",
+        "end": "17:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 2
+      },
+      "exclusive_group": "cafe_afternoon"
+    },
+    "exclusions": [
+      "bottled drinks",
+      "food items"
+    ],
+    "source": {
+      "url": "https://ediya.com/promo/ice2025",
+      "provider": "Ediya Coffee"
+    }
+  },
+  {
+    "id": "offer_009_telecom",
+    "type": "offer",
+    "title": "Samsung 통신사 멤버십 할인",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2026-01-31"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 100000,
+      "min_spend": 1000000,
+      "max_benefit": 100000
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "electronics_premium"
+    },
+    "exclusions": [
+      "refurbished items",
+      "accessories"
+    ],
+    "source": {
+      "url": "https://samsung.com/kr/event/galaxy2025",
+      "provider": "Samsung Electronics"
+    }
+  },
+  {
+    "id": "offer_009_card",
+    "type": "offer",
+    "title": "Samsung 제휴카드 청구할인",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2026-01-31"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 100000,
+      "min_spend": 1000000,
+      "max_benefit": 100000
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "HyundaiCard",
+        "ShinhanCheck"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "electronics_premium"
+    },
+    "exclusions": [
+      "refurbished items",
+      "accessories"
+    ],
+    "source": {
+      "url": "https://samsung.com/kr/event/galaxy2025",
+      "provider": "Samsung Electronics"
+    }
+  },
+  {
+    "id": "offer_010_telecom",
+    "type": "offer",
+    "title": "Apple 통신사 멤버십 할인",
+    "brand": "Apple",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-11-28",
+      "end": "2025-12-28"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 15,
+      "min_spend": 200000,
+      "max_benefit": 50000
+    },
+    "channels": [
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "electronics_audio"
+    },
+    "exclusions": [
+      "engraving service",
+      "AppleCare+"
+    ],
+    "source": {
+      "url": "https://apple.com/kr/shop/event/holiday",
+      "provider": "Apple Korea"
+    }
+  },
+  {
+    "id": "offer_010_card",
+    "type": "offer",
+    "title": "Apple 제휴카드 청구할인",
+    "brand": "Apple",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-11-28",
+      "end": "2025-12-28"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 15,
+      "min_spend": 200000,
+      "max_benefit": 50000
+    },
+    "channels": [
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard",
+        "KB_NaraSarang"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "electronics_audio"
+    },
+    "exclusions": [
+      "engraving service",
+      "AppleCare+"
+    ],
+    "source": {
+      "url": "https://apple.com/kr/shop/event/holiday",
+      "provider": "Apple Korea"
+    }
+  },
+  {
+    "id": "offer_011_telecom",
+    "type": "offer",
+    "title": "Netflix 통신사 멤버십 할인",
+    "brand": "Netflix",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2026-01-20"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20,
+      "min_spend": 30000,
+      "max_benefit": 6000
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "subscription_streaming"
+    },
+    "exclusions": [
+      "gift subscriptions"
+    ],
+    "source": {
+      "url": "https://netflix.com/kr/promo/winter2025",
+      "provider": "Netflix Korea"
+    }
+  },
+  {
+    "id": "offer_011_card",
+    "type": "offer",
+    "title": "Netflix 제휴카드 청구할인",
+    "brand": "Netflix",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2026-01-20"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20,
+      "min_spend": 30000,
+      "max_benefit": 6000
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "LotteCard",
+        "CitiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "subscription_streaming"
+    },
+    "exclusions": [
+      "gift subscriptions"
+    ],
+    "source": {
+      "url": "https://netflix.com/kr/promo/winter2025",
+      "provider": "Netflix Korea"
+    }
+  },
+  {
+    "id": "offer_012_telecom",
+    "type": "offer",
+    "title": "YouTube 통신사 멤버십 할인",
+    "brand": "YouTube",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-11-15",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 28000,
+      "min_spend": 0,
+      "max_benefit": 28000
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "subscription_video"
+    },
+    "exclusions": [
+      "existing subscribers"
+    ],
+    "source": {
+      "url": "https://youtube.com/premium/offer",
+      "provider": "Google Korea"
+    }
+  },
+  {
+    "id": "offer_012_card",
+    "type": "offer",
+    "title": "YouTube 제휴카드 청구할인",
+    "brand": "YouTube",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-11-15",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 28000,
+      "min_spend": 0,
+      "max_benefit": 28000
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KB_NaraSarang",
+        "WooriCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "subscription_video"
+    },
+    "exclusions": [
+      "existing subscribers"
+    ],
+    "source": {
+      "url": "https://youtube.com/premium/offer",
+      "provider": "Google Korea"
+    }
+  },
+  {
+    "id": "offer_013_telecom",
+    "type": "offer",
+    "title": "Naver 통신사 멤버십 할인",
+    "brand": "Naver",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-10"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 30000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 2
+      },
+      "exclusive_group": "ecommerce_points"
+    },
+    "exclusions": [
+      "gift cards",
+      "digital content"
+    ],
+    "source": {
+      "url": "https://pay.naver.com/event/2025winter",
+      "provider": "Naver Corp"
+    }
+  },
+  {
+    "id": "offer_013_card",
+    "type": "offer",
+    "title": "Naver 제휴카드 청구할인",
+    "brand": "Naver",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-10"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 5000,
+      "min_spend": 30000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "HanaCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 2
+      },
+      "exclusive_group": "ecommerce_points"
+    },
+    "exclusions": [
+      "gift cards",
+      "digital content"
+    ],
+    "source": {
+      "url": "https://pay.naver.com/event/2025winter",
+      "provider": "Naver Corp"
+    }
+  },
+  {
+    "id": "offer_014_telecom",
+    "type": "offer",
+    "title": "Kakao 통신사 멤버십 할인",
+    "brand": "Kakao",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-11-20",
+      "end": "2025-12-20"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 2000,
+      "min_spend": 5000,
+      "max_benefit": 2000
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "06:00",
+        "end": "09:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "delivery_taxi"
+    },
+    "exclusions": [
+      "premium taxi",
+      "long distance"
+    ],
+    "source": {
+      "url": "https://t.kakao.com/event/morning",
+      "provider": "Kakao Mobility"
+    }
+  },
+  {
+    "id": "offer_014_card",
+    "type": "offer",
+    "title": "Kakao 제휴카드 청구할인",
+    "brand": "Kakao",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-11-20",
+      "end": "2025-12-20"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 2000,
+      "min_spend": 5000,
+      "max_benefit": 2000
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KB_NaraSarang",
+        "SamsungCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "06:00",
+        "end": "09:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "delivery_taxi"
+    },
+    "exclusions": [
+      "premium taxi",
+      "long distance"
+    ],
+    "source": {
+      "url": "https://t.kakao.com/event/morning",
+      "provider": "Kakao Mobility"
+    }
+  },
+  {
+    "id": "offer_015_telecom",
+    "type": "offer",
+    "title": "Lotte 통신사 멤버십 할인",
+    "brand": "Lotte",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "min_spend": 50000,
+      "max_benefit": 10000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "grocery_weekend"
+    },
+    "exclusions": [
+      "alcohol",
+      "tobacco",
+      "gift cards"
+    ],
+    "source": {
+      "url": "https://lottemart.com/event/weekend",
+      "provider": "Lotte Shopping"
+    }
+  },
+  {
+    "id": "offer_015_card",
+    "type": "offer",
+    "title": "Lotte 제휴카드 청구할인",
+    "brand": "Lotte",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "min_spend": 50000,
+      "max_benefit": 10000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "LotteCard",
+        "HyundaiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "grocery_weekend"
+    },
+    "exclusions": [
+      "alcohol",
+      "tobacco",
+      "gift cards"
+    ],
+    "source": {
+      "url": "https://lottemart.com/event/weekend",
+      "provider": "Lotte Shopping"
+    }
+  },
+  {
+    "id": "offer_016_telecom",
+    "type": "offer",
+    "title": "Shinsegae 통신사 멤버십 할인",
+    "brand": "Shinsegae",
+    "category": "Department",
+    "validity": {
+      "start": "2025-11-25",
+      "end": "2026-01-05"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 15,
+      "min_spend": 100000,
+      "max_benefit": 30000
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "10:30",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 2
+      },
+      "exclusive_group": "department_vip"
+    },
+    "exclusions": [
+      "sale items",
+      "luxury brands",
+      "cosmetics"
+    ],
+    "source": {
+      "url": "https://shinsegae.com/event/vip2025",
+      "provider": "Shinsegae Department Store"
+    }
+  },
+  {
+    "id": "offer_016_card",
+    "type": "offer",
+    "title": "Shinsegae 제휴카드 청구할인",
+    "brand": "Shinsegae",
+    "category": "Department",
+    "validity": {
+      "start": "2025-11-25",
+      "end": "2026-01-05"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 15,
+      "min_spend": 100000,
+      "max_benefit": 30000
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "KB_NaraSarang",
+        "HyundaiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "10:30",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 2
+      },
+      "exclusive_group": "department_vip"
+    },
+    "exclusions": [
+      "sale items",
+      "luxury brands",
+      "cosmetics"
+    ],
+    "source": {
+      "url": "https://shinsegae.com/event/vip2025",
+      "provider": "Shinsegae Department Store"
+    }
+  },
+  {
+    "id": "offer_017_telecom",
+    "type": "offer",
+    "title": "Homeplus 통신사 멤버십 할인",
+    "brand": "Homeplus",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2025-12-25"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20,
+      "min_spend": 30000,
+      "max_benefit": 8000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "09:00",
+        "end": "12:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "grocery_fresh"
+    },
+    "exclusions": [
+      "processed food",
+      "frozen food"
+    ],
+    "source": {
+      "url": "https://homeplus.co.kr/event/fresh",
+      "provider": "Homeplus"
+    }
+  },
+  {
+    "id": "offer_017_card",
+    "type": "offer",
+    "title": "Homeplus 제휴카드 청구할인",
+    "brand": "Homeplus",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2025-12-25"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20,
+      "min_spend": 30000,
+      "max_benefit": 8000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "WooriCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "09:00",
+        "end": "12:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "grocery_fresh"
+    },
+    "exclusions": [
+      "processed food",
+      "frozen food"
+    ],
+    "source": {
+      "url": "https://homeplus.co.kr/event/fresh",
+      "provider": "Homeplus"
+    }
+  },
+  {
+    "id": "offer_018_telecom",
+    "type": "offer",
+    "title": "Emart 통신사 멤버십 할인",
+    "brand": "Emart",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-11-18",
+      "end": "2025-12-18"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 5000,
+      "min_spend": 40000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "grocery_essentials"
+    },
+    "exclusions": [
+      "alcohol",
+      "tobacco",
+      "electronics"
+    ],
+    "source": {
+      "url": "https://emart.ssg.com/event/essentials",
+      "provider": "Shinsegae Emart"
+    }
+  },
+  {
+    "id": "offer_018_card",
+    "type": "offer",
+    "title": "Emart 제휴카드 청구할인",
+    "brand": "Emart",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-11-18",
+      "end": "2025-12-18"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 5000,
+      "min_spend": 40000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "CitiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "grocery_essentials"
+    },
+    "exclusions": [
+      "alcohol",
+      "tobacco",
+      "electronics"
+    ],
+    "source": {
+      "url": "https://emart.ssg.com/event/essentials",
+      "provider": "Shinsegae Emart"
+    }
+  },
+  {
+    "id": "offer_019_telecom",
+    "type": "offer",
+    "title": "Daiso 통신사 멤버십 할인",
+    "brand": "Daiso",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "min_spend": 10000,
+      "max_benefit": 3000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "21:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "grocery_discount"
+    },
+    "exclusions": [
+      "food items"
+    ],
+    "source": {
+      "url": "https://daiso.co.kr/event/winter",
+      "provider": "Daiso Korea"
+    }
+  },
+  {
+    "id": "offer_019_card",
+    "type": "offer",
+    "title": "Daiso 제휴카드 청구할인",
+    "brand": "Daiso",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "min_spend": 10000,
+      "max_benefit": 3000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KB_NaraSarang",
+        "HanaCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "21:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "grocery_discount"
+    },
+    "exclusions": [
+      "food items"
+    ],
+    "source": {
+      "url": "https://daiso.co.kr/event/winter",
+      "provider": "Daiso Korea"
+    }
+  },
+  {
+    "id": "offer_020_telecom",
+    "type": "offer",
+    "title": "SevenEleven 통신사 멤버십 할인",
+    "brand": "SevenEleven",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-11-10",
+      "end": "2025-12-10"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 2000,
+      "min_spend": 2000,
+      "max_benefit": 2000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "06:00",
+        "end": "11:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "convenience_coffee"
+    },
+    "exclusions": [
+      "bottled coffee",
+      "ice cream"
+    ],
+    "source": {
+      "url": "https://7eleven.co.kr/event/coffee",
+      "provider": "Korea Seven"
+    }
+  },
+  {
+    "id": "offer_020_card",
+    "type": "offer",
+    "title": "SevenEleven 제휴카드 청구할인",
+    "brand": "SevenEleven",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-11-10",
+      "end": "2025-12-10"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 2000,
+      "min_spend": 2000,
+      "max_benefit": 2000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "LotteCard",
+        "SamsungCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "06:00",
+        "end": "11:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "convenience_coffee"
+    },
+    "exclusions": [
+      "bottled coffee",
+      "ice cream"
+    ],
+    "source": {
+      "url": "https://7eleven.co.kr/event/coffee",
+      "provider": "Korea Seven"
+    }
+  },
+  {
+    "id": "offer_021_telecom",
+    "type": "offer",
+    "title": "Starbucks VIP 무료 사이즈업",
+    "brand": "Starbucks",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-01-15"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 500
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "14:00",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "cafe_dessert"
+    },
+    "exclusions": [
+      "beverages only",
+      "merchandise"
+    ],
+    "source": {
+      "url": "https://starbucks.co.kr/promo/cake",
+      "provider": "Starbucks Korea"
+    }
+  },
+  {
+    "id": "offer_021_card",
+    "type": "offer",
+    "title": "Starbucks 4000원 이상 결제 시 1000원 할인",
+    "brand": "Starbucks",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-01-15"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 1000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "HyundaiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "14:00",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "cafe_dessert"
+    },
+    "exclusions": [
+      "beverages only",
+      "merchandise"
+    ],
+    "source": {
+      "url": "https://starbucks.co.kr/promo/cake",
+      "provider": "Starbucks Korea"
+    }
+  },
+  {
+    "id": "offer_022_telecom",
+    "type": "offer",
+    "title": "OliveYoung 통신사 멤버십 할인",
+    "brand": "OliveYoung",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-11-22",
+      "end": "2025-12-22"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 30,
+      "min_spend": 50000,
+      "max_benefit": 20000
+    },
+    "channels": [
+      "offline",
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "TUE",
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "beauty_skincare"
+    },
+    "exclusions": [
+      "luxury brands",
+      "sale items"
+    ],
+    "source": {
+      "url": "https://oliveyoung.co.kr/event/skincare",
+      "provider": "CJ Olive Young"
+    }
+  },
+  {
+    "id": "offer_022_card",
+    "type": "offer",
+    "title": "OliveYoung 제휴카드 청구할인",
+    "brand": "OliveYoung",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-11-22",
+      "end": "2025-12-22"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 30,
+      "min_spend": 50000,
+      "max_benefit": 20000
+    },
+    "channels": [
+      "offline",
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KB_NaraSarang",
+        "LotteCard",
+        "CitiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "TUE",
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "beauty_skincare"
+    },
+    "exclusions": [
+      "luxury brands",
+      "sale items"
+    ],
+    "source": {
+      "url": "https://oliveyoung.co.kr/event/skincare",
+      "provider": "CJ Olive Young"
+    }
+  },
+  {
+    "id": "offer_023_telecom",
+    "type": "offer",
+    "title": "Baemin 통신사 멤버십 할인",
+    "brand": "Baemin",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 4000,
+      "min_spend": 20000,
+      "max_benefit": 4000
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "21:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 2
+      },
+      "exclusive_group": "delivery_night"
+    },
+    "exclusions": [
+      "delivery fee",
+      "minimum order"
+    ],
+    "source": {
+      "url": "https://baemin.com/event/night",
+      "provider": "Woowa Brothers"
+    }
+  },
+  {
+    "id": "offer_023_card",
+    "type": "offer",
+    "title": "Baemin 제휴카드 청구할인",
+    "brand": "Baemin",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 4000,
+      "min_spend": 20000,
+      "max_benefit": 4000
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "WooriCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "21:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 2
+      },
+      "exclusive_group": "delivery_night"
+    },
+    "exclusions": [
+      "delivery fee",
+      "minimum order"
+    ],
+    "source": {
+      "url": "https://baemin.com/event/night",
+      "provider": "Woowa Brothers"
+    }
+  },
+  {
+    "id": "offer_024_telecom",
+    "type": "offer",
+    "title": "Coupang 통신사 멤버십 할인",
+    "brand": "Coupang",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-11-15",
+      "end": "2026-01-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 5000,
+      "min_spend": 12000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "delivery_first"
+    },
+    "exclusions": [
+      "new users only"
+    ],
+    "source": {
+      "url": "https://coupangeats.com/event/first",
+      "provider": "Coupang Corp"
+    }
+  },
+  {
+    "id": "offer_024_card",
+    "type": "offer",
+    "title": "Coupang 제휴카드 청구할인",
+    "brand": "Coupang",
+    "category": "Delivery",
+    "validity": {
+      "start": "2025-11-15",
+      "end": "2026-01-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 5000,
+      "min_spend": 12000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "KB_NaraSarang"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "delivery_first"
+    },
+    "exclusions": [
+      "new users only"
+    ],
+    "source": {
+      "url": "https://coupangeats.com/event/first",
+      "provider": "Coupang Corp"
+    }
+  },
+  {
+    "id": "offer_025_telecom",
+    "type": "offer",
+    "title": "McDonalds 통신사 멤버십 할인",
+    "brand": "McDonalds",
+    "category": "FastFood",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 2000,
+      "min_spend": 5000,
+      "max_benefit": 2000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "15:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "fastfood_kids"
+    },
+    "exclusions": [
+      "adult meals",
+      "delivery"
+    ],
+    "source": {
+      "url": "https://mcdonalds.co.kr/promo/happymeal",
+      "provider": "McDonald's Korea"
+    }
+  },
+  {
+    "id": "offer_025_card",
+    "type": "offer",
+    "title": "McDonalds 제휴카드 청구할인",
+    "brand": "McDonalds",
+    "category": "FastFood",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 2000,
+      "min_spend": 5000,
+      "max_benefit": 2000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HanaCard",
+        "CitiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "15:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "fastfood_kids"
+    },
+    "exclusions": [
+      "adult meals",
+      "delivery"
+    ],
+    "source": {
+      "url": "https://mcdonalds.co.kr/promo/happymeal",
+      "provider": "McDonald's Korea"
+    }
+  },
+  {
+    "id": "offer_026_telecom",
+    "type": "offer",
+    "title": "Samsung 통신사 멤버십 할인",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-11-20",
+      "end": "2026-01-20"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 200000,
+      "min_spend": 2000000,
+      "max_benefit": 200000
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "electronics_tv"
+    },
+    "exclusions": [
+      "outlet products",
+      "refurbished"
+    ],
+    "source": {
+      "url": "https://samsung.com/kr/event/tv2025",
+      "provider": "Samsung Electronics"
+    }
+  },
+  {
+    "id": "offer_026_card",
+    "type": "offer",
+    "title": "Samsung 제휴카드 청구할인",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-11-20",
+      "end": "2026-01-20"
+    },
+    "benefit": {
+      "kind": "cashback",
+      "value": 200000,
+      "min_spend": 2000000,
+      "max_benefit": 200000
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "HyundaiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "electronics_tv"
+    },
+    "exclusions": [
+      "outlet products",
+      "refurbished"
+    ],
+    "source": {
+      "url": "https://samsung.com/kr/event/tv2025",
+      "provider": "Samsung Electronics"
+    }
+  },
+  {
+    "id": "offer_027_telecom",
+    "type": "offer",
+    "title": "Apple 통신사 멤버십 할인",
+    "brand": "Apple",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2026-01-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "min_spend": 1500000,
+      "max_benefit": 200000
+    },
+    "channels": [
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "electronics_student"
+    },
+    "exclusions": [
+      "accessories",
+      "AppleCare+"
+    ],
+    "source": {
+      "url": "https://apple.com/kr/shop/education",
+      "provider": "Apple Korea"
+    }
+  },
+  {
+    "id": "offer_027_card",
+    "type": "offer",
+    "title": "Apple 제휴카드 청구할인",
+    "brand": "Apple",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2026-01-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "min_spend": 1500000,
+      "max_benefit": 200000
+    },
+    "channels": [
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KB_NaraSarang",
+        "ShinhanCheck"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "electronics_student"
+    },
+    "exclusions": [
+      "accessories",
+      "AppleCare+"
+    ],
+    "source": {
+      "url": "https://apple.com/kr/shop/education",
+      "provider": "Apple Korea"
+    }
+  },
+  {
+    "id": "offer_028_telecom",
+    "type": "offer",
+    "title": "Netflix 통신사 멤버십 할인",
+    "brand": "Netflix",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-11-25",
+      "end": "2025-12-25"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 17000,
+      "min_spend": 0,
+      "max_benefit": 17000
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "subscription_premium"
+    },
+    "exclusions": [
+      "existing premium subscribers"
+    ],
+    "source": {
+      "url": "https://netflix.com/kr/promo/premium",
+      "provider": "Netflix Korea"
+    }
+  },
+  {
+    "id": "offer_028_card",
+    "type": "offer",
+    "title": "Netflix 제휴카드 청구할인",
+    "brand": "Netflix",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-11-25",
+      "end": "2025-12-25"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 17000,
+      "min_spend": 0,
+      "max_benefit": 17000
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "LotteCard",
+        "WooriCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "subscription_premium"
+    },
+    "exclusions": [
+      "existing premium subscribers"
+    ],
+    "source": {
+      "url": "https://netflix.com/kr/promo/premium",
+      "provider": "Netflix Korea"
+    }
+  },
+  {
+    "id": "offer_029_telecom",
+    "type": "offer",
+    "title": "YouTube 통신사 멤버십 할인",
+    "brand": "YouTube",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2026-01-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 29700,
+      "min_spend": 0,
+      "max_benefit": 29700
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "subscription_music"
+    },
+    "exclusions": [
+      "existing subscribers"
+    ],
+    "source": {
+      "url": "https://music.youtube.com/promo",
+      "provider": "Google Korea"
+    }
+  },
+  {
+    "id": "offer_029_card",
+    "type": "offer",
+    "title": "YouTube 제휴카드 청구할인",
+    "brand": "YouTube",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2026-01-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 29700,
+      "min_spend": 0,
+      "max_benefit": 29700
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "HanaCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "subscription_music"
+    },
+    "exclusions": [
+      "existing subscribers"
+    ],
+    "source": {
+      "url": "https://music.youtube.com/promo",
+      "provider": "Google Korea"
+    }
+  },
+  {
+    "id": "offer_030_telecom",
+    "type": "offer",
+    "title": "Naver 통신사 멤버십 할인",
+    "brand": "Naver",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-11-20",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 50,
+      "min_spend": 23880,
+      "max_benefit": 11940
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "subscription_membership"
+    },
+    "exclusions": [
+      "existing members"
+    ],
+    "source": {
+      "url": "https://membership.naver.com/event",
+      "provider": "Naver Corp"
+    }
+  },
+  {
+    "id": "offer_030_card",
+    "type": "offer",
+    "title": "Naver 제휴카드 청구할인",
+    "brand": "Naver",
+    "category": "Subscription",
+    "validity": {
+      "start": "2025-11-20",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 50,
+      "min_spend": 23880,
+      "max_benefit": 11940
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KB_NaraSarang",
+        "CitiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "subscription_membership"
+    },
+    "exclusions": [
+      "existing members"
+    ],
+    "source": {
+      "url": "https://membership.naver.com/event",
+      "provider": "Naver Corp"
+    }
+  },
+  {
+    "id": "offer_031_telecom",
+    "type": "offer",
+    "title": "Kakao 통신사 멤버십 할인",
+    "brand": "Kakao",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2026-01-05"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20,
+      "min_spend": 20000,
+      "max_benefit": 10000
+    },
+    "channels": [
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 2
+      },
+      "exclusive_group": "ecommerce_character"
+    },
+    "exclusions": [
+      "limited editions",
+      "collaborations"
+    ],
+    "source": {
+      "url": "https://store.kakaofriends.com/event",
+      "provider": "Kakao Corp"
+    }
+  },
+  {
+    "id": "offer_031_card",
+    "type": "offer",
+    "title": "Kakao 제휴카드 청구할인",
+    "brand": "Kakao",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2026-01-05"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20,
+      "min_spend": 20000,
+      "max_benefit": 10000
+    },
+    "channels": [
+      "online",
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "LotteCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 2
+      },
+      "exclusive_group": "ecommerce_character"
+    },
+    "exclusions": [
+      "limited editions",
+      "collaborations"
+    ],
+    "source": {
+      "url": "https://store.kakaofriends.com/event",
+      "provider": "Kakao Corp"
+    }
+  },
+  {
+    "id": "offer_032_telecom",
+    "type": "offer",
+    "title": "Lotte 통신사 멤버십 할인",
+    "brand": "Lotte",
+    "category": "Entertainment",
+    "validity": {
+      "start": "2025-11-15",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 5000,
+      "min_spend": 14000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "18:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 2
+      },
+      "exclusive_group": "entertainment_movie"
+    },
+    "exclusions": [
+      "IMAX",
+      "4DX",
+      "weekend"
+    ],
+    "source": {
+      "url": "https://lottecinema.co.kr/event/weekday",
+      "provider": "Lotte Cinema"
+    }
+  },
+  {
+    "id": "offer_032_card",
+    "type": "offer",
+    "title": "Lotte 제휴카드 청구할인",
+    "brand": "Lotte",
+    "category": "Entertainment",
+    "validity": {
+      "start": "2025-11-15",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 5000,
+      "min_spend": 14000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "app",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "LotteCard",
+        "HyundaiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "18:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 2
+      },
+      "exclusive_group": "entertainment_movie"
+    },
+    "exclusions": [
+      "IMAX",
+      "4DX",
+      "weekend"
+    ],
+    "source": {
+      "url": "https://lottecinema.co.kr/event/weekday",
+      "provider": "Lotte Cinema"
+    }
+  },
+  {
+    "id": "offer_033_telecom",
+    "type": "offer",
+    "title": "Shinsegae 통신사 멤버십 할인",
+    "brand": "Shinsegae",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 15,
+      "min_spend": 30000,
+      "max_benefit": 10000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "10:30",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "grocery_premium"
+    },
+    "exclusions": [
+      "alcohol",
+      "imported goods"
+    ],
+    "source": {
+      "url": "https://shinsegae.com/event/food",
+      "provider": "Shinsegae Department Store"
+    }
+  },
+  {
+    "id": "offer_033_card",
+    "type": "offer",
+    "title": "Shinsegae 제휴카드 청구할인",
+    "brand": "Shinsegae",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 15,
+      "min_spend": 30000,
+      "max_benefit": 10000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "KB_NaraSarang"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "10:30",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "grocery_premium"
+    },
+    "exclusions": [
+      "alcohol",
+      "imported goods"
+    ],
+    "source": {
+      "url": "https://shinsegae.com/event/food",
+      "provider": "Shinsegae Department Store"
+    }
+  },
+  {
+    "id": "offer_034_telecom",
+    "type": "offer",
+    "title": "Homeplus 통신사 멤버십 할인",
+    "brand": "Homeplus",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-11-25",
+      "end": "2025-12-25"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 25,
+      "min_spend": 20000,
+      "max_benefit": 7000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "09:00",
+        "end": "21:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "grocery_household"
+    },
+    "exclusions": [
+      "food",
+      "electronics"
+    ],
+    "source": {
+      "url": "https://homeplus.co.kr/event/household",
+      "provider": "Homeplus"
+    }
+  },
+  {
+    "id": "offer_034_card",
+    "type": "offer",
+    "title": "Homeplus 제휴카드 청구할인",
+    "brand": "Homeplus",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-11-25",
+      "end": "2025-12-25"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 25,
+      "min_spend": 20000,
+      "max_benefit": 7000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "WooriCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "09:00",
+        "end": "21:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "grocery_household"
+    },
+    "exclusions": [
+      "food",
+      "electronics"
+    ],
+    "source": {
+      "url": "https://homeplus.co.kr/event/household",
+      "provider": "Homeplus"
+    }
+  },
+  {
+    "id": "offer_035_telecom",
+    "type": "offer",
+    "title": "Emart 통신사 멤버십 할인",
+    "brand": "Emart",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-10"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20,
+      "min_spend": 50000,
+      "max_benefit": 20000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT"
+      ],
+      "times": {
+        "start": "15:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 2
+      },
+      "exclusive_group": "grocery_wine"
+    },
+    "exclusions": [
+      "spirits",
+      "beer"
+    ],
+    "source": {
+      "url": "https://emart.ssg.com/event/wine",
+      "provider": "Shinsegae Emart"
+    }
+  },
+  {
+    "id": "offer_035_card",
+    "type": "offer",
+    "title": "Emart 제휴카드 청구할인",
+    "brand": "Emart",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-10"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20,
+      "min_spend": 50000,
+      "max_benefit": 20000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard",
+        "CitiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT"
+      ],
+      "times": {
+        "start": "15:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 2
+      },
+      "exclusive_group": "grocery_wine"
+    },
+    "exclusions": [
+      "spirits",
+      "beer"
+    ],
+    "source": {
+      "url": "https://emart.ssg.com/event/wine",
+      "provider": "Shinsegae Emart"
+    }
+  },
+  {
+    "id": "offer_036_telecom",
+    "type": "offer",
+    "title": "Daiso 통신사 멤버십 할인",
+    "brand": "Daiso",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-11-20",
+      "end": "2025-12-20"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 15,
+      "min_spend": 15000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "TUE",
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "grocery_kitchen"
+    },
+    "exclusions": [
+      "food",
+      "cosmetics"
+    ],
+    "source": {
+      "url": "https://daiso.co.kr/event/kitchen",
+      "provider": "Daiso Korea"
+    }
+  },
+  {
+    "id": "offer_036_card",
+    "type": "offer",
+    "title": "Daiso 제휴카드 청구할인",
+    "brand": "Daiso",
+    "category": "Grocery",
+    "validity": {
+      "start": "2025-11-20",
+      "end": "2025-12-20"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 15,
+      "min_spend": 15000,
+      "max_benefit": 5000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KB_NaraSarang",
+        "HanaCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "TUE",
+        "WED",
+        "THU"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "20:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "grocery_kitchen"
+    },
+    "exclusions": [
+      "food",
+      "cosmetics"
+    ],
+    "source": {
+      "url": "https://daiso.co.kr/event/kitchen",
+      "provider": "Daiso Korea"
+    }
+  },
+  {
+    "id": "offer_037_telecom",
+    "type": "offer",
+    "title": "Ediya 통신사 멤버십 할인",
+    "brand": "Ediya",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 30,
+      "min_spend": 10000,
+      "max_benefit": 4000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "15:00",
+        "end": "19:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "cafe_weekend"
+    },
+    "exclusions": [
+      "beverages only"
+    ],
+    "source": {
+      "url": "https://ediya.com/promo/dessert",
+      "provider": "Ediya Coffee"
+    }
+  },
+  {
+    "id": "offer_037_card",
+    "type": "offer",
+    "title": "Ediya 제휴카드 청구할인",
+    "brand": "Ediya",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 30,
+      "min_spend": 10000,
+      "max_benefit": 4000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "LotteCard",
+        "SamsungCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "15:00",
+        "end": "19:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "cafe_weekend"
+    },
+    "exclusions": [
+      "beverages only"
+    ],
+    "source": {
+      "url": "https://ediya.com/promo/dessert",
+      "provider": "Ediya Coffee"
+    }
+  },
+  {
+    "id": "offer_038_telecom",
+    "type": "offer",
+    "title": "OliveYoung 통신사 멤버십 할인",
+    "brand": "OliveYoung",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-11-28",
+      "end": "2025-12-28"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "min_spend": 80000,
+      "max_benefit": 15000
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "21:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "beauty_fragrance"
+    },
+    "exclusions": [
+      "luxury brands",
+      "limited editions"
+    ],
+    "source": {
+      "url": "https://oliveyoung.co.kr/event/fragrance",
+      "provider": "CJ Olive Young"
+    }
+  },
+  {
+    "id": "offer_038_card",
+    "type": "offer",
+    "title": "OliveYoung 제휴카드 청구할인",
+    "brand": "OliveYoung",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-11-28",
+      "end": "2025-12-28"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "min_spend": 80000,
+      "max_benefit": 15000
+    },
+    "channels": [
+      "offline",
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "HyundaiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "10:00",
+        "end": "21:00"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "beauty_fragrance"
+    },
+    "exclusions": [
+      "luxury brands",
+      "limited editions"
+    ],
+    "source": {
+      "url": "https://oliveyoung.co.kr/event/fragrance",
+      "provider": "CJ Olive Young"
+    }
+  },
+  {
+    "id": "offer_039_telecom",
+    "type": "offer",
+    "title": "CU VIP 도시락 무료 증정",
+    "brand": "CU",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 5000
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "11:00",
+        "end": "14:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "convenience_lunch"
+    },
+    "exclusions": [
+      "alcohol",
+      "tobacco"
+    ],
+    "source": {
+      "url": "https://cu.co.kr/event/lunchset",
+      "provider": "BGF Retail"
+    }
+  },
+  {
+    "id": "offer_039_card",
+    "type": "offer",
+    "title": "CU BC페이북 QR결제 500원 할인",
+    "brand": "CU",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 500
+    },
+    "channels": [
+      "offline",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KB_NaraSarang",
+        "CitiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "11:00",
+        "end": "14:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "convenience_lunch"
+    },
+    "exclusions": [
+      "alcohol",
+      "tobacco"
+    ],
+    "source": {
+      "url": "https://cu.co.kr/event/lunchset",
+      "provider": "BGF Retail"
+    }
+  },
+  {
+    "id": "offer_040_telecom",
+    "type": "offer",
+    "title": "GS25 멤버십 10% 할인",
+    "brand": "GS25",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-11-18",
+      "end": "2025-12-18"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "06:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "convenience_snack"
+    },
+    "exclusions": [
+      "premium products"
+    ],
+    "source": {
+      "url": "https://gs25.gsretail.com/event/kimbap",
+      "provider": "GS Retail"
+    }
+  },
+  {
+    "id": "offer_040_card",
+    "type": "offer",
+    "title": "GS25 행사상품 20% 현장할인",
+    "brand": "GS25",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-11-18",
+      "end": "2025-12-18"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "WooriCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "06:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "convenience_snack"
+    },
+    "exclusions": [
+      "premium products"
+    ],
+    "source": {
+      "url": "https://gs25.gsretail.com/event/kimbap",
+      "provider": "GS Retail"
+    }
+  },
+  {
+    "id": "offer_001_var1_telecom",
+    "type": "offer",
+    "title": "Starbucks VIP 무료 사이즈업",
+    "brand": "Starbucks",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2026-01-05"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 500
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "13:00",
+        "end": "17:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "cafe_weekend_special"
+    },
+    "exclusions": [
+      "drive-thru"
+    ],
+    "source": {
+      "url": "https://starbucks.co.kr/promo/weekend",
+      "provider": "Starbucks Korea"
+    }
+  },
+  {
+    "id": "offer_001_var1_card",
+    "type": "offer",
+    "title": "Starbucks 10% 청구할인",
+    "brand": "Starbucks",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-05",
+      "end": "2026-01-05"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "HyundaiCard",
+        "SamsungCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "13:00",
+        "end": "17:00"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "cafe_weekend_special"
+    },
+    "exclusions": [
+      "drive-thru"
+    ],
+    "source": {
+      "url": "https://starbucks.co.kr/promo/weekend",
+      "provider": "Starbucks Korea"
+    }
+  },
+  {
+    "id": "offer_002_var1_telecom",
+    "type": "offer",
+    "title": "CU VIP 도시락 무료 증정",
+    "brand": "CU",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-10"
+    },
+    "benefit": {
+      "kind": "free",
+      "value": 5000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT"
+      ],
+      "times": {
+        "start": "22:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "convenience_night"
+    },
+    "exclusions": [
+      "alcohol"
+    ],
+    "source": {
+      "url": "https://cu.co.kr",
+      "provider": "BGF Retail"
+    }
+  },
+  {
+    "id": "offer_002_var1_card",
+    "type": "offer",
+    "title": "CU BC페이북 QR결제 500원 할인",
+    "brand": "CU",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-10",
+      "end": "2026-01-10"
+    },
+    "benefit": {
+      "kind": "fixed_amount",
+      "value": 500
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "HanaCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT"
+      ],
+      "times": {
+        "start": "22:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "convenience_night"
+    },
+    "exclusions": [
+      "alcohol"
+    ],
+    "source": {
+      "url": "https://cu.co.kr",
+      "provider": "BGF Retail"
+    }
+  },
+  {
+    "id": "offer_006_var1_telecom",
+    "type": "offer",
+    "title": "Coupang 통신사 멤버십 할인",
+    "brand": "Coupang",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2026-02-28"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 10000,
+      "min_spend": 30000,
+      "max_benefit": 10000
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "ecommerce_new"
+    },
+    "exclusions": [
+      "gold box"
+    ],
+    "source": {
+      "url": "https://coupang.com",
+      "provider": "Coupang"
+    }
+  },
+  {
+    "id": "offer_006_var1_card",
+    "type": "offer",
+    "title": "Coupang 제휴카드 청구할인",
+    "brand": "Coupang",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2026-02-28"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 10000,
+      "min_spend": 30000,
+      "max_benefit": 10000
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "KB_NaraSarang",
+        "WooriCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 1
+      },
+      "exclusive_group": "ecommerce_new"
+    },
+    "exclusions": [
+      "gold box"
+    ],
+    "source": {
+      "url": "https://coupang.com",
+      "provider": "Coupang"
+    }
+  },
+  {
+    "id": "offer_016_var1_telecom",
+    "type": "offer",
+    "title": "Shinsegae 통신사 멤버십 할인",
+    "brand": "Shinsegae",
+    "category": "Department",
+    "validity": {
+      "start": "2025-12-20",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "min_spend": 50000,
+      "max_benefit": 20000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:30",
+        "end": "20:30"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "department_membership"
+    },
+    "exclusions": [
+      "luxury"
+    ],
+    "source": {
+      "url": "https://shinsegae.com",
+      "provider": "Shinsegae"
+    }
+  },
+  {
+    "id": "offer_016_var1_card",
+    "type": "offer",
+    "title": "Shinsegae 제휴카드 청구할인",
+    "brand": "Shinsegae",
+    "category": "Department",
+    "validity": {
+      "start": "2025-12-20",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10,
+      "min_spend": 50000,
+      "max_benefit": 20000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "LotteCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "10:30",
+        "end": "20:30"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 1
+      },
+      "exclusive_group": "department_membership"
+    },
+    "exclusions": [
+      "luxury"
+    ],
+    "source": {
+      "url": "https://shinsegae.com",
+      "provider": "Shinsegae"
+    }
+  },
+  {
+    "id": "offer_022_var1_telecom",
+    "type": "offer",
+    "title": "OliveYoung 통신사 멤버십 할인",
+    "brand": "OliveYoung",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2026-01-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20,
+      "min_spend": 20000,
+      "max_benefit": 10000
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 5
+      },
+      "exclusive_group": "beauty_men"
+    },
+    "exclusions": [],
+    "source": {
+      "url": "https://oliveyoung.co.kr",
+      "provider": "OliveYoung"
+    }
+  },
+  {
+    "id": "offer_022_var1_card",
+    "type": "offer",
+    "title": "OliveYoung 제휴카드 청구할인",
+    "brand": "OliveYoung",
+    "category": "Beauty",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2026-01-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20,
+      "min_spend": 20000,
+      "max_benefit": 10000
+    },
+    "channels": [
+      "online",
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "KB_NaraSarang",
+        "IBK_NaraSarang"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "month",
+        "count": 5
+      },
+      "exclusive_group": "beauty_men"
+    },
+    "exclusions": [],
+    "source": {
+      "url": "https://oliveyoung.co.kr",
+      "provider": "OliveYoung"
+    }
+  },
+  {
+    "id": "offer_010_var1_telecom",
+    "type": "offer",
+    "title": "Apple 통신사 멤버십 할인",
+    "brand": "Apple",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-02-15"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 50000,
+      "min_spend": 800000,
+      "max_benefit": 50000
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "09:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "year",
+        "count": 1
+      },
+      "exclusive_group": "electronics_edu"
+    },
+    "exclusions": [
+      "accessories"
+    ],
+    "source": {
+      "url": "https://apple.com",
+      "provider": "Apple"
+    }
+  },
+  {
+    "id": "offer_010_var1_card",
+    "type": "offer",
+    "title": "Apple 제휴카드 청구할인",
+    "brand": "Apple",
+    "category": "Electronics",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-02-15"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 50000,
+      "min_spend": 800000,
+      "max_benefit": 50000
+    },
+    "channels": [
+      "online"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "HanaCard",
+        "WooriCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI",
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "09:00",
+        "end": "22:00"
+      },
+      "usage_limit": {
+        "period": "year",
+        "count": 1
+      },
+      "exclusive_group": "electronics_edu"
+    },
+    "exclusions": [
+      "accessories"
+    ],
+    "source": {
+      "url": "https://apple.com",
+      "provider": "Apple"
+    }
+  },
+  {
+    "id": "offer_008_var1_telecom",
+    "type": "offer",
+    "title": "Ediya 통신사 멤버십 할인",
+    "brand": "Ediya",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 1000,
+      "min_spend": 4000,
+      "max_benefit": 1000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "08:00",
+        "end": "11:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "cafe_morning"
+    },
+    "exclusions": [],
+    "source": {
+      "url": "https://ediya.com",
+      "provider": "Ediya"
+    }
+  },
+  {
+    "id": "offer_008_var1_card",
+    "type": "offer",
+    "title": "Ediya 제휴카드 청구할인",
+    "brand": "Ediya",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 1000,
+      "min_spend": 4000,
+      "max_benefit": 1000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "KB_NaraSarang"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "MON",
+        "TUE",
+        "WED",
+        "THU",
+        "FRI"
+      ],
+      "times": {
+        "start": "08:00",
+        "end": "11:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "cafe_morning"
+    },
+    "exclusions": [],
+    "source": {
+      "url": "https://ediya.com",
+      "provider": "Ediya"
+    }
+  },
+  {
+    "id": "offer_013_var1_telecom",
+    "type": "offer",
+    "title": "Naver 통신사 멤버십 할인",
+    "brand": "Naver",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-24",
+      "end": "2025-12-25"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 3000,
+      "min_spend": 10000,
+      "max_benefit": 30000
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "SKT",
+        "KT",
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "WED"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 10
+      },
+      "exclusive_group": "ecommerce_xmas"
+    },
+    "exclusions": [],
+    "source": {
+      "url": "https://naver.com",
+      "provider": "Naver"
+    }
+  },
+  {
+    "id": "offer_013_var1_card",
+    "type": "offer",
+    "title": "Naver 제휴카드 청구할인",
+    "brand": "Naver",
+    "category": "ECommerce",
+    "validity": {
+      "start": "2025-12-24",
+      "end": "2025-12-25"
+    },
+    "benefit": {
+      "kind": "points",
+      "value": 3000,
+      "min_spend": 10000,
+      "max_benefit": 30000
+    },
+    "channels": [
+      "app"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "SamsungCard",
+        "HyundaiCard",
+        "LotteCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "WED"
+      ],
+      "times": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 10
+      },
+      "exclusive_group": "ecommerce_xmas"
+    },
+    "exclusions": [],
+    "source": {
+      "url": "https://naver.com",
+      "provider": "Naver"
+    }
+  },
+  {
+    "id": "offer_037_var1_telecom",
+    "type": "offer",
+    "title": "Ediya 통신사 멤버십 할인",
+    "brand": "Ediya",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-01-15"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 2000,
+      "min_spend": 5000,
+      "max_benefit": 2000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "LGU+"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "12:00",
+        "end": "21:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "cafe_dessert"
+    },
+    "exclusions": [
+      "whole cake"
+    ],
+    "source": {
+      "url": "https://ediya.com",
+      "provider": "Ediya"
+    }
+  },
+  {
+    "id": "offer_037_var1_card",
+    "type": "offer",
+    "title": "Ediya 제휴카드 청구할인",
+    "brand": "Ediya",
+    "category": "Cafe",
+    "validity": {
+      "start": "2025-12-15",
+      "end": "2026-01-15"
+    },
+    "benefit": {
+      "kind": "fixed",
+      "value": 2000,
+      "min_spend": 5000,
+      "max_benefit": 2000
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "WooriCard",
+        "HanaCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "SAT",
+        "SUN"
+      ],
+      "times": {
+        "start": "12:00",
+        "end": "21:00"
+      },
+      "usage_limit": {
+        "period": "day",
+        "count": 1
+      },
+      "exclusive_group": "cafe_dessert"
+    },
+    "exclusions": [
+      "whole cake"
+    ],
+    "source": {
+      "url": "https://ediya.com",
+      "provider": "Ediya"
+    }
+  },
+  {
+    "id": "offer_007_var1_telecom",
+    "type": "offer",
+    "title": "GS25 멤버십 10% 할인",
+    "brand": "GS25",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 10
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "telecom_any_of": [
+        "KT"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT"
+      ],
+      "times": {
+        "start": "18:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 2
+      },
+      "exclusive_group": "convenience_beer"
+    },
+    "exclusions": [],
+    "source": {
+      "url": "https://gs25.gsretail.com",
+      "provider": "GS25"
+    }
+  },
+  {
+    "id": "offer_007_var1_card",
+    "type": "offer",
+    "title": "GS25 행사상품 20% 현장할인",
+    "brand": "GS25",
+    "category": "Convenience",
+    "validity": {
+      "start": "2025-12-01",
+      "end": "2025-12-31"
+    },
+    "benefit": {
+      "kind": "percent",
+      "value": 20
+    },
+    "channels": [
+      "offline"
+    ],
+    "eligibility": {
+      "cards_any_of": [
+        "ShinhanCheck",
+        "HyundaiCard"
+      ]
+    },
+    "constraints": {
+      "days_of_week": [
+        "FRI",
+        "SAT"
+      ],
+      "times": {
+        "start": "18:00",
+        "end": "23:59"
+      },
+      "usage_limit": {
+        "period": "week",
+        "count": 2
+      },
+      "exclusive_group": "convenience_beer"
+    },
+    "exclusions": [],
+    "source": {
+      "url": "https://gs25.gsretail.com",
+      "provider": "GS25"
+    }
+  }
 ]
