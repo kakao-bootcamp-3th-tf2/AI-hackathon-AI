@@ -4,30 +4,68 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from datetime import datetime
 import os
-import sys
 import json
 from dotenv import load_dotenv
+from pymongo import MongoClient
 
 # .env 파일 로드
 load_dotenv()
 
-# JSON 파일에서 더미데이터 로드
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
+# MongoDB 연결 설정
+MONGO_HOST = os.getenv("MONGO_HOST")
+MONGO_PORT = int(os.getenv("MONGO_PORT")) if os.getenv("MONGO_PORT") else 27017
+MONGO_USERNAME = os.getenv("MONGO_ROOT_USERNAME")
+MONGO_PASSWORD = os.getenv("MONGO_ROOT_PASSWORD")
+MONGO_DB = os.getenv("MONGO_DATABASE") or "jjdc"
 
-# [TEST MODE] Sparse Data 사용 (결측치 테스트용)
-# OFFERS_FILE = os.path.join(DATA_DIR, "offers.sparse.json")
-# EVENTS_FILE = os.path.join(DATA_DIR, "events.sparse.json")
+# MongoDB 연결 시도
+OFFERS = []
+EVENTS = []
+USE_MONGODB = False
 
-# [NORMAL MODE] Full Data 사용
-OFFERS_FILE = os.path.join(DATA_DIR, "offers.full.json")
-EVENTS_FILE = os.path.join(DATA_DIR, "events.full.json")
+if not MONGO_HOST or not MONGO_USERNAME or not MONGO_PASSWORD:
+    print("MongoDB configuration missing, using JSON files")
+    USE_MONGODB = False
+else:
+    try:
+        client = MongoClient(
+            host=MONGO_HOST,
+            port=MONGO_PORT,
+            username=MONGO_USERNAME,
+            password=MONGO_PASSWORD,
+            authSource="admin"
+        )
+        db = client[MONGO_DB]
+        offers_collection = db["offers"]
+        events_collection = db["events"]
+        
+        # MongoDB에서 데이터 로드
+        OFFERS = list(offers_collection.find({}, {"_id": 0}))
+        EVENTS = list(events_collection.find({}, {"_id": 0}))
+        USE_MONGODB = True
+        print(f"MongoDB connected: {MONGO_HOST}:{MONGO_PORT}")
+        print(f"Loaded {len(OFFERS)} offers, {len(EVENTS)} events from MongoDB")
+    except Exception as e:
+        print(f"MongoDB connection failed: {e}")
+        print("Loading from JSON files...")
+        USE_MONGODB = False
 
-# 데이터 로드
-with open(OFFERS_FILE, 'r', encoding='utf-8') as f:
-    OFFERS = json.load(f)
-
-with open(EVENTS_FILE, 'r', encoding='utf-8') as f:
-    EVENTS = json.load(f)
+# JSON 파일에서 fallback (MongoDB 미설정 또는 연결 실패 시)
+if not USE_MONGODB:
+    DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
+    OFFERS_FILE = os.path.join(DATA_DIR, "offers.full.json")
+    EVENTS_FILE = os.path.join(DATA_DIR, "events.full.json")
+    
+    try:
+        with open(OFFERS_FILE, 'r', encoding='utf-8') as f:
+            OFFERS = json.load(f)
+        with open(EVENTS_FILE, 'r', encoding='utf-8') as f:
+            EVENTS = json.load(f)
+        print(f"Loaded {len(OFFERS)} offers, {len(EVENTS)} events from JSON files")
+    except Exception as json_error:
+        print(f"JSON file load failed: {json_error}")
+        OFFERS = []
+        EVENTS = []
 
 # 모델 및 추천 로직 임포트
 from app.models import (
@@ -67,16 +105,17 @@ DATA_LOADED = False
 async def startup_event():
     global DATA_LOADED
     DATA_LOADED = True
-    print("🚀 FastAPI Backend Server Started!")
-    print(f"📊 Loaded {len(OFFERS)} offers and {len(EVENTS)} events")
-    print("📚 API Documentation: http://localhost:8000/docs")
-    print("📖 ReDoc Documentation: http://localhost:8000/redoc")
+    print("FastAPI Backend Server Started")
+    print(f"Loaded {len(OFFERS)} offers and {len(EVENTS)} events")
+    print(f"Data source: {'MongoDB' if USE_MONGODB else 'JSON files'}")
+    print("API Documentation: http://localhost:8000/docs")
+    print("ReDoc Documentation: http://localhost:8000/redoc")
 
 
 # 앱 종료 이벤트
 @app.on_event("shutdown")
 async def shutdown_event():
-    print("👋 FastAPI Backend Server Shutting Down...")
+    print("FastAPI Backend Server Shutting Down")
 
 
 # ============================================================================

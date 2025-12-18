@@ -1,6 +1,7 @@
 services:
   mongo:
     image: mongo:6.0
+    platform: linux/arm64
     container_name: jjdc-mongo
     restart: unless-stopped
     ports:

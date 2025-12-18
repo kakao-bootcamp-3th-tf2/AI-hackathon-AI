@@ -28,15 +28,12 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Verify Python syntax and dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Verify Python syntax
-        run: python -m compileall app
-
-      - name: Verify dependency graph
-        run: pip check
+          python -m compileall app
+          pip check
 
   # 2. main push 또는 main 대상 PR 시 빌드 + Docker Hub push + 배포
   build-and-deploy:
@@ -53,21 +50,17 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Verify Python syntax and dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Verify Python syntax
-        run: python -m compileall app
-
-      - name: Verify dependency graph
-        run: pip check
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+          python -m compileall app
+          pip check
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+        with:
+          driver-opts: network=host
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
@@ -75,7 +68,7 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: Build and Push Docker Image to Docker Hub
+      - name: Build and Push Docker Image (arm64)
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -116,6 +109,7 @@ jobs:
             echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
             
             # docker-compose.ai.yaml 업데이트
+            
             cat > docker-compose.ai.yaml << 'EOF'
             services:
               ai-server:
@@ -151,6 +145,7 @@ jobs:
             services:
               mongo:
                 image: mongo:6.0
+                platform: linux/arm64
                 container_name: jjdc-mongo
                 restart: unless-stopped
                 ports:
@@ -184,4 +179,4 @@ jobs:
             docker compose -f docker-compose.ai.yaml pull ai-server
             docker compose -f docker-compose.ai.yaml up -d --force-recreate ai-server
             
-            echo "Deployment completed"
+            echo "AI + MongoDB Deployment completed successfully"
