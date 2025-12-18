@@ -1,0 +1,797 @@
+[
+    {
+        "id": "event_001",
+        "type": "event",
+        "title": "Starbucks 윈터 페스티벌",
+        "brand": "Starbucks",
+        "category": "Cafe",
+        "validity": {
+            "start": "2025-12-01",
+            "end": "2026-01-31"
+        },
+        "channels": [
+            "offline",
+            "app"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "ShinhanCheck",
+                "KB_NaraSarang",
+                "HyundaiCard"
+            ]
+        },
+        "notes": "겨울 시즌 한정 음료 출시 및 굿즈 증정 이벤트",
+        "source": {
+            "url": "https://starbucks.co.kr/event/winter2025",
+            "provider": "Starbucks Korea"
+        }
+    },
+    {
+        "id": "event_002",
+        "type": "event",
+        "title": "OliveYoung 연말 뷰티 페스티벌",
+        "brand": "OliveYoung",
+        "category": "Beauty",
+        "validity": {
+            "start": "2025-12-10",
+            "end": "2025-12-31"
+        },
+        "channels": [
+            "offline",
+            "online",
+            "app"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT"
+            ],
+            "cards_any_of": [
+                "ShinhanCheck",
+                "KB_NaraSarang",
+                "LotteCard"
+            ]
+        },
+        "notes": "전 품목 최대 50% 할인, 추가 쿠폰 제공 및 사은품 증정",
+        "source": {
+            "url": "https://oliveyoung.co.kr/event/beautyfest",
+            "provider": "CJ Olive Young"
+        }
+    },
+    {
+        "id": "event_003",
+        "type": "event",
+        "title": "Samsung Galaxy S25 사전예약",
+        "brand": "Samsung",
+        "category": "Electronics",
+        "validity": {
+            "start": "2025-12-15",
+            "end": "2026-01-15"
+        },
+        "channels": [
+            "online",
+            "offline"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "SamsungCard",
+                "HyundaiCard",
+                "ShinhanCheck"
+            ]
+        },
+        "notes": "사전 예약 고객 대상 특별 혜택 및 액세서리 증정",
+        "source": {
+            "url": "https://samsung.com/kr/event/s25preorder",
+            "provider": "Samsung Electronics"
+        }
+    },
+    {
+        "id": "event_004",
+        "type": "event",
+        "title": "Lotte 백화점 연말 대축제",
+        "brand": "Lotte",
+        "category": "Department",
+        "validity": {
+            "start": "2025-11-25",
+            "end": "2026-01-05"
+        },
+        "channels": [
+            "offline",
+            "online"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "LotteCard",
+                "HyundaiCard",
+                "KB_NaraSarang"
+            ]
+        },
+        "notes": "전 품목 최대 70% 할인, VIP 고객 추가 혜택 제공",
+        "source": {
+            "url": "https://lotte.com/event/yearend2025",
+            "provider": "Lotte Shopping"
+        }
+    },
+    {
+        "id": "event_005",
+        "type": "event",
+        "title": "CU 편의점 크리스마스 특가",
+        "brand": "CU",
+        "category": "Convenience",
+        "validity": {
+            "start": "2025-12-20",
+            "end": "2025-12-26"
+        },
+        "channels": [
+            "offline"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT"
+            ],
+            "cards_any_of": [
+                "KB_NaraSarang",
+                "SamsungCard"
+            ]
+        },
+        "notes": "크리스마스 한정 상품 출시 및 2+1 행사",
+        "source": {
+            "url": "https://cu.co.kr/event/christmas",
+            "provider": "BGF Retail"
+        }
+    },
+    {
+        "id": "event_006",
+        "type": "event",
+        "title": "Baemin 배달 페스티벌",
+        "brand": "Baemin",
+        "category": "Delivery",
+        "validity": {
+            "start": "2025-12-01",
+            "end": "2025-12-31"
+        },
+        "channels": [
+            "app"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT"
+            ],
+            "cards_any_of": [
+                "SamsungCard",
+                "HanaCard",
+                "WooriCard"
+            ]
+        },
+        "notes": "인기 맛집 최대 5000원 할인 쿠폰 매일 발급",
+        "source": {
+            "url": "https://baemin.com/event/festival",
+            "provider": "Woowa Brothers"
+        }
+    },
+    {
+        "id": "event_007",
+        "type": "event",
+        "title": "Coupang 로켓배송 데이",
+        "brand": "Coupang",
+        "category": "ECommerce",
+        "validity": {
+            "start": "2025-11-20",
+            "end": "2025-12-20"
+        },
+        "channels": [
+            "app",
+            "online"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "KT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "KB_NaraSarang",
+                "WooriCard",
+                "CitiCard"
+            ]
+        },
+        "notes": "로켓배송 상품 추가 할인 및 무료배송 쿠폰 제공",
+        "source": {
+            "url": "https://coupang.com/event/rocketday",
+            "provider": "Coupang Corp"
+        }
+    },
+    {
+        "id": "event_008",
+        "type": "event",
+        "title": "McDonalds 해피밀 페스티벌",
+        "brand": "McDonalds",
+        "category": "FastFood",
+        "validity": {
+            "start": "2025-12-05",
+            "end": "2026-01-05"
+        },
+        "channels": [
+            "offline",
+            "app"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "HyundaiCard",
+                "LotteCard"
+            ]
+        },
+        "notes": "해피밀 구매 시 인기 캐릭터 장난감 증정",
+        "source": {
+            "url": "https://mcdonalds.co.kr/event/happymeal",
+            "provider": "McDonald's Korea"
+        }
+    },
+    {
+        "id": "event_009",
+        "type": "event",
+        "title": "Ediya 겨울 신메뉴 출시",
+        "brand": "Ediya",
+        "category": "Cafe",
+        "validity": {
+            "start": "2025-11-15",
+            "end": "2025-12-31"
+        },
+        "channels": [
+            "offline",
+            "app"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "LotteCard",
+                "HanaCard",
+                "SamsungCard"
+            ]
+        },
+        "notes": "겨울 한정 음료 3종 출시 및 시음 이벤트 진행",
+        "source": {
+            "url": "https://ediya.com/event/winter",
+            "provider": "Ediya Coffee"
+        }
+    },
+    {
+        "id": "event_010",
+        "type": "event",
+        "title": "Apple 연말 쇼핑 이벤트",
+        "brand": "Apple",
+        "category": "Electronics",
+        "validity": {
+            "start": "2025-11-28",
+            "end": "2026-01-02"
+        },
+        "channels": [
+            "online",
+            "offline"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT"
+            ],
+            "cards_any_of": [
+                "HyundaiCard",
+                "KB_NaraSarang",
+                "ShinhanCheck"
+            ]
+        },
+        "notes": "선정 제품 구매 시 기프트 카드 증정 및 무이자 할부",
+        "source": {
+            "url": "https://apple.com/kr/shop/event/holiday",
+            "provider": "Apple Korea"
+        }
+    },
+    {
+        "id": "event_011",
+        "type": "event",
+        "title": "Netflix 오리지널 시리즈 특별 프로모션",
+        "brand": "Netflix",
+        "category": "Subscription",
+        "validity": {
+            "start": "2025-12-01",
+            "end": "2026-01-31"
+        },
+        "channels": [
+            "app",
+            "online"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "ShinhanCheck",
+                "LotteCard",
+                "CitiCard"
+            ]
+        },
+        "notes": "신규 가입자 대상 첫 달 무료 및 오리지널 굿즈 증정",
+        "source": {
+            "url": "https://netflix.com/kr/event/originals",
+            "provider": "Netflix Korea"
+        }
+    },
+    {
+        "id": "event_012",
+        "type": "event",
+        "title": "Naver 쇼핑 라이브 위크",
+        "brand": "Naver",
+        "category": "ECommerce",
+        "validity": {
+            "start": "2025-12-10",
+            "end": "2025-12-17"
+        },
+        "channels": [
+            "app",
+            "online"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "ShinhanCheck",
+                "HanaCard",
+                "KB_NaraSarang"
+            ]
+        },
+        "notes": "라이브 방송 중 특가 상품 판매 및 추가 쿠폰 발급",
+        "source": {
+            "url": "https://shopping.naver.com/event/liveweek",
+            "provider": "Naver Corp"
+        }
+    },
+    {
+        "id": "event_013",
+        "type": "event",
+        "title": "Kakao Friends 팝업스토어",
+        "brand": "Kakao",
+        "category": "ECommerce",
+        "validity": {
+            "start": "2025-12-15",
+            "end": "2026-01-15"
+        },
+        "channels": [
+            "offline"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT"
+            ],
+            "cards_any_of": [
+                "ShinhanCheck",
+                "LotteCard",
+                "SamsungCard"
+            ]
+        },
+        "notes": "한정판 굿즈 판매 및 포토존 운영, 방문 고객 사은품 증정",
+        "source": {
+            "url": "https://store.kakaofriends.com/event/popup",
+            "provider": "Kakao Corp"
+        }
+    },
+    {
+        "id": "event_014",
+        "type": "event",
+        "title": "GS25 도시락 페스티벌",
+        "brand": "GS25",
+        "category": "Convenience",
+        "validity": {
+            "start": "2025-11-25",
+            "end": "2025-12-25"
+        },
+        "channels": [
+            "offline",
+            "app"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT"
+            ],
+            "cards_any_of": [
+                "ShinhanCheck",
+                "CitiCard",
+                "KB_NaraSarang"
+            ]
+        },
+        "notes": "신상 도시락 출시 및 구매 고객 대상 음료 1+1 증정",
+        "source": {
+            "url": "https://gs25.gsretail.com/event/lunchbox",
+            "provider": "GS Retail"
+        }
+    },
+    {
+        "id": "event_015",
+        "type": "event",
+        "title": "Shinsegae 신년 맞이 대축제",
+        "brand": "Shinsegae",
+        "category": "Department",
+        "validity": {
+            "start": "2025-12-26",
+            "end": "2026-01-31"
+        },
+        "channels": [
+            "offline",
+            "online"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "ShinhanCheck",
+                "KB_NaraSarang",
+                "HyundaiCard"
+            ]
+        },
+        "notes": "전 품목 최대 80% 할인, 럭키박스 이벤트 진행",
+        "source": {
+            "url": "https://shinsegae.com/event/newyear",
+            "provider": "Shinsegae Department Store"
+        }
+    },
+    {
+        "id": "event_016",
+        "type": "event",
+        "title": "Homeplus 신선식품 위크",
+        "brand": "Homeplus",
+        "category": "Grocery",
+        "validity": {
+            "start": "2025-12-01",
+            "end": "2025-12-15"
+        },
+        "channels": [
+            "offline"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "SamsungCard",
+                "WooriCard"
+            ]
+        },
+        "notes": "신선식품 특가 판매 및 레시피 북 증정",
+        "source": {
+            "url": "https://homeplus.co.kr/event/freshweek",
+            "provider": "Homeplus"
+        }
+    },
+    {
+        "id": "event_017",
+        "type": "event",
+        "title": "Emart 연말 대청소 페스티벌",
+        "brand": "Emart",
+        "category": "Grocery",
+        "validity": {
+            "start": "2025-12-10",
+            "end": "2025-12-31"
+        },
+        "channels": [
+            "offline",
+            "app"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "KT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "ShinhanCheck",
+                "CitiCard",
+                "HanaCard"
+            ]
+        },
+        "notes": "생활용품 및 청소용품 최대 40% 할인",
+        "source": {
+            "url": "https://emart.ssg.com/event/cleaning",
+            "provider": "Shinsegae Emart"
+        }
+    },
+    {
+        "id": "event_018",
+        "type": "event",
+        "title": "Daiso 크리스마스 데코 페어",
+        "brand": "Daiso",
+        "category": "Grocery",
+        "validity": {
+            "start": "2025-11-20",
+            "end": "2025-12-25"
+        },
+        "channels": [
+            "offline"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "KB_NaraSarang",
+                "HanaCard",
+                "LotteCard"
+            ]
+        },
+        "notes": "크리스마스 장식용품 특가 판매 및 DIY 키트 증정",
+        "source": {
+            "url": "https://daiso.co.kr/event/christmas",
+            "provider": "Daiso Korea"
+        }
+    },
+    {
+        "id": "event_019",
+        "type": "event",
+        "title": "YouTube Premium 패밀리 플랜 프로모션",
+        "brand": "YouTube",
+        "category": "Subscription",
+        "validity": {
+            "start": "2025-12-01",
+            "end": "2026-01-31"
+        },
+        "channels": [
+            "app",
+            "online"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "KT"
+            ],
+            "cards_any_of": [
+                "KB_NaraSarang",
+                "WooriCard",
+                "SamsungCard"
+            ]
+        },
+        "notes": "패밀리 플랜 가입 시 첫 3개월 50% 할인",
+        "source": {
+            "url": "https://youtube.com/premium/family",
+            "provider": "Google Korea"
+        }
+    },
+    {
+        "id": "event_020",
+        "type": "event",
+        "title": "SevenEleven 겨울 간식 페스티벌",
+        "brand": "SevenEleven",
+        "category": "Convenience",
+        "validity": {
+            "start": "2025-11-15",
+            "end": "2025-12-31"
+        },
+        "channels": [
+            "offline",
+            "app"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "LotteCard",
+                "SamsungCard",
+                "CitiCard"
+            ]
+        },
+        "notes": "겨울 한정 간식 출시 및 2+1 행사 진행",
+        "source": {
+            "url": "https://7eleven.co.kr/event/wintersnack",
+            "provider": "Korea Seven"
+        }
+    },
+    {
+        "id": "event_001_var1",
+        "type": "event",
+        "title": "[신년] Starbucks 머그 증정 이벤트",
+        "brand": "Starbucks",
+        "category": "Cafe",
+        "validity": {
+            "start": "2026-01-01",
+            "end": "2026-01-15"
+        },
+        "channels": [
+            "offline"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "HyundaiCard",
+                "SamsungCard"
+            ]
+        },
+        "notes": "3만원 이상 구매 시 신년 머그컵 증정 (선착순)",
+        "source": {
+            "url": "https://starbucks.co.kr",
+            "provider": "Starbucks"
+        }
+    },
+    {
+        "id": "event_010_var1",
+        "type": "event",
+        "title": "Apple iPhone 보상판매 특별전",
+        "brand": "Apple",
+        "category": "Electronics",
+        "validity": {
+            "start": "2025-12-01",
+            "end": "2026-02-28"
+        },
+        "channels": [
+            "offline",
+            "online"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "KT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "ShinhanCheck",
+                "KB_NaraSarang"
+            ]
+        },
+        "notes": "기존 아이폰 반납 시 최대 10만원 추가 보상",
+        "source": {
+            "url": "https://apple.com",
+            "provider": "Apple"
+        }
+    },
+    {
+        "id": "event_007_var1",
+        "type": "event",
+        "title": "Coupang 와우 회원 전용 특가",
+        "brand": "Coupang",
+        "category": "ECommerce",
+        "validity": {
+            "start": "2025-12-05",
+            "end": "2026-01-05"
+        },
+        "channels": [
+            "app"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT"
+            ],
+            "cards_any_of": [
+                "WooriCard",
+                "HanaCard",
+                "CitiCard"
+            ]
+        },
+        "notes": "와우 회원 대상 매일 오전 7시 타임딜 오픈",
+        "source": {
+            "url": "https://coupang.com",
+            "provider": "Coupang"
+        }
+    },
+    {
+        "id": "event_015_var1",
+        "type": "event",
+        "title": "SSG DAY 추가 행사",
+        "brand": "Shinsegae",
+        "category": "Department",
+        "validity": {
+            "start": "2025-11-20",
+            "end": "2025-12-20"
+        },
+        "channels": [
+            "offline"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "KT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "SamsungCard",
+                "LotteCard"
+            ]
+        },
+        "notes": "전 점포 5만원 이상 구매 시 5천원 상품권 증정",
+        "source": {
+            "url": "https://shinsegae.com",
+            "provider": "Shinsegae"
+        }
+    },
+    {
+        "id": "event_004_var1",
+        "type": "event",
+        "title": "Lotte 문화센터 수강신청 할인",
+        "brand": "Lotte",
+        "category": "Department",
+        "validity": {
+            "start": "2025-12-01",
+            "end": "2026-02-28"
+        },
+        "channels": [
+            "offline",
+            "online"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT"
+            ],
+            "cards_any_of": [
+                "LotteCard",
+                "KB_NaraSarang"
+            ]
+        },
+        "notes": "겨울학기 문화센터 강좌 2개 이상 신청 시 10% 할인",
+        "source": {
+            "url": "https://culture.lotteshopping.com",
+            "provider": "Lotte Culture"
+        }
+    },
+    {
+        "id": "event_002_var1",
+        "type": "event",
+        "title": "OliveYoung 블랙프라이데이 연장",
+        "brand": "OliveYoung",
+        "category": "Beauty",
+        "validity": {
+            "start": "2025-11-30",
+            "end": "2025-12-07"
+        },
+        "channels": [
+            "offline",
+            "online",
+            "app"
+        ],
+        "eligibility": {
+            "telecom_any_of": [
+                "SKT",
+                "KT",
+                "LGU+"
+            ],
+            "cards_any_of": [
+                "ShinhanCheck",
+                "HyundaiCard"
+            ]
+        },
+        "notes": "인기 품목 앵콜 세일 최대 60%",
+        "source": {
+            "url": "https://oliveyoung.co.kr",
+            "provider": "OliveYoung"
+        }
+    }
+]

@@ -1,211 +1,111 @@
-# FastAPI Backend Server
+# 혜택 추천 API (AI Hackathon Backend)
 
-AI Hackathon을 위한 FastAPI 백엔드 서버입니다.
+사용자의 프로필(통신사, 카드)과 계획(브랜드, 카테고리, 일정)을 분석하여 최적의 혜택을 추천해주는 FastAPI 백엔드 서비스입니다.
+Rule-based 필터링뿐만 아니라 **OpenAI를 활용한 문맥 기반 추천**과 **시간/카테고리 기반 대안 추천** 기능을 제공합니다.
 
-## 🚀 빠른 시작
+## 🚀 주요 기능
 
-### 필수 요구사항
+### 1. 혜택 추천 (3가지 모드)
+| 모드 | 엔드포인트 | 설명 |
+|------|-----------|------|
+| **기본 추천** | `/api/recommend` | 유효기간, 자격조건, 점수 기반의 Rule-based 추천 |
+| **AI 추천** | `/api/recommend/ai` | **OpenAI GPT**를 활용하여 문맥을 파악하고 추천 사유를 생성 |
+| **대안 추천** | `/api/recommend/alternatives` | 시간대가 맞지 않거나 혜택이 없을 때, **인근 시간대**나 **경쟁 브랜드** 혜택 제안 |
+
+### 2. 데이터 관리
+- **JSON 기반 데이터**: `data/offers.full.json`, `data/events.full.json` 파일로 관리 (서버 재시작 시 자동 로드)
+- **100% Full Data**: 결측치 없는 고품질 더미 데이터 (Offer 60여개, Event 30여개)
+- **풍부한 메타데이터**: 유효기간, 요일/시간 제약, 통신사/카드 자격요건 등 상세 포함
+
+---
+
+## 🛠️ 설치 및 실행
+
+### 1. 필수 요구사항
 - Python 3.11 이상
-- pip
+- OpenAI API Key (AI 추천 기능 사용 시)
 
-### 실행 방법
-
-#### 1. 자동 설정 및 실행 (권장)
+### 2. 자동 설정 및 실행 (권장)
 
 ```bash
-# 초기 설정 (최초 1회만)
+# 초기 설정 (가상환경 생성, 패키지 설치)
 ./setup.sh
+
+# 환경변수 설정 (최초 1회)
+cp .env.example .env
+# .env 파일을 열어 OPENAI_API_KEY를 입력하세요!
 
 # 서버 시작
 ./start.sh
 ```
 
-#### 2. 수동 설정 및 실행
+### 3. 수동 실행
 
 ```bash
-# 가상환경 생성
-python3 -m venv venv
-
-# 가상환경 활성화
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# 의존성 설치
+source venv/bin/activate
 pip install -r requirements.txt
-
-# 환경변수 설정 (선택사항)
-cp .env.example .env
-# .env 파일을 필요에 따라 수정
-
-# 서버 시작
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+uvicorn app.main:app --reload
 ```
 
-### 3. 서버 접속
+---
 
-서버가 시작되면 다음 URL로 접속할 수 있습니다:
+## 📚 API 사용 가이드
 
-- **API 문서 (Swagger UI)**: http://localhost:8000/docs
-- **API 문서 (ReDoc)**: http://localhost:8000/redoc
-- **Health Check**: http://localhost:8000/health
+서버가 실행되면 **Swagger UI** (http://localhost:8000/docs) 에서 모든 API를 즉시 테스트할 수 있습니다.
+
+### 1. 기본 추천 요청 (`POST /api/recommend`)
+가장 빠르고 기본적인 추천입니다.
+
+```bash
+curl -X POST http://localhost:8000/api/recommend \
+  -H "Content-Type: application/json" \
+  -d '{
+    "user": {"user_id": "u1", "telecom": "SKT", "cards": ["ShinhanCheck"]},
+    "plan": {"brand": "Starbucks", "category": "Cafe", "datetime": "2025-12-18T14:00:00"}
+  }'
+```
+
+### 2. AI 추천 요청 (`POST /api/recommend/ai`)
+OpenAI가 분석한 **추천 사유(`ai_reason`)**를 함께 받아볼 수 있습니다.
+
+```bash
+curl -X POST http://localhost:8000/api/recommend/ai \
+  -H "Content-Type: application/json" \
+  -d @test_request.json
+```
+
+### 3. 대안 추천 요청 (`POST /api/recommend/alternatives`)
+원하는 브랜드의 혜택이 없거나 조건이 맞지 않을 때 유용합니다.
+- **Near Time**: "지금은 안 되지만 1시간 뒤면 쓸 수 있는 쿠폰"
+- **Category Alternative**: "스타벅스 쿠폰은 없지만 이디야 쿠폰은 있어요"
+
+---
 
 ## 📁 프로젝트 구조
 
 ```
 .
 ├── app/
-│   ├── __init__.py
-│   └── main.py          # FastAPI 메인 애플리케이션
-├── requirements.txt     # Python 의존성
-├── .env.example         # 환경변수 예시
-├── setup.sh            # 초기 설정 스크립트
-├── start.sh            # 서버 시작 스크립트
-└── README.md
+│   ├── main.py              # FastAPI 메인 (엔드포인트 정의)
+│   ├── models.py            # Pydantic 데이터 모델
+│   ├── recommender.py       # Rule-based & 대안 추천 로직
+│   └── llm_recommender.py   # OpenAI 기반 추천 로직
+├── data/                    # 데이터 저장소
+│   ├── offers.full.json     # Offer 데이터 (JSON)
+│   └── events.full.json     # Event 데이터 (JSON)
+├── requirements.txt         # 의존성 패키지 목록
+└── .env                     # 환경변수 (API Key 등)
 ```
 
-## 🛠️ API 엔드포인트
+## 🔍 환경변수 설정 (.env)
 
-### Health Check
-- `GET /health` - 서버 상태 확인
-
-### Example APIs
-- `GET /` - 루트 엔드포인트
-- `GET /api/hello?name=YourName` - 인사 API
-- `POST /api/echo` - 에코 API
-
-## 📚 API 문서
-
-서버 실행 후 http://localhost:8000/docs 에서 자동 생성된 API 문서를 확인할 수 있습니다.
-
-Swagger UI에서 다음 기능을 사용할 수 있습니다:
-- 📖 모든 API 엔드포인트 확인
-- 🧪 API 테스트 (Try it out)
-- 📝 요청/응답 스키마 확인
-
-## 🔧 개발
-
-### 개발 모드
-
-`--reload` 옵션으로 서버를 실행하면 코드 변경 시 자동으로 서버가 재시작됩니다.
-
-```bash
-uvicorn app.main:app --reload
-```
-
-### 새로운 API 추가
-
-`app/main.py` 파일에 새로운 엔드포인트를 추가하면 됩니다:
-
-```python
-@app.get("/api/your-endpoint")
-async def your_endpoint():
-    return {"message": "Hello!"}
-```
-
-### 의존성 추가
-
-새로운 Python 패키지가 필요한 경우:
-
-```bash
-# 가상환경 활성화 상태에서
-pip install package-name
-
-# requirements.txt 업데이트
-pip freeze > requirements.txt
-```
-
-## 📝 환경변수
-
-`.env.example` 파일을 참고하여 `.env` 파일을 생성하세요.
-
-주요 환경변수:
-- `ENV`: 환경 (development/production)
-- `DEBUG`: 디버그 모드
-- `ALLOWED_ORIGINS`: CORS 허용 오리진
-
-## 🚀 배포
-
-### 서버에 배포하기
-
-1. **서버에 코드 복사**
-```bash
-git clone <repository-url>
-cd AI-hackathon-AI
-```
-
-2. **초기 설정**
-```bash
-./setup.sh
-```
-
-3. **환경변수 설정**
-```bash
-cp .env.example .env
-# .env 파일 수정 (production 설정)
-```
-
-4. **서버 시작**
-```bash
-# 개발 모드
-./start.sh
-
-# 프로덕션 모드 (백그라운드 실행)
-nohup uvicorn app.main:app --host 0.0.0.0 --port 8000 > server.log 2>&1 &
-```
-
-### systemd로 서비스 등록 (Linux)
-
-`/etc/systemd/system/fastapi.service` 파일 생성:
+`.env.example`을 복사하여 `.env`를 만들고 설정하세요.
 
 ```ini
-[Unit]
-Description=FastAPI Backend Service
-After=network.target
-
-[Service]
-Type=simple
-User=your-username
-WorkingDirectory=/path/to/AI-hackathon-AI
-Environment="PATH=/path/to/AI-hackathon-AI/venv/bin"
-ExecStart=/path/to/AI-hackathon-AI/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-```
-
-서비스 시작:
-```bash
-sudo systemctl daemon-reload
-sudo systemctl enable fastapi
-sudo systemctl start fastapi
-sudo systemctl status fastapi
-```
-
-## 🔍 문제 해결
-
-### 포트가 이미 사용 중인 경우
-
-```bash
-# 8000 포트를 사용 중인 프로세스 확인
-lsof -i :8000
-
-# 프로세스 종료
-kill -9 <PID>
-
-# 또는 다른 포트 사용
-uvicorn app.main:app --port 8080
-```
-
-### 가상환경 활성화가 안 되는 경우
-
-```bash
-# 가상환경 삭제 후 재생성
-rm -rf venv
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+OPENAI_API_KEY=sk-your-api-key-here  # AI 추천 기능을 위해 필수
+DEBUG=True
+ALLOWED_ORIGINS=http://localhost:3000
 ```
 
 ## 📄 라이선스
-
 MIT License
