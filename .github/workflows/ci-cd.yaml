@@ -138,28 +138,36 @@ jobs:
             echo "Data files extracted:"
             ls -la /tmp/*.full.json
             
-            # 3. MongoDB 준비 대기 후 데이터 삽입
+            # 3. MongoDB 준비 대기 후 데이터 삽입 (mongoimport 사용)
             echo "Waiting for MongoDB to be ready..."
             sleep 10
             
             docker cp /tmp/offers.full.json jjdc-mongo:/tmp/offers.full.json
             docker cp /tmp/events.full.json jjdc-mongo:/tmp/events.full.json
             
+            # 기존 컬렉션 삭제 후 mongoimport로 삽입
+            docker exec jjdc-mongo mongoimport \
+              --uri="mongodb://${{ secrets.MONGO_ROOT_USERNAME }}:${{ secrets.MONGO_ROOT_PASSWORD }}@localhost:27017/${{ secrets.MONGO_DATABASE }}?authSource=admin" \
+              --collection=offers \
+              --file=/tmp/offers.full.json \
+              --jsonArray \
+              --drop
+            
+            docker exec jjdc-mongo mongoimport \
+              --uri="mongodb://${{ secrets.MONGO_ROOT_USERNAME }}:${{ secrets.MONGO_ROOT_PASSWORD }}@localhost:27017/${{ secrets.MONGO_DATABASE }}?authSource=admin" \
+              --collection=events \
+              --file=/tmp/events.full.json \
+              --jsonArray \
+              --drop
+            
+            # 삽입 결과 확인
             docker exec jjdc-mongo mongosh \
               -u ${{ secrets.MONGO_ROOT_USERNAME }} \
               -p ${{ secrets.MONGO_ROOT_PASSWORD }} \
               --authenticationDatabase admin \
               ${{ secrets.MONGO_DATABASE }} \
               --quiet \
-              --eval '
-                db.offers.drop();
-                db.events.drop();
-                var offers = JSON.parse(cat("/tmp/offers.full.json"));
-                var events = JSON.parse(cat("/tmp/events.full.json"));
-                db.offers.insertMany(offers);
-                db.events.insertMany(events);
-                print("Inserted: " + db.offers.countDocuments() + " offers, " + db.events.countDocuments() + " events");
-              '
+              --eval 'print("Inserted: " + db.offers.countDocuments() + " offers, " + db.events.countDocuments() + " events")'
             
             docker exec jjdc-mongo rm -f /tmp/offers.full.json /tmp/events.full.json
             rm -f /tmp/offers.full.json /tmp/events.full.json
