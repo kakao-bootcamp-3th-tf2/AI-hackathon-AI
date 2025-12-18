@@ -353,12 +353,16 @@ async def get_alternative_recommendations(request: RecommendRequest):
     """
     try:
         from app.recommender import recommend_alternatives
-        from app.llm_recommender import augment_with_llm_messages
+        from app.llm_recommender import augment_with_llm_messages, normalize_plan_input
         
+        # 0. Plan Normalization (Korean -> English)
+        # request.plan이 Pydantic model이므로 그대로 넘김
+        normalized_plan = normalize_plan_input(request.plan, OFFERS + EVENTS)
+
         # 1. Rule-based 추천 (Top-3 씩만 추출하여 비용 절약)
         raw_result = recommend_alternatives(
             user=request.user,
-            plan=request.plan,
+            plan=normalized_plan,
             offers=OFFERS,
             events=EVENTS,
             top_k=3

@@ -13,6 +13,87 @@ except Exception as e:
     print(f"Warning: OpenAI Client initialization failed: {e}")
     client = None
 
+
+def normalize_plan_input(plan: Plan, candidates: List[Dict[str, Any]]) -> Plan:
+    """
+    사용자가 입력한 Brand/Category가 한글이거나 매핑되지 않는 경우,
+    LLM을 통해 candidates에 존재하는 가장 적절한 영어 값으로 변환합니다.
+    """
+    if not candidates:
+        return plan
+        
+    # 1. 가능한 브랜드 및 카테고리 수집
+    known_brands = set()
+    known_categories = set()
+    for item in candidates:
+        brand = item.get("brand")
+        category = item.get("category")
+        if brand:
+            known_brands.add(brand)
+        if category:
+            known_categories.add(category)
+            
+    # 2. 이미 유효한지 체크 (둘 다 존재하면 패스)
+    # 완전 일치를 위해 비교 (case-sensitive)
+    if plan.brand in known_brands and plan.category in known_categories:
+        return plan
+        
+    # 3. LLM을 통한 매핑
+    # 리스트가 너무 길면 토큰 제한에 걸릴 수 있으므로, 적절히 자르거나 핵심만 전달
+    brands_list = list(known_brands)
+    categories_list = list(known_categories)
+    
+    system_prompt = f"""
+    You are a data mapping assistant.
+    Map the User's Input (Brand, Category) to the most semantic match from the Valid Lists.
+    
+    # Valid Lists
+    - Brands: {brands_list}
+    - Categories: {categories_list}
+    
+    # Core Rules
+    1. If the input is Korean, translate and map it to the corresponding English term in Valid Lists.
+    2. If the user swapped Brand and Category, correct them.
+    3. If there is no exact match, choose the most relevant one.
+    4. Return ONLY a JSON object with "brand" and "category".
+    
+    # Example
+    Input: brand="영화", category="메가박스"
+    Output: {{"brand": "Megabox", "category": "Movie"}}
+    """
+    
+    user_input = f'brand="{plan.brand}", category="{plan.category}"'
+    
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input}
+            ],
+            response_format={"type": "json_object"},
+            temperature=0
+        )
+        content = response.choices[0].message.content
+        parsed = json.loads(content)
+        
+        # 매핑된 결과로 Plan 생성
+        new_brand = parsed.get("brand", plan.brand)
+        new_category = parsed.get("category", plan.category)
+        
+        print(f"[Normalization] {plan.brand}/{plan.category} -> {new_brand}/{new_category}")
+        
+        return Plan(
+            dateTime=plan.datetime,
+            brand=new_brand,
+            category=new_category
+        )
+        
+    except Exception as e:
+        print(f"Plan normalization failed: {e}")
+        return plan
+
+
 def get_ai_recommendations(
     user: UserProfile,
     plan: Plan,
@@ -25,7 +106,10 @@ def get_ai_recommendations(
     if not client or not os.environ.get("OPENAI_API_KEY"):
         raise Exception("OpenAI API Key is missing. Please check .env file.")
 
-    # 1. 문맥 최적화를 위한 1차 필터링 (Heuristic)
+    # 1. 입력 정규화 (한글 -> 영어 매핑)
+    plan = normalize_plan_input(plan, offers + events)
+
+    # 2. 문맥 최적화를 위한 1차 필터링 (Heuristic)
     candidates = []
     
     for item in offers + events:
