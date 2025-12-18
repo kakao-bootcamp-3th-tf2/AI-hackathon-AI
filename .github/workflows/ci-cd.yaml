@@ -86,6 +86,8 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            set -euo pipefail
+
             # Docker 설치 여부 체크 및 설치
             if ! command -v docker &> /dev/null; then
               echo "Docker not found. Installing..."
@@ -174,21 +176,25 @@ jobs:
             
             # AI 서버 이미지 pull 및 시작
             docker compose -f docker-compose.ai.yaml pull ai-server
-            docker compose -f docker-compose.ai.yaml up -d --force-recreate ai-server
+            docker compose -f docker-compose.ai.yaml up -d --force-recreate --remove-orphans ai-server
             
             # MongoDB 대기 후 AI 컨테이너 내부 data를 MongoDB에 삽입
             echo "Waiting for MongoDB..." && sleep 8
-            docker cp jjdc-ai:/app/data/offers.full.json /tmp/offers.full.json
-            docker cp jjdc-ai:/app/data/events.full.json /tmp/events.full.json
-            docker cp /tmp/offers.full.json jjdc-mongo:/tmp/
-            docker cp /tmp/events.full.json jjdc-mongo:/tmp/
+            echo "Checking data files in AI container..."
+            docker exec jjdc-ai ls -la /app/data
+
+            docker cp jjdc-ai:/app/data/offers.full.json jjdc-mongo:/tmp/offers.full.json
+            docker cp jjdc-ai:/app/data/events.full.json jjdc-mongo:/tmp/events.full.json
+
             docker exec jjdc-mongo mongosh -u ${{ secrets.MONGO_ROOT_USERNAME }} -p ${{ secrets.MONGO_ROOT_PASSWORD }} --authenticationDatabase admin ${{ secrets.MONGO_DATABASE }} --quiet --eval "
+              const fs = require('fs');
+              const offers = JSON.parse(fs.readFileSync('/tmp/offers.full.json', 'utf8'));
+              const events = JSON.parse(fs.readFileSync('/tmp/events.full.json', 'utf8'));
               db.offers.drop(); db.events.drop();
-              db.offers.insertMany(JSON.parse(cat('/tmp/offers.full.json')));
-              db.events.insertMany(JSON.parse(cat('/tmp/events.full.json')));
+              if (Array.isArray(offers) && offers.length) db.offers.insertMany(offers);
+              if (Array.isArray(events) && events.length) db.events.insertMany(events);
               print('Inserted: ' + db.offers.countDocuments() + ' offers, ' + db.events.countDocuments() + ' events');
             "
-            rm -f /tmp/offers.full.json /tmp/events.full.json
             docker exec jjdc-mongo rm -f /tmp/offers.full.json /tmp/events.full.json
             
             echo "AI + MongoDB Deployment completed successfully"
