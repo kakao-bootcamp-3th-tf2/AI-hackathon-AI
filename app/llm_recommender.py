@@ -255,7 +255,11 @@ def augment_with_llm_messages(items: List[Dict[str, Any]], plan: Plan) -> List[D
             elif kind == "fixed":
                 benefit_text = f"{int(value)}원 할인"
             elif kind == "cashback":
-                benefit_text = f"{value}% 캐시백"
+                # 100보다 크면 금액(원)으로 간주, 아니면 %(퍼센트)로 간주하는 휴리스틱 적용
+                if value > 100:
+                    benefit_text = f"{int(value)}원 캐시백"
+                else:
+                    benefit_text = f"{value}% 캐시백"
             elif kind == "points":
                 benefit_text = f"{int(value)}P 적립"
 
